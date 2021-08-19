@@ -1,3 +1,48 @@
-body{
-    background:blue;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background-image: url("../images/backgroundimg.jpeg");
+}
+
+.main-area {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  /* center main area container vertically and hortionzal */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+}
+
+.front-card,
+.back-card {
+
+  /* relative to card so they will back card will cover the front card*/
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  position: absolute;
+  border-radius: 5px;
+  background: pink;
+
+}
+
+@media (max-width:400px) {
+
+  .card {
+    width: calc(33.333% - 10px);
+    height: calc(20% - 10px);
+  }
 }
