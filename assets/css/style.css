@@ -10,12 +10,22 @@ body {
   background-image: url("../images/backgroundimg.jpeg");
 }
 
+
+.container {
+  margin: auto;
+  /* center main area container vertically and hortionzal */
+  
+}
+
+h1,section{
+  text-align: center;
+  padding:10px;
+}
+
 .main-area {
   width: 640px;
   height: 640px;
-  margin: auto;
-  /* center main area container vertically and hortionzal */
-  display: flex;
+display: flex;
   flex-wrap: wrap;
 }
 
