@@ -14,26 +14,29 @@ body {
 .container {
   margin: auto;
   /* center main area container vertically and hortionzal */
-  
+
 }
 
-h1,section{
+h1,
+section {
   text-align: center;
-  padding:10px;
+  padding: 10px;
 }
 
 .main-area {
   width: 640px;
   height: 640px;
-display: flex;
+  display: flex;
   flex-wrap: wrap;
 }
 
 .card {
-  width: calc(25% - 10px);
-  height: calc(33.333% - 10px);
-  margin: 5px;
+  width: calc(25% - 6px);
+  height: calc(33.333% - 6px);
+  margin: 3px;
   position: relative;
+  transform-style: preserve-3d;
+  /*insert card element into 3d space*/
 }
 
 .front-card,
@@ -44,15 +47,28 @@ display: flex;
   height: 100%;
   padding: 5px;
   position: absolute;
+  /* postion relative to card*/
   border-radius: 5px;
   background: pink;
 
 }
 
+.card.select {
+  transform: rotateY(180deg);
+  /* when flip class is present rotate 180oc)*/
+}
+
+.front-card {
+  transform: rotateY(180deg);
+}
+
 @media (max-width:400px) {
 
   .card {
-    width: calc(33.333% - 10px);
-    height: calc(20% - 10px);
+    width: calc(33.333% - 1px);
+    height: calc(20% - 1px);
+    
   }
+
+
 }
