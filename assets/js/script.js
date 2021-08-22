@@ -1,11 +1,7 @@
 const cards = document.querySelectorAll('.card');
 
 function selectCard() {
-   
-    this.classList.toggle('select');    //  this relates to card class, if it is true add the flip card, if false set it to turn  
-  
-    
-    
-      }
+       this.classList.toggle('select');    //  this keyword relates to '.card' class, if the '.select' class is there remove it, if not add it 
+           }
 
-cards.forEach(card => card.addEventListener('click', selectCard)); // loop for each card click envoke the select card function
+cards.forEach(card => card.addEventListener('click', selectCard)); // loop for each card click invoke the select card function
