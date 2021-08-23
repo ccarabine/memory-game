@@ -7,7 +7,8 @@
 body {
   height: 100vh;
   display: flex;
-  background-image: url("../images/backgroundimg.jpeg");
+background-image: url("../images/backgroundimg.png");
+ 
 }
 
 
@@ -17,10 +18,14 @@ body {
 
 }
 
-h1,
-section {
+header {
   text-align: center;
   padding: 10px;
+  color:yellow;
+  background-color: red;
+  border-style: double;
+ 
+  
 }
 
 .main-area {
@@ -49,7 +54,7 @@ section {
   position: absolute;
   /* postion relative to card*/
   border-radius: 5px;
-  background: pink;
+  background: lightblue;
 
 }
 
@@ -68,7 +73,7 @@ section {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 300px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
