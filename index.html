@@ -10,67 +10,89 @@
 </head>
 
 <body>
-  <div class="container">
-    <header>
-        <h1>Memory Game</h1>
-    </header>
-    <section>
-        <span class="moves">0</span>
-        <span class="bonus">0</span>
-    </section>
-    
-     <main class="main-area">
-       
-        <div class="card" data-cardtype="card1">
-            <img class="front-card" src="../assets/images/card1.jpg" alt="card1" />
-            <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
+    <div class="container">
+        <header>
+            <h1>Memory Game</h1>
+        </header>
+        <section>
+            <span class="moves">0</span>
+            <span class="bonus">0</span>
+        </section>
+
+        <main class="main-area">
+
+            <div class="card" data-cardtype="card1">
+                <img class="front-card" src="../assets/images/card1.jpg" alt="card1" />
+                <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
+            </div>
+            <div class="card" data-cardtype="card1">
+                <img class="front-card" src="../assets/images/card1.jpg" alt="card1" />
+                <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
+            </div>
+            <div class="card" data-cardtype="card2">
+                <img class="front-card" src="../assets/images/card2.jpg" alt="card2" />
+                <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
+            </div>
+            <div class="card" data-cardtype="card2">
+                <img class="front-card" src="../assets/images/card2.jpg" alt="card2" />
+                <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
+            </div>
+            <div class="card" data-cardtype="card3">
+                <img class="front-card" src="../assets/images/card3.jpg" alt="card3" />
+                <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
+            </div>
+            <div class="card" data-cardtype="card3">
+                <img class="front-card" src="../assets/images/card3.jpg" alt="card3" />
+                <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
+            </div>
+            <div class="card" data-cardtype="card4">
+                <img class="front-card" src="../assets/images/card4.jpg" alt="card4" />
+                <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
+            </div>
+            <div class="card" data-cardtype="card4">
+                <img class="front-card" src="../assets/images/card4.jpg" alt="card4" />
+                <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
+            </div>
+            <div class="card" data-cardtype="card5">
+                <img class="front-card" src="../assets/images/card5.jpg" alt="card5" />
+                <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
+            </div>
+            <div class="card" data-cardtype="card5">
+                <img class="front-card" src="../assets/images/card5.jpg" alt="card5" />
+                <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
+            </div>
+            <div class="card" data-cardtype="card6">
+                <img class="front-card" src="../assets/images/card6.jpg" alt="card6" />
+                <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
+            </div>
+            <div class="card" data-cardtype="card6">
+                <img class="front-card" src="../assets/images/card6.jpg" alt="card6" />
+                <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
+            </div>
+        </main>
+
+    </div>
+    <!--  -->
+    <h2>Modal Example</h2>
+
+    <!-- Trigger/Open The Modal -->
+    <!--<button id="myBtn">Open Modal</button>-->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal back">
+
+        <!-- Modal content -->
+        <div class="modal-content ">
+            <span class="close">&times;</span>
+
+
+        <!--    <h1>Paw Patrol Memory Game</h1> -->
+            <img class="pawpatrollogo" src="../assets/images/pawpatrollogo.png" alt="paw patrol logo" />
+            <button id="myBtn btn">Start New Game</button>
+            <button id="myBtn2 btn">Rules</button>
         </div>
-        <div class="card"data-cardtype="card1">
-            <img class="front-card" src="../assets/images/card1.jpg" alt="card1" />
-            <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
-        </div>
-        <div class="card" data-cardtype="card2">
-            <img class="front-card" src="../assets/images/card2.jpg" alt="card2" />
-            <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
-        </div>
-        <div class="card" data-cardtype="card2">
-            <img class="front-card" src="../assets/images/card2.jpg" alt="card2" />
-            <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
-        </div>
-        <div class="card" data-cardtype="card3">
-            <img class="front-card" src="../assets/images/card3.jpg" alt="card3" />
-            <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
-        </div>
-        <div class="card" data-cardtype="card3">
-            <img class="front-card" src="../assets/images/card3.jpg" alt="card3" />
-            <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
-        </div>
-        <div class="card" data-cardtype="card4">
-            <img class="front-card" src="../assets/images/card4.jpg" alt="card4" />
-            <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
-        </div>
-        <div class="card" data-cardtype="card4">
-            <img class="front-card" src="../assets/images/card4.jpg" alt="card4" />
-            <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
-        </div>
-        <div class="card" data-cardtype="card5">
-            <img class="front-card" src="../assets/images/card5.jpg" alt="card5" />
-            <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
-        </div>
-        <div class="card" data-cardtype="card5">
-            <img class="front-card" src="../assets/images/card5.jpg" alt="card5" />
-            <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
-        </div>
-        <div class="card" data-cardtype="card6">
-            <img class="front-card" src="../assets/images/card6.jpg" alt="card6" />
-            <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
-        </div>
-        <div class="card" data-cardtype="card6">
-            <img class="front-card" src="../assets/images/card6.jpg" alt="card6" />
-            <img class="back-card" src="../assets/images/backgroundcard.jpeg" alt="Background card" />
-        </div>
-    </main>
-  </div>
+
+    </div>
     <script src="../assets/js/script.js"></script>
 </body>
 
