@@ -71,7 +71,10 @@ Image from  <a href="http://ami.responsivedesign.is/">Am I Responsive</a>, to di
 
 ## Strategy Tradeoffs <a name="tradeoffs"></a>
 The purpose of this memory game is for users of all ages to have fun playing the game
+</br>
 to update
+</br>
+
 to update -I have rated the features on a scale of 1 to 5 in terms of importance (how important is it for the project now) and feasibility (how realistic is that we can implement a solution)
 
 ![Strategy Tradeoffs](assets/uxd/strategy-tradeoffs.PNG)
@@ -90,7 +93,7 @@ To achieve the strategy goals, I want to implement the following functional spec
 ---
 
 
-# 3. Structure a name="structure"></a> [Contents](#home)
+# 3. Structure <a name="structure"></a> [Contents](#home)
 link to be updated in menu
 The site will be on one page, there is no need for a navbar or footer due to the site being simple.
 The main page, there will be a background image, with a main playing area that will house the playing cards, scores and buttons
@@ -231,15 +234,12 @@ The user will be given the option to click “play again” button to restart th
 
 ---
 # Features remaining to implement (long term objectives): <a name="features-toimplement"></a>
-1.) Live calendar for bookings
-
-2.) Testimonials
-
-3.) Map 
-
 1.) High score table
+
 2.) Add in skill levels
+
 3.) Add additional game type e.g. logos, animals etc
+
 4.) Timer
 
 
