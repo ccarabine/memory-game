@@ -7,8 +7,8 @@
 body {
   height: 100vh;
   display: flex;
-background-image: url("../images/backgroundimg.png");
- 
+  background-image: url("../images/backgroundimg.png");
+
 }
 
 
@@ -21,11 +21,11 @@ background-image: url("../images/backgroundimg.png");
 header {
   text-align: center;
   padding: 10px;
-  color:yellow;
+  color: yellow;
   background-color: red;
   border-style: double;
- 
-  
+
+
 }
 
 .main-area {
@@ -70,27 +70,63 @@ header {
 /* Modal Styling
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 300px; /* Location of the box */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.modal-game {
+  padding-top: 100px;
+  /* Location of the box */
+}
+
+.modal-rules {
+  padding-top: 50px;
+  /* Location of the box */
 }
 
 /* Modal Content */
 .modal-content {
   background-color: darkblue;
- color:yellow;
+  color: yellow;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
+}
+
+.modal-contentgame {
   width: 30%;
+}
+
+.modal-contentrules {
+  width: 80%;
+}
+
+li {
+  list-style-type: none;
+  /* Remove bullets */
+  margin-left: 20px;
+  padding-bottom: 3px;
+}
+
+h1 {
+  text-align: center;
 }
 
 /* The Close Button */
@@ -107,38 +143,54 @@ header {
   text-decoration: none;
   cursor: pointer;
 }
-.pawpatrollogo{
+
+.pawpatrollogo {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom:20px;
-
+  margin-bottom: 20px;
 }
 
-button{
+.btn-hover:hover {
+  background-color: yellow;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+
+button {
   align-items: center;
   justify-content: center;
   background-color: red;
-  color:yellow;
-   display: block;
-    margin: 0 auto;
-    margin-bottom:20px;
-  width:30%; height:8vh; border: 1px solid;
-
+  color: yellow;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 30%;
+  height: 8vh;
+  border: 1px solid;
 }
-.back{
-border: 2px solid black;
 
-/*background-image: url(../assets/images/backgroundmodal.jpg); background-repeat : no-repeat; background-size: cover;*/
+.back {
+  border: 2px solid black;
+}
+
+@media (max-width:1300px) {
+  .modal-contentgame {
+    width: 40%;
+  }
+}
+
+@media (max-width:1000px) {
+  .modal-contentgame {
+    width: 60%;
+  }
 }
 
 @media (max-width:400px) {
-
   .card {
-    width: calc(33.333% - 1px);
-    height: calc(20% - 1px);
-    
+    width: calc(33.333% - 2px);
+    height: calc(20% - 2px);
+    margin: 1px;
   }
-
-
 }

@@ -14,7 +14,7 @@
     <div class="container">
         <header>
             <h1>Paw Patrol Memory Game</h1>
-        
+
             <span class="moves">0</span>
             <span class="bonus">0</span>
         </header>
@@ -72,29 +72,58 @@
         </main>
 
     </div>
-    <!--  
-    <h2>Modal Example</h2>-->
-
-    <!-- Trigger/Open The Modal -->
-    <!--<button id="myBtn">Open Modal</button>-->
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content ">
-            <span class="close">&times;</span>
 
 
-        <!--    <h1>Paw Patrol Memory Game</h1> -->
+    <!-- New Game Modal -->
+    <div id="newGameModal" class="modal modal-game">
+        <div class="modal-content modal-contentgame ">
             <img class="pawpatrollogo" src="../assets/images/pawpatrollogo.png" alt="paw patrol logo" />
-            <button id="myBtn btn">Start New Game</button>
-            <button id="myBtn2 btn">Rules</button>
+            <button onclick="playNewGame()" id="btn" class="btn-hover">Start New Game</button>
+            <button onclick="rules()" id="btn" class="btn-hover">Rules</button>
+        </div>
+    </div>
+
+    <!-- Rules Modal -->
+    <div id="rulesModal" class="modal modal-rules">
+        <div class="modal-content modal-contentrules ">
+            <span class="close closerules">&times;</span>
+            <img class="pawpatrollogo" src="../assets/images/pawpatrollogo.png" alt="paw patrol logo" />
+            <h1>Rules</h1> </br>
+            <h3>How to play the Memory game?</h3> </br>
+            <p>Just click on "Start New Game" to start the game.</p> </br>
+
+
+            <h3>The purpose of this memory game:</h3></br>
+            <p> To memorize the locations of the cards in the game in the least moves and to make pairs of cards by
+                turning them over 2 by
+                2. When the 2 cards match, it's a pair! You win the pair and the cards
+                remain turned face up. You will then continue the game, otherwise the cards are automatically turned
+                face down and you have to make a new try until you have found the 6 pairs of cards. You will be given a
+                final score which will depend on the
+                number of moves and the bonus questions answered
+            </p></br>
+
+            <h3> Scoring</h3></br>
+            <p>The final score is calculated from the number of moves taken and bonus questions </p>
+            <ul>
+                <li> Less than 7 moves, the player receives 50 points</li>
+                <li> Less than 10 moves, the player receives 40 points</li>
+                <li> Less than 13 moves, the player receives 30 points</li>
+                <li> Less than 16 moves, the player receives 20 points</li>
+                <li> Less than 19 moves, the player receives 10 points</li>
+                <li> More then 25 moves, the player receives zero points</li>
+                <li> Bonus question answered correctly, the player receives 15 points</li>
+            </ul> </br>
+
+
+            <p>Every time you start a new game, a random selection and a random positioning of the cards ensure you a
+                different game than the previous one, so you can play as many times as you want!</p>
+
+
         </div>
 
     </div>
 
-  
     <script src="../assets/js/script.js"></script>
 </body>
 

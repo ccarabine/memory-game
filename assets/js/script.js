@@ -1,4 +1,16 @@
 const cards = document.querySelectorAll('.card');
+// Get the modal
+var newGameModal = document.getElementById("newGameModal");
+
+
+var rulesModal = document.getElementById("rulesModal");
+// newGamebutton 
+var newGameBtn = document.getElementById("newGameBtn");
+var rulesBtn = document.getElementById("rulesBtn");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+var closerules = document.getElementsByClassName("closerules")[0];
+
 let selectedCard = false;
 let boardDisabled = false;
 let firstClick;
@@ -55,37 +67,38 @@ function shuffleCards() {
 }
 
 function resetBoard() {
-    
+
     selectedCard = false;
     boardDisabled = false;
     firstClick = null;
     secondClick = null;
 }
-//MODAL CODE
 
-// Get the modal
-var modal = document.getElementById("myModal");
+function playNewGame() {
+    //reset game
+    // When the user clicks on the button, close the modal and start game
+    newGameModal.style.display = "none";
+    cards.forEach(card => card.addEventListener('click', selectCard)); // loop for each card click invoke the select card function
+   }
 
-// Get the button that opens the modal - might not need
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-//OPENS AT THE BEGINING
-  modal.style.display = "block";
-
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+function rules() {
+    newGameModal.style.display = "none";
+    rulesModal.style.display = "block";
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+
+// When the user clicks on (x), close the modal and open the newGame Modal
+closerules.onclick = function () {
+    rulesModal.style.display = "none";
+    newGameModal.style.display = "block";
+
 }
-cards.forEach(card => card.addEventListener('click', selectCard)); // loop for each card click invoke the select card function
+// When the user clicks anywhere outside of the rulesModal, close it
+window.onclick = function (event) {
+    if (event.target == rulesModal) {
+        rulesModal.style.display = "none";
+    }
+}
+
+//OPENS new Game Modal at the begining
+newGameModal.style.display = "block";
