@@ -1,4 +1,5 @@
 const cards = document.querySelectorAll('.card');
+
 // Get the modal
 var newGameModal = document.getElementById("newGameModal");
 
@@ -32,7 +33,7 @@ function selectCard() {
     //if its is the second car clicked then the (this) varaible holds the second card, if this equal first card then it will return from the function
 
 
-    this.classList.toggle('select'); //  this keyword relates to '.card' class, if the '.select' class is there remove it, if not add it 
+    this.classList.add('select'); //  this keyword relates to '.card' class, if the '.select' class is there remove it, if not add it 
 
     if (!selectedCard) { // if selectedcard equals false then the player has selected the first card
         selectedCard = true;
@@ -46,8 +47,15 @@ function selectCard() {
     }
 }
 
+/*
+const elements=document.getElementsByClassName('select');
+function removeselectcard(){
 
-
+    elements.forEach(elements => {
+        elements.remove('select')
+})
+}
+*/
 
 function match() {
     if (firstClick.dataset.cardtype === secondClick.dataset.cardtype) { // if first card equals second card then its a match
@@ -55,12 +63,10 @@ function match() {
         secondClick.removeEventListener('click', selectCard);
         matchPairsCounter();
         resetBoard();
-        console.log("match");
+        //  console.log(cards);
+
         if (matchedpairs == 2) {
-            console.log("happy");
-
             finishGame();
-
         }
     } else { //Not a match,  set a delay 1000milseconds so we can see the 2nd clicked card, turn back over the cards(rotate by 180oc remove the classes '.select')
         disabledBoard = true; //unlock the board and wait until they have turned back over
@@ -68,10 +74,7 @@ function match() {
             firstClick.classList.remove('select');
             secondClick.classList.remove('select');
             resetBoard();
-
-            //  disabledBoard = true;
         }, 1000);
-        console.log("matc111h");
     }
 }
 
@@ -105,9 +108,33 @@ function playNewGame() {
     //reset game
     // When the user clicks on the button, close the modal and start game
     newGameModal.style.display = "none";
-    shuffleCards();
+
+    resetGame();
     cards.forEach(card => card.addEventListener('click', selectCard)); // loop for each card click invoke the select card function
 }
+
+function resetGame() {
+    moves = 0;
+    matchedpairs = 0;
+    score = 0;
+    countermatchedpairs.innerHTML = `Matched Pairs: ${matchedpairs} `;
+    countermoves.innerHTML = `Moves: ${moves}   `;
+       removeSelect();
+    shuffleCards();
+}
+/**
+ * Function - Removes '.select' from all cards, so they show the back card
+ */
+
+function removeSelect() {
+    let selectCards = Array.from(document.querySelectorAll('.select'));
+  
+    selectCards.forEach(function (selectCard) {
+        selectCard.classList.remove('select');
+    })
+};
+
+
 
 function rules() {
     newGameModal.style.display = "none";
@@ -117,6 +144,7 @@ function rules() {
 function displayNewGameModal() {
     finishgamemodal.style.display = "none";
     newGameModal.style.display = "block";
+
 }
 /**
  * This Function calcualtes the final score and puts the values in the finish game modal

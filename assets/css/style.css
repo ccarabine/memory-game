@@ -60,7 +60,7 @@ header {
 
 .card.select {
   transform: rotateY(180deg);
-  /* when flip class is present rotate 180oc)*/
+  /* when select class is present rotate 180oc)*/
 }
 
 .front-card {
