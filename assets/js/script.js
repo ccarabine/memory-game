@@ -60,10 +60,12 @@ function match() {
 }
 
 function shuffleCards() {
-    cards.forEach(card => {
-        let position = Math.floor(Math.random() * 12);
-        card.style.order = position;
-    })
+   
+    //cards.forEach(card => {
+        for (let i = 0; i < cards.length; i++) {  
+    let position = Math.floor(Math.random() * 12);
+        cards[i].style.order = position;
+    }
 }
 
 function resetBoard() {
@@ -78,6 +80,7 @@ function playNewGame() {
     //reset game
     // When the user clicks on the button, close the modal and start game
     newGameModal.style.display = "none";
+   shuffleCards();
     cards.forEach(card => card.addEventListener('click', selectCard)); // loop for each card click invoke the select card function
    }
 
