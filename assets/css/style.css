@@ -41,7 +41,12 @@ header {
   margin: 3px;
   position: relative;
   transform-style: preserve-3d;
+  transform:scale(1);
   /*insert card element into 3d space*/
+}
+.card:active{
+  transform:scale(.95);
+  transition:transform .3s;
 }
 
 .front-card,
