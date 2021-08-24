@@ -3,6 +3,7 @@ const cards = document.querySelectorAll('.card');
 var newGameModal = document.getElementById("newGameModal");
 
 var rulesModal = document.getElementById("rulesModal");
+var confirmModal = document.getElementById("confirmModal");
 // newGamebutton 
 var newGameBtn = document.getElementById("newGameBtn");
 var rulesBtn = document.getElementById("rulesBtn");
@@ -117,10 +118,10 @@ function displayNewGameModal() {
     finishgamemodal.style.display = "none";
     newGameModal.style.display = "block";
 }
-
+/**
+ * This Function calcualtes the final score and puts the values in the finish game modal
+ */
 function finishGame() {
-    
-  
     if (moves <= 7) {
         score = 50
     } else if (moves <= 10) {
@@ -134,18 +135,37 @@ function finishGame() {
     } else if (moves >= 20) {
         score = 0
     }
-   resultmoves.innerHTML = `You have made ${moves} moves`;
-   resultscore.innerHTML = `Your score is ${score} moves`;
+    resultmoves.innerHTML = `You have made ${moves} moves`;
+    resultscore.innerHTML = `Your score is ${score} moves`;
     finishgamemodal.style.display = "block";
 
 }
+/**
+ *  This function allows the user clicks on restart Game, the confirmation opens modal 
+ */
 
+function confirmDecision() {
+    confirmmodal.style.display = "block";
+}
+/**
+ * This function calls the new game function and closes the confirm modal  
+ */
+
+function restartGame() {
+    displayNewGameModal()
+    confirmmodal.style.display = "none";
+}
+// Confirmation modal - click no and it closes the confirm modal and continues game
+function continueGame() {
+    confirmmodal.style.display = "none";
+}
 // When the user clicks on (x), close the modal and open the newGame Modal
 closerules.onclick = function () {
     rulesModal.style.display = "none";
     newGameModal.style.display = "block";
 
 }
+
 // When the user clicks anywhere outside of the rulesModal, close it
 window.onclick = function (event) {
     if (event.target == rulesModal) {

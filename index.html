@@ -14,7 +14,7 @@
     <div class="container">
         <header>
             <h1>Paw Patrol Memory Game</h1>
-
+            <button onclick="confirmDecision()" id="btn" class="btn-hover">Re-Start Game</button>
             <span id="moves"></span>
             <span id="matchedpairs"></span>
         </header>
@@ -83,6 +83,15 @@
         </div>
     </div>
 
+    <!-- Confirm decision Modal -->
+    <div id="confirmmodal" class="modal modal-game">
+        <div class="modal-content modal-contentgame ">
+            <img class="pawpatrollogo" src="../assets/images/pawpatrollogo.png" alt="paw patrol logo" />
+            <h1>Are you sure you want start the game again?</h1> </br>
+            <button onclick="restartGame()" id="btn" class="btn-hover">Yes</button>
+            <button onclick="continueGame()" id="btn" class="btn-hover">No</button>
+        </div>
+    </div>
     <!-- Rules Modal -->
     <div id="rulesModal" class="modal modal-rules">
         <div class="modal-content modal-contentrules ">
