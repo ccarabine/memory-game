@@ -27,7 +27,10 @@ let secondClick;
 
 function selectCard() {
     if (boardDisabled) return; // if boardDisabled =true return so the rest doesnt get executed else disable board and enable it (in the match function) after the cards have been selected
-    if (this === firstClick) return;
+    if (this === firstClick) {
+        this.classList.remove('select');  // if the first click equals second on the same card, remove the select class so it turns back over
+        return;
+    }
     // if we click twice on a the same card, match will equal to true and it will remove the event listener so have incorporated this line of code
     //if its the first click then the (this) varaible holds the first card but the first card varaible is still unset so the condition is  going to evaluate to false and the function wil be executed normally.
     //if its is the second car clicked then the (this) varaible holds the second card, if this equal first card then it will return from the function
@@ -47,15 +50,6 @@ function selectCard() {
     }
 }
 
-/*
-const elements=document.getElementsByClassName('select');
-function removeselectcard(){
-
-    elements.forEach(elements => {
-        elements.remove('select')
-})
-}
-*/
 
 function match() {
     if (firstClick.dataset.cardtype === secondClick.dataset.cardtype) { // if first card equals second card then its a match
@@ -119,7 +113,7 @@ function resetGame() {
     score = 0;
     countermatchedpairs.innerHTML = `Matched Pairs: ${matchedpairs} `;
     countermoves.innerHTML = `Moves: ${moves}   `;
-       removeSelect();
+    removeSelect();
     shuffleCards();
 }
 /**
@@ -128,7 +122,7 @@ function resetGame() {
 
 function removeSelect() {
     let selectCards = Array.from(document.querySelectorAll('.select'));
-  
+
     selectCards.forEach(function (selectCard) {
         selectCard.classList.remove('select');
     })
