@@ -15,6 +15,9 @@ let countermatchedpairs = document.getElementById("matchedpairs");
 let moves = 0;
 let matchedpairs = 0;
 
+let resultmoves = document.getElementById("resultmoves");
+let resultscore = document.getElementById("resultscore");
+let score = 0;
 let selectedCard = false;
 let boardDisabled = false;
 let firstClick;
@@ -52,6 +55,12 @@ function match() {
         matchPairsCounter();
         resetBoard();
         console.log("match");
+        if (matchedpairs == 2) {
+            console.log("happy");
+
+            finishGame();
+
+        }
     } else { //Not a match,  set a delay 1000milseconds so we can see the 2nd clicked card, turn back over the cards(rotate by 180oc remove the classes '.select')
         disabledBoard = true; //unlock the board and wait until they have turned back over
         setTimeout(() => {
@@ -83,14 +92,12 @@ function resetBoard() {
 
 function moveCounter() {
     moves++
-    countermoves.innerHTML = `Moves: ${moves} `;
-    console.log(moves);
+    countermoves.innerHTML = `Moves: ${moves}   `;
 }
 
 function matchPairsCounter() {
     matchedpairs++
     countermatchedpairs.innerHTML = `Matched Pairs: ${matchedpairs} `;
-    console.log(moves);
 }
 
 function playNewGame() {
@@ -106,6 +113,32 @@ function rules() {
     rulesModal.style.display = "block";
 }
 
+function displayNewGameModal() {
+    finishgamemodal.style.display = "none";
+    newGameModal.style.display = "block";
+}
+
+function finishGame() {
+    
+  
+    if (moves <= 7) {
+        score = 50
+    } else if (moves <= 10) {
+        score = 40
+    } else if (moves <= 13) {
+        score = 30
+    } else if (moves <= 16) {
+        score = 20
+    } else if (moves <= 19) {
+        score = 10
+    } else if (moves >= 20) {
+        score = 0
+    }
+   resultmoves.innerHTML = `You have made ${moves} moves`;
+   resultscore.innerHTML = `Your score is ${score} moves`;
+    finishgamemodal.style.display = "block";
+
+}
 
 // When the user clicks on (x), close the modal and open the newGame Modal
 closerules.onclick = function () {

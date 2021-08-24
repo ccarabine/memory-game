@@ -111,7 +111,7 @@
                 <li> Less than 13 moves, the player receives 30 points</li>
                 <li> Less than 16 moves, the player receives 20 points</li>
                 <li> Less than 19 moves, the player receives 10 points</li>
-                <li> More then 25 moves, the player receives zero points</li>
+                <li> More then 20 moves, the player receives zero points</li>
                 <li> Bonus question answered correctly, the player receives 15 points</li>
             </ul> </br>
 
@@ -122,6 +122,20 @@
 
         </div>
 
+    </div>
+    <!-- Finish Game Modal -->
+    <div id="finishgamemodal" class="modal modal-game">
+        <div class="modal-content modal-contentgame ">
+            <img class="pawpatrollogo" src="../assets/images/pawpatrollogo.png" alt="paw patrol logo" />
+            <h1>Congratulations </h1> </br>
+            <h1>You are a winner</h1> </br>
+            <h3 id="resultmoves">You made xx moves</h3> </br>
+            <h3>You answered correctly xx bonus questions</h3> </br>
+            <h3 id="resultscore">You score is</h3> </br>
+
+            <button onclick="displayNewGameModal()" id="btn" class="btn-hover">Play again?</button>
+
+        </div>
     </div>
 
     <script src="../assets/js/script.js"></script>
