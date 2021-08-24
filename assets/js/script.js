@@ -2,7 +2,6 @@ const cards = document.querySelectorAll('.card');
 // Get the modal
 var newGameModal = document.getElementById("newGameModal");
 
-
 var rulesModal = document.getElementById("rulesModal");
 // newGamebutton 
 var newGameBtn = document.getElementById("newGameBtn");
@@ -10,6 +9,11 @@ var rulesBtn = document.getElementById("rulesBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 var closerules = document.getElementsByClassName("closerules")[0];
+//declare move varaible
+let countermoves = document.getElementById("moves");
+let countermatchedpairs = document.getElementById("matchedpairs");
+let moves = 0;
+let matchedpairs = 0;
 
 let selectedCard = false;
 let boardDisabled = false;
@@ -33,6 +37,7 @@ function selectCard() {
     } else { // if selectedcard equals true then the player has selected the second card
         selectedCard = false;
         secondClick = this;
+        moveCounter();
         match();
     }
 }
@@ -44,6 +49,7 @@ function match() {
     if (firstClick.dataset.cardtype === secondClick.dataset.cardtype) { // if first card equals second card then its a match
         firstClick.removeEventListener('click', selectCard); // disabled the user from clickiing the matched pair of cars
         secondClick.removeEventListener('click', selectCard);
+        matchPairsCounter();
         resetBoard();
         console.log("match");
     } else { //Not a match,  set a delay 1000milseconds so we can see the 2nd clicked card, turn back over the cards(rotate by 180oc remove the classes '.select')
@@ -60,10 +66,9 @@ function match() {
 }
 
 function shuffleCards() {
-   
-    //cards.forEach(card => {
-        for (let i = 0; i < cards.length; i++) {  
-    let position = Math.floor(Math.random() * 12);
+
+    for (let i = 0; i < cards.length; i++) {
+        let position = Math.floor(Math.random() * 12);
         cards[i].style.order = position;
     }
 }
@@ -76,13 +81,25 @@ function resetBoard() {
     secondClick = null;
 }
 
+function moveCounter() {
+    moves++
+    countermoves.innerHTML = `Moves: ${moves} `;
+    console.log(moves);
+}
+
+function matchPairsCounter() {
+    matchedpairs++
+    countermatchedpairs.innerHTML = `Matched Pairs: ${matchedpairs} `;
+    console.log(moves);
+}
+
 function playNewGame() {
     //reset game
     // When the user clicks on the button, close the modal and start game
     newGameModal.style.display = "none";
-   shuffleCards();
+    shuffleCards();
     cards.forEach(card => card.addEventListener('click', selectCard)); // loop for each card click invoke the select card function
-   }
+}
 
 function rules() {
     newGameModal.style.display = "none";
