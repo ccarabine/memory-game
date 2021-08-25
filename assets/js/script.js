@@ -26,6 +26,13 @@ let boardDisabled = false;
 let firstClick;
 let secondClick;
 
+//high scores
+/*const score = {
+    name: username.values,
+    score: score.innerText    
+};*/
+
+
 /**
  * Function SelectCard 
  * 1.  boardDisabled: // if boardDisabled =true return so the rest doesnt get executed else disable board and enable it (in the match function) after the cards have been selected

@@ -215,18 +215,18 @@ button {
       height: calc(33.333% - 2px);
       margin: 1px;
     }
+  
   }
 @media (max-width:500px) {
   .modal-contentgame {
     width: 90%;
   }
-  .main-area {
-    width: 400px;
-    height: 400px;
-  }
- 
-}
-  @media (max-width:400px) {
+  .container{
+    margin:0;
+  }}
+
+
+  @media (max-width:300px) {
     .modal-contentgame {
       width: 80%;
     }
