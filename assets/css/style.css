@@ -41,12 +41,13 @@ header {
   margin: 3px;
   position: relative;
   transform-style: preserve-3d;
-  transform:scale(1);
+  transform: scale(1);
   /*insert card element into 3d space*/
 }
-.card:active{
-  transform:scale(.95);
-  transition:transform .3s;
+
+.card:active {
+  transform: scale(.95);
+  transition: transform .3s;
 }
 
 .front-card,
@@ -113,13 +114,6 @@ header {
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-}
-
-.modal-contentgame {
-  width: 30%;
-}
-
-.modal-contentrules {
   width: 80%;
 }
 
@@ -180,22 +174,67 @@ button {
   border: 2px solid black;
 }
 
-@media (max-width:1300px) {
+
+@media (max-width:3500px) {
+  .modal-contentgame {
+    width: 25%;
+  }
+}
+
+@media (max-width:2500px) {
+  .modal-contentgame {
+    width: 30%;
+  }
+}
+
+@media (max-width:2000px) {
   .modal-contentgame {
     width: 40%;
   }
 }
 
-@media (max-width:1000px) {
+@media (max-width:1500px) {
   .modal-contentgame {
-    width: 60%;
+    width: 50%;
   }
 }
 
-@media (max-width:400px) {
-  .card {
-    width: calc(33.333% - 2px);
-    height: calc(20% - 2px);
-    margin: 1px;
+@media (max-width:1000px) {
+  .modal-contentgame {
+    width: 80%;
   }
 }
+ @media (max-width:800px) {
+    .main-area {
+      width: 480px;
+      height: 480px;
+    }
+
+    .card {
+      width: calc(25% - 2px);
+      height: calc(33.333% - 2px);
+      margin: 1px;
+    }
+  }
+@media (max-width:500px) {
+  .modal-contentgame {
+    width: 90%;
+  }
+  .main-area {
+    width: 400px;
+    height: 400px;
+  }
+ 
+}
+  @media (max-width:400px) {
+    .modal-contentgame {
+      width: 80%;
+    }
+   
+    .main-area {
+      width: 300px;
+      height: 300px;
+    }
+    
+  }
+
