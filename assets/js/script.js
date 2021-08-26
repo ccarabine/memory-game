@@ -1,51 +1,44 @@
 //Modals
-var newGameModal = document.getElementById("newGameModal");
-var rulesModal = document.getElementById("rulesModal");
-var confirmModal = document.getElementById("confirmModal");
-var newGameBtn = document.getElementById("newGameBtn");
-var rulesBtn = document.getElementById("rulesBtn");
-var scoreboardmodal = document.getElementById("scoreboardmodal");
-var span = document.getElementsByClassName("close")[0];
-var closerules = document.getElementsByClassName("closerules")[0];
-var closeScoreBoard = document.getElementsByClassName("closeScoreBoard")[0];
-var con = "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr> ";
+const newGameModal = document.getElementById("newgamemodal");
+const rulesModal = document.getElementById("rulesmodal");
+const confirmModal = document.getElementById("confirmmodal");
+const scoreBoardModal = document.getElementById("scoreboardmodal");
+const span = document.getElementsByClassName("close")[0];
+const closeRules = document.getElementsByClassName("closerules")[0];
+const closeScoreBoard = document.getElementsByClassName("closescoreboard")[0];
+const newGameBtn = document.getElementById("newgamebtn");
+const rulesBtn = document.getElementById("rulesbtn");
+let con = "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr> ";
 
 //Get Elements
 const cards = document.querySelectorAll('.card');
-let countermoves = document.getElementById("moves");
-let countermatchedpairs = document.getElementById("matchedpairs");
-let resultmoves = document.getElementById("resultmoves");
-let resultscore = document.getElementById("resultscore");
+const counterMoves = document.getElementById("moves");
+const counterMatchedPairs = document.getElementById("matchedpairs");
+const resultMoves = document.getElementById("resultmoves");
+const resultScore = document.getElementById("resultscore");
+const names = document.getElementById('name');
+const highScore = [{
+    knames: "chris",
+    kscores: 15
+}, {
+    knames: "chris",
+    kscores: 15
+}, {
+    knames: "chris",
+    kscores: 15
+}, {
+    knames: "chris",
+    kscores: 15
+}]
 
 //declare Variables
 let moves = 0;
-let matchedpairs = 0;
+let matchedPairs = 0;
 let score = 0;
 let selectedCard = false;
 let boardDisabled = false;
 let firstClick;
 let secondClick;
-const names = document.getElementById('name');
-//const scores =document.getElementById('score');
-
-const highScore = [{
-    knames: "chris",
-    kscores: 15
-},{
-    knames: "chris",
-    kscores: 15
-},{
-    knames: "chris",
-    kscores: 15
-},{
-    knames: "chris",
-    kscores: 15
-}
-
-]
-
-
-
 
 /**
  * Function SelectCard 
@@ -92,7 +85,7 @@ function match() {
         secondClick.removeEventListener('click', selectCard);
         matchPairsCounter(); //2.
         resetBoard();
-        if (matchedpairs == 6) { //3.
+        if (matchedPairs == 6) { //3.
             finishGame();
         }
     } else { //4.
@@ -128,36 +121,31 @@ function resetBoard() {
  */
 function moveCounter() {
     moves++
-    countermoves.innerHTML = `Moves: ${moves}   `;
+    counterMoves.innerHTML = `Moves: ${moves}   `;
 }
 /**
  * Function - increments matchpairs variable by 1 and displays the result in the main window
  */
 function matchPairsCounter() {
     matchedpairs++
-    countermatchedpairs.innerHTML = `Matched Pairs: ${matchedpairs} `;
+    counterMatchedPairs.innerHTML = `Matched Pairs: ${matchedPairs} `;
 }
 
-
 function addToArray() {
-
     const addScore = {
         knames: names.value,
         kscores: parseInt((score), 10)
     }
     highScore.push(addScore);
-
 }
 
 function displayScores() {
     highScore.sort((a, b) => (b.kscores > a.kscores) ? 1 : -1);
- 
-        for (i = 0; i < highScore.length; i++)  
-        {
-            con = con + "<tr><td>" + highScore[i].knames + "</td><td>" + highScore[i].kscores + "</td></tr>"
-        }
-   return con;
-   
+
+    for (i = 0; i < highScore.length; i++) {
+        con = con + "<tr><td>" + highScore[i].knames + "</td><td>" + highScore[i].kscores + "</td></tr>"
+    }
+    return con;
 }
 
 /**
@@ -176,8 +164,8 @@ function resetGame() {
     moves = 0;
     matchedpairs = 0;
     score = 0;
-    countermatchedpairs.innerHTML = `Matched Pairs: ${matchedpairs} `;
-    countermoves.innerHTML = `Moves: ${moves}   `;
+    counterMatchedPairs.innerHTML = `Matched Pairs: ${matchedPairs} `;
+    counterMoves.innerHTML = `Moves: ${moves}   `;
     removeSelect();
     shuffleCards();
 }
@@ -207,15 +195,14 @@ function rules() {
 function displayNewGameModal() {
     finishgamemodal.style.display = "none";
     newGameModal.style.display = "block";
-
 }
+
 function displayScoreBoardModal() {
     finishgamemodal.style.display = "none";
     addToArray();
     displayScores(con);
     document.getElementById('scoretable').innerHTML = con;
-    scoreboardmodal.style.display = "block";
-
+    scoreBoardModal.style.display = "block";
 }
 
 /**
@@ -235,9 +222,9 @@ function finishGame() {
     } else if (moves >= 20) {
         score = 0
     }
-    resultmoves.innerHTML = `You have made ${moves} moves`;
-    resultscore.innerHTML = `Your score is ${score} moves`;
-  
+    resultMoves.innerHTML = `You have made ${moves} moves`;
+    resultScore.innerHTML = `Your score is ${score} moves`;
+
     finishgamemodal.style.display = "block";
 }
 
@@ -245,7 +232,7 @@ function finishGame() {
  *  This function allows the user clicks on restart Game, the confirmation opens modal 
  */
 function confirmDecision() {
-    confirmmodal.style.display = "block";
+    confirmModal.style.display = "block";
 }
 
 /**
@@ -253,25 +240,23 @@ function confirmDecision() {
  */
 function restartGame() {
     displayNewGameModal()
-    confirmmodal.style.display = "none";
+    confirmModal.style.display = "none";
 }
 /**
  * Function Click no on the Confirmation modal and it closes the confirmation modal and continues game
  */
 function continueGame() {
-    confirmmodal.style.display = "none";
+    confirmModal.style.display = "none";
 }
 // When the user clicks on (x), close the modal and open the newGame Modal
-closerules.onclick = function () {
+closeRules.onclick = function () {
     rulesModal.style.display = "none";
     newGameModal.style.display = "block";
 
 }
 // When the user clicks on (x), close the modal 
 closeScoreBoard.onclick = function () {
-    scoreboardmodal.style.display = "none";
-    
-
+    scoreBoardModal.style.display = "none";
 }
 
 
@@ -283,6 +268,6 @@ window.onclick = function (event) {
 }
 
 //OPENS new Game Modal at the begining
-//newGameModal.style.display = "block";
+newGameModal.style.display = "block";
 /*finishgamemodal.style.display = "block";*/
-displayScoreBoardModal();
+//displayScoreBoardModal();
