@@ -1,14 +1,14 @@
-
-
 //Modals
 var newGameModal = document.getElementById("newGameModal");
 var rulesModal = document.getElementById("rulesModal");
 var confirmModal = document.getElementById("confirmModal");
 var newGameBtn = document.getElementById("newGameBtn");
 var rulesBtn = document.getElementById("rulesBtn");
+var scoreboardmodal = document.getElementById("scoreboardmodal");
 var span = document.getElementsByClassName("close")[0];
 var closerules = document.getElementsByClassName("closerules")[0];
-
+var closeScoreBoard = document.getElementsByClassName("closeScoreBoard")[0];
+var con = "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr> ";
 
 //Get Elements
 const cards = document.querySelectorAll('.card');
@@ -25,12 +25,26 @@ let selectedCard = false;
 let boardDisabled = false;
 let firstClick;
 let secondClick;
+const names = document.getElementById('name');
+//const scores =document.getElementById('score');
 
-//high scores
-/*const score = {
-    name: username.values,
-    score: score.innerText    
-};*/
+const highScore = [{
+    knames: "chris",
+    kscores: 15
+},{
+    knames: "chris",
+    kscores: 15
+},{
+    knames: "chris",
+    kscores: 15
+},{
+    knames: "chris",
+    kscores: 15
+}
+
+]
+
+
 
 
 /**
@@ -74,16 +88,16 @@ function selectCard() {
  */
 function match() {
     if (firstClick.dataset.cardtype === secondClick.dataset.cardtype) { // 1. 
-        firstClick.removeEventListener('click', selectCard);  
-        secondClick.removeEventListener('click', selectCard); 
+        firstClick.removeEventListener('click', selectCard);
+        secondClick.removeEventListener('click', selectCard);
         matchPairsCounter(); //2.
         resetBoard();
         if (matchedpairs == 6) { //3.
             finishGame();
         }
     } else { //4.
-        disabledBoard = true; 
-        setTimeout(() => {//5. 
+        disabledBoard = true;
+        setTimeout(() => { //5. 
             firstClick.classList.remove('select');
             secondClick.classList.remove('select');
             resetBoard();
@@ -124,6 +138,28 @@ function matchPairsCounter() {
     countermatchedpairs.innerHTML = `Matched Pairs: ${matchedpairs} `;
 }
 
+
+function addToArray() {
+
+    const addScore = {
+        knames: names.value,
+        kscores: parseInt((score), 10)
+    }
+    highScore.push(addScore);
+
+}
+
+function displayScores() {
+    highScore.sort((a, b) => (b.kscores > a.kscores) ? 1 : -1);
+ 
+        for (i = 0; i < highScore.length; i++)  
+        {
+            con = con + "<tr><td>" + highScore[i].knames + "</td><td>" + highScore[i].kscores + "</td></tr>"
+        }
+   return con;
+   
+}
+
 /**
  * Function - closes new game modal, calls reset game function and listens out for click on card, then calls select card function
  */
@@ -158,7 +194,7 @@ function removeSelect() {
 };
 
 /**
- * This Function closes the finishgamemodal and displays the new game modal
+ * This Function closes the new game modal and displays the new rule modal
  */
 function rules() {
     newGameModal.style.display = "none";
@@ -173,6 +209,15 @@ function displayNewGameModal() {
     newGameModal.style.display = "block";
 
 }
+function displayScoreBoardModal() {
+    finishgamemodal.style.display = "none";
+    addToArray();
+    displayScores(con);
+    document.getElementById('scoretable').innerHTML = con;
+    scoreboardmodal.style.display = "block";
+
+}
+
 /**
  * This Function calcualtes the final score and puts the values in the finish game modal
  */
@@ -192,6 +237,7 @@ function finishGame() {
     }
     resultmoves.innerHTML = `You have made ${moves} moves`;
     resultscore.innerHTML = `Your score is ${score} moves`;
+  
     finishgamemodal.style.display = "block";
 }
 
@@ -221,6 +267,13 @@ closerules.onclick = function () {
     newGameModal.style.display = "block";
 
 }
+// When the user clicks on (x), close the modal 
+closeScoreBoard.onclick = function () {
+    scoreboardmodal.style.display = "none";
+    
+
+}
+
 
 // When the user clicks anywhere outside of the rulesModal, close it
 window.onclick = function (event) {
@@ -230,4 +283,6 @@ window.onclick = function (event) {
 }
 
 //OPENS new Game Modal at the begining
-newGameModal.style.display = "block";
+//newGameModal.style.display = "block";
+/*finishgamemodal.style.display = "block";*/
+displayScoreBoardModal();

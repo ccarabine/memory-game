@@ -16,7 +16,7 @@
             <h1>Paw Patrol Memory Game</h1>
             <button onclick="confirmDecision()" id="btn" class="btn-hover">Re-Start Game</button>
             <span id="moves"></span>
-            <span id="matchedpairs"></span>
+            <span id="matchedPairs"></span>
         </header>
 
         <main class="main-area">
@@ -78,8 +78,7 @@
     <div id="newGameModal" class="modal modal-game">
         <div class="modal-content modal-contentgame ">
             <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" alt="paw patrol logo" />
-         <!--  <label for="username"><b>Name</b></label>
-            <input id="uname" type="text" placeholder="Enter your name" name="username" required> </br>-->
+
             <button onclick="playNewGame()" id="btn" class="btn-hover">Start New Game</button>
             <button onclick="rules()" id="btn" class="btn-hover">Rules</button>
         </div>
@@ -137,17 +136,33 @@
     <!-- Finish Game Modal -->
     <div id="finishgamemodal" class="modal modal-game">
         <div class="modal-content modal-contentgame ">
+          
             <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" alt="paw patrol logo" />
             <h1>Congratulations </h1> </br>
             <h1>You are a winner</h1> </br>
             <h3 id="resultmoves">You made xx moves</h3> </br>
             <h3>You answered correctly xx bonus questions</h3> </br>
             <h3 id="resultscore">You score is</h3> </br>
+            <h3>Enter your name for the score board below</h3> </br>
+            <input type="text" id="name"><br>
 
             <button onclick="displayNewGameModal()" id="btn" class="btn-hover">Play again?</button>
+            <button onclick="displayScoreBoardModal()" id="btn" class="btn-hover">View Score board</button>
+        </div>
+    </div>
+    <!-- Scoreboard Modal -->
+    <div id="scoreboardmodal" class="modal modal-game">
+        <div class="modal-content modal-contentgame ">
+            <span class="close closeScoreBoard">&times;</span>
+            <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" alt="paw patrol logo" />
+            <h1>Score Board </h1> </br>
+
+            <table id="scoretable"></table>
+            <!--   <button onclick="displayNewGameModal()" id="btn" class="btn-hover">Play again?</button>-->
 
         </div>
     </div>
+
 
     <script src="assets/js/script.js"></script>
 </body>
