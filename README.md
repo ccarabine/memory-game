@@ -71,9 +71,9 @@ Image from  <a href="http://ami.responsivedesign.is/">Am I Responsive</a>, to di
 
 ## Strategy Tradeoffs <a name="tradeoffs"></a>
 The purpose of this memory game is for users of all ages to have fun playing the game
-</br>
+<br>
 to update
-</br>
+<br>
 
 to update -I have rated the features on a scale of 1 to 5 in terms of importance (how important is it for the project now) and feasibility (how realistic is that we can implement a solution)
 
