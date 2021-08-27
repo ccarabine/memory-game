@@ -141,9 +141,9 @@ function addToArray() {
 function displayScores() {
     highScore.sort((a, b) => (b.kscores > a.kscores) ? 1 : -1);
 
-    for (i = 0; i < highScore.length; i++) {
-        con = con + "<tr><td>" + highScore[i].knames + "</td><td>" + highScore[i].kscores + "</td></tr>"
-    };
+    for (let i = 0; i < highScore.length; i++) {
+        con = con + "<tr><td>" + highScore[i].knames + "</td><td>" + highScore[i].kscores + "</td></tr>";
+    }
     return con;
 }
 
@@ -161,7 +161,7 @@ function playNewGame() {
  */
 function resetGame() {
     moves = 0;
-    matchedpairs = 0;
+    matchedPairs = 0;
     score = 0;
     counterMatchedPairs.innerHTML = `Matched Pairs: ${matchedPairs} `;
     counterMoves.innerHTML = `Moves: ${moves}   `;
@@ -192,12 +192,12 @@ function rules() {
  * This Function closes the finishgamemodal and displays the new game modal
  */
 function displayNewGameModal() {
-    finishgamemodal.style.display = "none";
+    finishGameModal.style.display = "none";
     newGameModal.style.display = "block";
 }
 
 function displayScoreBoardModal() {
-    finishgamemodal.style.display = "none";
+    finishGameModal.style.display = "none";
     addToArray();
     displayScores(con);
     document.getElementById('scoretable').innerHTML = con;
@@ -224,7 +224,7 @@ function finishGame() {
     resultMoves.innerHTML = `You have made ${moves} moves`;
     resultScore.innerHTML = `Your score is ${score} moves`;
 
-    finishgamemodal.style.display = "block";
+    finishGameModal.style.display = "block";
 }
 
 /**
@@ -252,11 +252,11 @@ closeRules.onclick = function () {
     rulesModal.style.display = "none";
     newGameModal.style.display = "block";
 
-}
+};
 // When the user clicks on (x), close the modal 
 closeScoreBoard.onclick = function () {
     scoreBoardModal.style.display = "none";
-}
+};
 
 
 // When the user clicks anywhere outside of the rulesModal, close it
@@ -264,9 +264,9 @@ window.onclick = function (event) {
     if (event.target == rulesModal) {
         rulesModal.style.display = "none";
     }
-}
+};
 
 //OPENS new Game Modal at the begining
 newGameModal.style.display = "block";
-/*finishgamemodal.style.display = "block";*/
+/*finishgameModal.style.display = "block";*/
 //displayScoreBoardModal();
