@@ -28,7 +28,7 @@ const highScore = [{
 }, {
     knames: "chris",
     kscores: 15
-}]
+}];
 
 //declare Variables
 let moves = 0;
@@ -119,14 +119,14 @@ function resetBoard() {
  * Function - increments moves variable by 1 and displays the result in the main window
  */
 function moveCounter() {
-    moves++
+    moves++;
     counterMoves.innerHTML = `Moves: ${moves}   `;
 }
 /**
  * Function - increments matchpairs variable by 1 and displays the result in the main window
  */
 function matchPairsCounter() {
-    matchedPairs++
+    matchedPairs++;
     counterMatchedPairs.innerHTML = `Matched Pairs: ${matchedPairs} `;
 }
 
@@ -134,7 +134,7 @@ function addToArray() {
     const addScore = {
         knames: names.value,
         kscores: parseInt((score), 10)
-    }
+    };
     highScore.push(addScore);
 }
 
@@ -143,7 +143,7 @@ function displayScores() {
 
     for (i = 0; i < highScore.length; i++) {
         con = con + "<tr><td>" + highScore[i].knames + "</td><td>" + highScore[i].kscores + "</td></tr>"
-    }
+    };
     return con;
 }
 
@@ -177,8 +177,8 @@ function removeSelect() {
 
     selectCards.forEach(function (selectCard) {
         selectCard.classList.remove('select');
-    })
-};
+    });
+}
 
 /**
  * This Function closes the new game modal and displays the new rule modal
@@ -209,17 +209,17 @@ function displayScoreBoardModal() {
  */
 function finishGame() {
     if (moves <= 7) {
-        score = 50
+        score = 50;
     } else if (moves <= 10) {
-        score = 40
+        score = 40;
     } else if (moves <= 13) {
-        score = 30
+        score = 30;
     } else if (moves <= 16) {
-        score = 20
+        score = 20;
     } else if (moves <= 19) {
-        score = 10
+        score = 10;
     } else if (moves >= 20) {
-        score = 0
+        score = 0;
     }
     resultMoves.innerHTML = `You have made ${moves} moves`;
     resultScore.innerHTML = `Your score is ${score} moves`;
@@ -238,7 +238,7 @@ function confirmDecision() {
  * This function calls the new game function and closes the confirm modal  
  */
 function restartGame() {
-    displayNewGameModal()
+    displayNewGameModal();
     confirmModal.style.display = "none";
 }
 /**
