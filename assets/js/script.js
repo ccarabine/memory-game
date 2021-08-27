@@ -6,8 +6,7 @@ const scoreBoardModal = document.getElementById("scoreboardmodal");
 const span = document.getElementsByClassName("close")[0];
 const closeRules = document.getElementsByClassName("closerules")[0];
 const closeScoreBoard = document.getElementsByClassName("closescoreboard")[0];
-const newGameBtn = document.getElementById("newgamebtn");
-const rulesBtn = document.getElementById("rulesbtn");
+
 let con = "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr> ";
 
 //Get Elements
