@@ -127,7 +127,7 @@ function moveCounter() {
  * Function - increments matchpairs variable by 1 and displays the result in the main window
  */
 function matchPairsCounter() {
-    matchedpairs++
+    matchedPairs++
     counterMatchedPairs.innerHTML = `Matched Pairs: ${matchedPairs} `;
 }
 
