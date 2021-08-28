@@ -39,7 +39,7 @@ let selectedCard = false;
 let boardDisabled = false;
 let firstClick;
 let secondClick;
-
+let click=0;
 /**
  * Function SelectCard 
  * 1.  boardDisabled: // if boardDisabled =true return so the rest doesnt get executed else disable board and enable it (in the match function) after the cards have been selected
@@ -51,14 +51,24 @@ let secondClick;
  * 5. if selectedcard equals true then the player has selected the second card
  */
 function selectCard() {
+    
     if (boardDisabled) return; //1.
     if (this === firstClick) { //2.
         this.classList.remove('select');
         return;
     }
     this.classList.add('select'); // 3.
-
-    if (!selectedCard) { // 4.
+    click++;
+    console.log(click);
+ /*  if (click >2) {
+    this.classList.toggle('select'); 
+      
+        //console.log(click);
+        click=0;
+            console.log("here");
+    
+    return;}
+   */ if (!selectedCard) { // 4.
         selectedCard = true;
         firstClick = this;
         return;
@@ -80,15 +90,18 @@ function selectCard() {
  * 5. Not a match,  set a delay 1000milseconds so we can see the 2nd clicked card, turn back over the cards(rotate by 180oc remove the classes '.select')
  */
 function match() {
+    
     if (firstClick.dataset.cardtype === secondClick.dataset.cardtype) { // 1. 
         firstClick.removeEventListener('click', selectCard);
         secondClick.removeEventListener('click', selectCard);
         matchPairsCounter(); //2.
         resetBoard();
+        
         if (matchedPairs == 6) { //3.
             finishGame();
         }
     } else { //4.
+        click=0;
         disabledBoard = true;
         setTimeout(() => { //5. 
             firstClick.classList.remove('select');
