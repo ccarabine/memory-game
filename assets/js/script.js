@@ -1,5 +1,6 @@
 //Modals
 const newGameModal = document.getElementById("newgamemodal");
+const finishGameModal = document.getElementById("finishgamemodal");
 const rulesModal = document.getElementById("rulesmodal");
 const confirmModal = document.getElementById("confirmmodal");
 const scoreBoardModal = document.getElementById("scoreboardmodal");
@@ -238,8 +239,10 @@ function confirmDecision() {
  * This function calls the new game function and closes the confirm modal  
  */
 function restartGame() {
-    displayNewGameModal();
     confirmModal.style.display = "none";
+     
+       playNewGame();
+ 
 }
 /**
  * Function Click no on the Confirmation modal and it closes the confirmation modal and continues game
@@ -268,5 +271,6 @@ window.onclick = function (event) {
 
 //OPENS new Game Modal at the begining
 newGameModal.style.display = "block";
+//displayNewGameModal();
 /*finishgameModal.style.display = "block";*/
 //displayScoreBoardModal();
