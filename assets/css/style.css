@@ -56,11 +56,13 @@ header {
   /* relative to card so they will back card will cover the front card*/
   width: 100%;
   height: 100%;
-  padding: 5px;
+  padding: 1px;
   position: absolute;
   /* postion relative to card*/
   border-radius: 5px;
-  background: lightblue;
+  background: white;
+  border:2px;
+  border-color: lightblue;
 
 }
 
