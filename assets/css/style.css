@@ -157,7 +157,7 @@ h1 {
   cursor: pointer;
 }
 
-button {
+.btn {
   align-items: center;
   justify-content: center;
   background-color: red;
@@ -170,6 +170,16 @@ button {
   border: 1px solid;
 }
 
+.btnonheader {
+
+  margin: 0 auto;
+  margin: 20px;
+
+  width: 20%;
+  height: 4vh;
+  display: inline-block;
+ 
+}
 .back {
   border: 2px solid black;
 }

@@ -197,14 +197,17 @@ function displayNewGameModal() {
     newGameModal.style.display = "block";
 }
 
-function displayScoreBoardModal() {
+function addScoreToScoreBoard() {
     finishGameModal.style.display = "none";
     addToArray();
     displayScores(con);
     document.getElementById('scoretable').innerHTML = con;
-    scoreBoardModal.style.display = "block";
+    displayScoreBoardModal();
 }
 
+function displayScoreBoardModal(){
+    scoreBoardModal.style.display = "block";
+}
 /**
  * This Function calcualtes the final score and puts the values in the finish game modal
  */

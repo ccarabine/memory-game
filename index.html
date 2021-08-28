@@ -14,9 +14,11 @@
     <div class="container">
         <header>
             <h1>Paw Patrol Memory Game</h1>
-            <button onclick="confirmDecision()"  class="btn-hover">Re-Start Game</button>
+            <button onclick="confirmDecision()"  class="btn btnonheader btn-hover">New Game</button>
             <span id="moves"></span>
             <span id="matchedpairs"></span>
+            <button onclick="displayScoreBoardModal()"  class="btn btnonheader btn-hover">Score board</button>
+            
         </header>
 
         <main class="main-area">
@@ -79,8 +81,8 @@
         <div class="modal-content modal-contentgame ">
             <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" alt="paw patrol logo" />
 
-            <button onclick="playNewGame()"  class="btn-hover">Start New Game</button>
-            <button onclick="rules()"  class="btn-hover">Rules</button>
+            <button onclick="playNewGame()"  class="btn btn-hover">Start New Game</button>
+            <button onclick="rules()"  class="btn btn-hover">Rules</button>
         </div>
     </div>
 
@@ -89,8 +91,8 @@
         <div class="modal-content modal-contentgame ">
             <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" alt="paw patrol logo" />
             <h1>Are you sure you want start the game again?</h1> <br>
-            <button onclick="restartGame()"  class="btn-hover">Yes</button>
-            <button onclick="continueGame()"  class="btn-hover">No</button>
+            <button onclick="restartGame()"  class="btn btn-hover">Yes</button>
+            <button onclick="continueGame()"  class="btn btn-hover">No</button>
         </div>
     </div>
     <!-- Rules Modal -->
@@ -146,8 +148,8 @@
             <h3>Enter your name for the score board below</h3> <br>
             <input type="text" id="name"><br>
 
-            <button onclick="displayNewGameModal()"  class="btn-hover">Play again?</button>
-            <button onclick="displayScoreBoardModal()"  class="btn-hover">View Score board</button>
+            <button onclick="displayNewGameModal()"  class="btn btn-hover">Play again?</button>
+            <button onclick="addScoreToScoreBoard()"  class="btn btn-hover">View Score board</button>
         </div>
     </div>
     <!-- Scoreboard Modal -->
@@ -158,7 +160,7 @@
             <h1>Score Board </h1> <br>
 
             <table id="scoretable"></table>
-            <!--   <button onclick="displayNewGameModal()"  class="btn-hover">Play again?</button>-->
+            <!--   <button onclick="displayNewGameModal()"  class="btn btn-hover">Play again?</button>-->
 
         </div>
     </div>
