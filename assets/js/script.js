@@ -8,7 +8,7 @@ const span = document.getElementsByClassName("close")[0];
 const closeRules = document.getElementsByClassName("closerules")[0];
 const closeScoreBoard = document.getElementsByClassName("closescoreboard")[0];
 
-let con = "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr> ";
+//let con = "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr> ";
 
 //Get Elements
 const cards = document.querySelectorAll('.card');
@@ -27,17 +27,9 @@ let selectedCard = false;
 let boardDisabled = false;
 let firstClick;
 let secondClick;
+let con= "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr>";
 const highScore = [{
-    knames: "chris",
-    kscores: 15
-}, {
-    knames: "chris",
-    kscores: 15
-}, {
-    knames: "chris",
-    kscores: 15
-}, {
-    knames: "chris",
+    knames: "Connie",
     kscores: 15
 }];
 /**
@@ -147,13 +139,25 @@ function addToArray() {
  */
 function displayScores() {
     highScore.sort((a, b) => (b.kscores > a.kscores) ? 1 : -1);
-
+//con=null;
     for (let i = 0; i < highScore.length; i++) {
-        con = con + "<tr><td>" + highScore[i].knames + "</td><td>" + highScore[i].kscores + "</td></tr>";
+        con = con+ "<tr><td>" + highScore[i].knames + "</td><td>" + highScore[i].kscores + "</td></tr>";
     }
     return con;
 }
 
+/**
+ * Function Calls add to array function which saves the players name and score to the score board
+ */
+ function saveDetails() {
+    finishGameModal.style.display = "none";
+    addToArray();
+    displayScores();
+    document.getElementById('scoretable').innerHTML = con;
+    displayScoreBoardModal();
+ //   saveBtn.innerHTML = 'Saved'
+  //  saveBtn.classList.remove('btn-hover');
+}
 /**
  * Function - closes new game modal, calls reset game function and listens out for click on card, then calls select card function
  */
@@ -174,6 +178,7 @@ function resetGame() {
     counterMoves.innerHTML = `Moves: ${moves}   `;
     removeSelect();
     shuffleCards();
+    names.innerHTML = '';
 }
 
 /**
@@ -258,16 +263,7 @@ function continueGame() {
     confirmModal.style.display = "none";
 }
 
-/**
- * Function Calls add to array function which saves the players name and score to the score board
- */
-function saveDetails() {
-    addToArray();
-    displayScores(con);
-    document.getElementById('scoretable').innerHTML = con;
-    saveBtn.innerHTML = 'Saved'
-    saveBtn.classList.remove('btn-hover');
-}
+
 
 // When the user clicks on (x), close the modal and open the newGame Modal
 closeRules.onclick = function () {
