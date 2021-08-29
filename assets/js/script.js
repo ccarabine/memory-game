@@ -14,8 +14,7 @@ let con = "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr
 const cards = document.querySelectorAll('.card');
 const counterMoves = document.getElementById("moves");
 const counterMatchedPairs = document.getElementById("matchedpairs");
-const resultMoves = document.getElementById("resultmoves");
-const resultScore = document.getElementById("resultscore");
+const results = document.getElementById("results");
 const names = document.getElementById('name');
 const highScore = [{
     knames: "chris",
@@ -239,8 +238,7 @@ function finishGame() {
     } else if (moves >= 21) {
         score = 5;
     }
-    resultMoves.innerHTML = `You have made ${moves} moves`;
-    resultScore.innerHTML = `Your score is ${score} moves`;
+    results.innerHTML = `You made ${moves} moves. Well done, your score is ${score} points`;
 
     finishGameModal.style.display = "block";
 }
