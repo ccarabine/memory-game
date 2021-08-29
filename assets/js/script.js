@@ -16,6 +16,17 @@ const counterMoves = document.getElementById("moves");
 const counterMatchedPairs = document.getElementById("matchedpairs");
 const results = document.getElementById("results");
 const names = document.getElementById('name');
+const saveBtn = document.getElementById("savebtn");
+
+
+//declare Variables
+let moves = 0;
+let matchedPairs = 0;
+let score = 0;
+let selectedCard = false;
+let boardDisabled = false;
+let firstClick;
+let secondClick;
 const highScore = [{
     knames: "chris",
     kscores: 15
@@ -29,16 +40,6 @@ const highScore = [{
     knames: "chris",
     kscores: 15
 }];
-
-//declare Variables
-let moves = 0;
-let matchedPairs = 0;
-let score = 0;
-let selectedCard = false;
-let boardDisabled = false;
-let firstClick;
-let secondClick;
-
 /**
  * Function SelectCard 
  * 1.  boardDisabled: // if boardDisabled =true return so the rest doesnt get executed else disable board and enable it (in the match function) after the cards have been selected
@@ -202,21 +203,12 @@ function displayNewGameModal() {
     newGameModal.style.display = "block";
 }
 
-/**
- * This Function closes finish game modal, runs function addToArray which adds the name and score to scoreboard, then displays it.
- */
-function addScoreToScoreBoard() {
-    finishGameModal.style.display = "none";
-    addToArray();
-    displayScores(con);
-    document.getElementById('scoretable').innerHTML = con;
-    displayScoreBoardModal();
-}
 
 /**
- * This Function displays the scoreboard Modal
+ * This Function closes finish game modal,displays  scoreboard
  */
 function displayScoreBoardModal() {
+    finishGameModal.style.display = "none";
     scoreBoardModal.style.display = "block";
 }
 /**
@@ -267,10 +259,14 @@ function continueGame() {
 }
 
 /**
- * Function Click no on the Confirmation modal and it closes the confirmation modal and continues game
+ * Function Calls add to array function which saves the players name and score to the score board
  */
- function saveDetails() {
-    confirmModal.style.display = "none";
+function saveDetails() {
+    addToArray();
+    displayScores(con);
+    document.getElementById('scoretable').innerHTML = con;
+    saveBtn.innerHTML = 'Saved'
+    saveBtn.classList.remove('btn-hover');
 }
 
 // When the user clicks on (x), close the modal and open the newGame Modal
@@ -293,4 +289,5 @@ window.onclick = function (event) {
 };
 
 //OPENS new Game Modal at the beginning
-newGameModal.style.display = "block";
+//newGameModal.style.display = "block";
+finishGameModal.style.display = "block";
