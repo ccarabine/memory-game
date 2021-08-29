@@ -51,12 +51,12 @@ let secondClick;
  * 5. if selectedcard equals true then the player has selected the second card
  */
 function selectCard() {
-
     if (boardDisabled) return; //1.
+
     if (this === firstClick) //2.
         return;
     this.classList.add('select'); // 3.
-    
+
     if (!selectedCard) { // 4.
         selectedCard = true;
         firstClick = this;
@@ -79,7 +79,6 @@ function selectCard() {
  * 5. Not a match,  set a delay 1000milseconds so we can see the 2nd clicked card, turn back over the cards(rotate by 180oc remove the classes '.select')
  */
 function match() {
-
     if (firstClick.dataset.cardtype === secondClick.dataset.cardtype) { // 1. 
         firstClick.removeEventListener('click', selectCard);
         secondClick.removeEventListener('click', selectCard);
@@ -90,7 +89,6 @@ function match() {
             finishGame();
         }
     } else { //4.
-       
         boardDisabled = true;
         setTimeout(() => { //5. 
             firstClick.classList.remove('select');
@@ -112,27 +110,30 @@ function shuffleCards() {
  * Function - reset boards and resets the values of selectedCard, boardDisabled, firstClick and secondClick
  */
 function resetBoard() {
-
     selectedCard = false;
     boardDisabled = false;
     firstClick = null;
     secondClick = null;
 }
 /**
- * Function - increments moves variable by 1 and displays the result in the main window
+ * Function - increments number of moves the player has made by 1 and displays the result in the main window
  */
 function moveCounter() {
     moves++;
     counterMoves.innerHTML = `Moves: ${moves}   `;
 }
+
 /**
- * Function - increments matchpairs variable by 1 and displays the result in the main window
+ * Function - increments number of matched pairs the player has completed by 1 and displays the result in the main window
  */
 function matchPairsCounter() {
     matchedPairs++;
     counterMatchedPairs.innerHTML = `Matched Pairs: ${matchedPairs} `;
 }
 
+/**
+ * Function - Adds the players name and score to the addscore array
+ */
 function addToArray() {
     const addScore = {
         knames: names.value,
@@ -141,6 +142,9 @@ function addToArray() {
     highScore.push(addScore);
 }
 
+/**
+ * Function - Sorts highscore Array by score from highest to lowest and displays the scoreboard
+ */
 function displayScores() {
     highScore.sort((a, b) => (b.kscores > a.kscores) ? 1 : -1);
 
@@ -199,6 +203,9 @@ function displayNewGameModal() {
     newGameModal.style.display = "block";
 }
 
+/**
+ * This Function closes finish game modal, runs function addToArray which adds the name and score to scoreboard, then displays it.
+ */
 function addScoreToScoreBoard() {
     finishGameModal.style.display = "none";
     addToArray();
@@ -207,25 +214,30 @@ function addScoreToScoreBoard() {
     displayScoreBoardModal();
 }
 
+/**
+ * This Function displays the scoreboard Modal
+ */
 function displayScoreBoardModal() {
     scoreBoardModal.style.display = "block";
 }
 /**
- * This Function calcualtes the final score and puts the values in the finish game modal
+ * This Function calculates the final score and puts the values in the finish game modal
  */
 function finishGame() {
-    if (moves <= 7) {
-        score = 50;
-    } else if (moves <= 10) {
+    if (moves <= 9) {
+        score = 80;
+    } else if (moves <= 12) {
+        score = 60;
+    } else if (moves <= 14) {
         score = 40;
-    } else if (moves <= 13) {
-        score = 30;
     } else if (moves <= 16) {
+        score = 30;
+    } else if (moves <= 18) {
         score = 20;
-    } else if (moves <= 19) {
+    } else if (moves <= 20) {
         score = 10;
-    } else if (moves >= 20) {
-        score = 0;
+    } else if (moves >= 21) {
+        score = 5;
     }
     resultMoves.innerHTML = `You have made ${moves} moves`;
     resultScore.innerHTML = `Your score is ${score} moves`;
@@ -234,7 +246,7 @@ function finishGame() {
 }
 
 /**
- *  This function allows the user clicks on restart Game, the confirmation opens modal 
+ *  This function brings up the confirm modal which allows the user to either the restart a new Game or continue with the game 
  */
 function confirmDecision() {
     confirmModal.style.display = "block";
@@ -274,8 +286,5 @@ window.onclick = function (event) {
     }
 };
 
-//OPENS new Game Modal at the begining
+//OPENS new Game Modal at the beginning
 newGameModal.style.display = "block";
-//displayNewGameModal();
-/*finishgameModal.style.display = "block";*/
-//displayScoreBoardModal();
