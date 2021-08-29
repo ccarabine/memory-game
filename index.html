@@ -14,10 +14,10 @@
     <div class="container">
         <header>
             <h1>Paw Patrol Memory Game</h1>
-            <button onclick="confirmDecision()" class="btn btnonheader btn-hover">New Game</button>
+            <button onclick="confirmDecision()" class="btn btnsml btn-hover">New Game</button>
             <span id="moves"></span>
             <span id="matchedpairs"></span>
-            <button onclick="displayScoreBoardModal()" class="btn btnonheader btn-hover">Score board</button>
+            <button onclick="displayScoreBoardModal()" class="btn btnsml btn-hover">Score board</button>
 
         </header>
 
@@ -140,11 +140,11 @@
             <h1>Congratulations </h1> <br>
             <h1>You are a winner</h1> <br>
             <h3 id="results"></h3> <br>
-            <h3>Enter your name for the score board below and click on the save button</h3> <br>
+            <h3>Enter your name below for the score board and click on the save button</h3> <br>
             <input type="text" id="name"><br>
-
-            <button onclick="displayNewGameModal()" class="btn btn-hover">Play again?</button>
-            <button onclick="addScoreToScoreBoard()" class="btn btn-hover">View Score board</button>
+            <button onclick="savedetails()" class="btn btn-hover btnsml">Save</button>
+            <button onclick="displayNewGameModal()" class="btn btn-hover btnsml">Play again?</button>
+            <button onclick="addScoreToScoreBoard()" class="btn btn-hover btnsml">View Score board</button>
         </div>
     </div>
     <!-- Scoreboard Modal -->
@@ -153,13 +153,9 @@
             <span class="close closescoreboard">&times;</span>
             <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" alt="paw patrol logo" />
             <h1>Score Board </h1> <br>
-
             <table id="scoretable"></table>
-            <!--   <button onclick="displayNewGameModal()"  class="btn btn-hover">Play again?</button>-->
-
         </div>
     </div>
-
 
     <script src="assets/js/script.js"></script>
 </body>

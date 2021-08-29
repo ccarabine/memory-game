@@ -171,16 +171,15 @@ h1 {
   border: 1px solid;
 }
 
-.btnonheader {
-
-  margin: 0 auto;
+.btnsml {
   margin: 20px;
-
   width: 20%;
   height: 4vh;
   display: inline-block;
  
 }
+
+
 .back {
   border: 2px solid black;
 }

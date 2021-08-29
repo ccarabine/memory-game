@@ -265,6 +265,14 @@ function restartGame() {
 function continueGame() {
     confirmModal.style.display = "none";
 }
+
+/**
+ * Function Click no on the Confirmation modal and it closes the confirmation modal and continues game
+ */
+ function saveDetails() {
+    confirmModal.style.display = "none";
+}
+
 // When the user clicks on (x), close the modal and open the newGame Modal
 closeRules.onclick = function () {
     rulesModal.style.display = "none";
