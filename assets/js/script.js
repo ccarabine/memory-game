@@ -13,7 +13,7 @@ const cards = document.querySelectorAll('.card');
 const counterMoves = document.getElementById("moves");
 const counterMatchedPairs = document.getElementById("matchedpairs");
 const results = document.getElementById("results");
-const names = document.getElementById('name');
+const winnerName = document.getElementById('winnername');
 const saveBtn = document.getElementById("savebtn");
 
 
@@ -105,7 +105,7 @@ function resetBoard() {
     firstClick = null;
     secondClick = null;
     con= "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr>";
-    
+    winnerName.value = null;
 }
 /**
  * Function - increments number of moves the player has made by 1 and displays the result in the main window
@@ -128,7 +128,7 @@ function matchPairsCounter() {
  */
 function addToArray() {
     const addScore = {
-        knames: names.value,
+        knames: winnerName.value,
         kscores: parseInt((score), 10)
     };
     let con= "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr>";
@@ -141,7 +141,7 @@ function addToArray() {
  */
 function displayScores() {
     highScore.sort((a, b) => (b.kscores > a.kscores) ? 1 : -1);
-//con=null;
+
     for (let i = 0; i < highScore.length; i++) {
         con = con+ "<tr><td>" + highScore[i].knames + "</td><td>" + highScore[i].kscores + "</td></tr>";
     }
@@ -182,7 +182,7 @@ function resetGame() {
     counterMoves.innerHTML = `Moves: ${moves}   `;
     removeSelect();
     shuffleCards();
-    names.innerHTML = '';
+  
 }
 
 /**
@@ -240,7 +240,6 @@ function finishGame() {
         score = 5;
     }
     results.innerHTML = `You made ${moves} moves. Well done, your score is ${score} points`;
-
     finishGameModal.style.display = "block";
 }
 
@@ -289,5 +288,5 @@ window.onclick = function (event) {
 };
 
 //OPENS new Game Modal at the beginning
-//newGameModal.style.display = "block";
-finishGameModal.style.display = "block";
+newGameModal.style.display = "block";
+//finishGameModal.style.display = "block";

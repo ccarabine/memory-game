@@ -10,7 +10,10 @@ body {
   background-image: url("../images/backgroundimg.png");
 
 }
-
+#winnername {
+margin:0 auto;
+display:block;
+}
 
 .container {
   margin: auto;
@@ -179,7 +182,10 @@ h1 {
  
 }
 
-
+#savebtn{
+ margin:0 auto;
+ display:block; 
+}
 .back {
   border: 2px solid black;
 }
