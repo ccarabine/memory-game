@@ -8,8 +8,6 @@ const span = document.getElementsByClassName("close")[0];
 const closeRules = document.getElementsByClassName("closerules")[0];
 const closeScoreBoard = document.getElementsByClassName("closescoreboard")[0];
 
-//let con = "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr> ";
-
 //Get Elements
 const cards = document.querySelectorAll('.card');
 const counterMoves = document.getElementById("moves");
@@ -77,7 +75,7 @@ function match() {
         matchPairsCounter(); //2.
         resetBoard();
 
-        if (matchedPairs == 6) { //3.
+        if (matchedPairs == 1) { //3.
             finishGame();
         }
     } else { //4.
@@ -99,13 +97,15 @@ function shuffleCards() {
     }
 }
 /**
- * Function - reset boards and resets the values of selectedCard, boardDisabled, firstClick and secondClick
+ * Function - reset boards and resets the values of selectedCard, boardDisabled, firstClick and secondClick, and con to reset the scoreboard
  */
 function resetBoard() {
     selectedCard = false;
     boardDisabled = false;
     firstClick = null;
     secondClick = null;
+    con= "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr>";
+    
 }
 /**
  * Function - increments number of moves the player has made by 1 and displays the result in the main window
@@ -131,6 +131,8 @@ function addToArray() {
         knames: names.value,
         kscores: parseInt((score), 10)
     };
+    let con= "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr>";
+
     highScore.push(addScore);
 }
 
@@ -155,6 +157,7 @@ function displayScores() {
     displayScores();
     document.getElementById('scoretable').innerHTML = con;
     displayScoreBoardModal();
+    
  //   saveBtn.innerHTML = 'Saved'
   //  saveBtn.classList.remove('btn-hover');
 }
@@ -164,6 +167,7 @@ function displayScores() {
 function playNewGame() {
     newGameModal.style.display = "none";
     resetGame();
+    
     cards.forEach(card => card.addEventListener('click', selectCard)); // loop for each card click invoke the select card function
 }
 
