@@ -160,38 +160,32 @@ Please refer to further details in credits section for specific images used with
 
 ## New game modal
 
-A modal pop up will be displayed with a main heading and have two clickable buttons .
--	1. “Start game” button  - when the user clicks on the button, the user would be able to begin the memory game.  All moves, final score and bonus questioned answered will be set to zero.
--	all cards will show the back face
--	2. “Rules” button– when the user clicks on button, a modal pop up will appear which will allow the user to read the rules of the game.
+A new game modal pop up will be displayed with Paw Patrol logo and two clickable buttons .
+-	1. “Play New Game” button  - when the user clicks on the button, the user would be able to begin the memory game.  All moves, matched card numbers will be set to zero.  All cards will show the back face
+-	2. “Rules” button– when the user clicks on button, the rules modal pop up will appear which will allow the user to read the rules of the game.  
 
 ## Rules Modal
-The rules modal  is accessed from the new game modal once the user clicks on the “rules” button.  The user can read the rules of the game and click close to bring them back to the new game modal.
+The rules modal  is accessed from the new game modal once the user clicks on the “rules” button.  The user can read the rules of the game and click close [x] to bring them back to the new game modal.
 
 ## The game
-Once the user initiates the game by clicking “play” from the new game modal, the user will be presented with the memory game. 3 rows of 4 cards ,totaling 12 cards to choose from which will have a backcard image displayed on each of the cards as default.
+Once the user initiates the game by clicking “Play New Game” from the new game modal, the user will be presented with the memory game. 3 rows of 4 cards ,totaling 12 cards to choose from which will have a backcard image displayed on each of the cards as default.
 The user can click only on 2 cards at a time. 
 
-If they match two cards they will remain up turned and display the front of the card – cartoon characters.
-
-A bonus question modal popup  will appear and ask the user to answer the name of the cartoon character from a choice of 3.  If they answer correctly they get extra points, if they get the answer incorrect they continue on with the game.
+If they match two cards they will remain up turned and display the front of the card – Paw Patrol characters. The matched pairs counter will increment by 1
 
 The number of moves will update and increment by 1 when a user has selected 2 cards
 
-The bonus question will increment by 1 when the user has selected the correct answer
-
 When all 6 pairs are successfully chosen, the finish game modal popup will appear
 
-The user can restart the game at any point by clicking the “restart game” button.  A confirmation modal will appear to confirm there choice whether to continue game or start a new game.
+The user can restart the game at any point by clicking the “New game” button.  A confirmation modal will appear to confirm there choice whether to continue game or start a new game.
 
 ## Confirmation Modal
-The confirmation modal  is accessed from the memory game page, once the user clicks “restart”.  The user can decide wether to click on “restart” which will goto the new game modal or they can click on “continue”  to carry on with the current game 
+The confirmation modal  is accessed from the memory game page, once the user clicks “New Game”.  The user can decide wether to click on “New Game” which will goto the new game modal or they can click on “continue”  to carry on with the current game 
 
 ## Finish game Modal
 When all 6 pairs are successfully chosen, a modal pop up  will appear with 
 * the Score
 * number of moves
-* number of bonus questions calculated
 
 Score calculated by the follow formula
  if moves are
@@ -210,8 +204,12 @@ Score calculated by the follow formula
 
 => 21 - points = 5
 
-The user will be given the option to click “play again” button to restart the game.
+The user will then enter their name for the score board  and click save.  This will then display the score board.  
 
+## Score Board Modal
+Displays score board
+
+The user can then click on the close [x] and decide whether they would like to play again or click on the scoreboard to view from the main game page
 
 ---
 # Features remaining to implement (long term objectives): <a name="features-toimplement"></a>
