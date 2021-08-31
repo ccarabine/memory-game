@@ -8,27 +8,26 @@ body {
   height: 100vh;
   display: flex;
   background-image: url("../images/backgroundimg.png");
-
+  font-family: 'Cabin', sans-serif;
 }
+
 #winnername {
-margin:0 auto;
-display:block;
+  margin: 0 auto;
+  display: block;
 }
 
 .container {
   margin: auto;
   /* center main area container vertically and hortionzal */
-
 }
 
 header {
+
   text-align: center;
   padding: 10px;
   color: yellow;
   background-color: red;
   border-style: double;
-
-
 }
 
 .main-area {
@@ -179,33 +178,34 @@ h1 {
   width: 20%;
   height: 4vh;
   display: inline-block;
- 
+
 }
 
-#savebtn{
- margin:0 auto;
- display:block; 
+#savebtn {
+  margin: 0 auto;
+  display: block;
 }
+
 .back {
   border: 2px solid black;
 }
 
-#scoretable{
-text-align: center;
-margin:auto;
-padding:1px;
-border: 3px solid yellow; 
-width: 100%;
+#scoretable {
+  text-align: center;
+  margin: auto;
+  padding: 1px;
+  border: 3px solid yellow;
+  width: 100%;
 
 }
 
-#scoretable tr:nth-child(even){
+#scoretable tr:nth-child(even) {
   background-color: RED;
 }
 
 #scoretable tr:hover {
   background-color: YELLOW;
-  color:red;
+  color: red;
 }
 
 
@@ -238,37 +238,40 @@ width: 100%;
     width: 80%;
   }
 }
- @media (max-width:800px) {
-    .main-area {
-      width: 480px;
-      height: 480px;
-    }
 
-    .card {
-      width: calc(25% - 2px);
-      height: calc(33.333% - 2px);
-      margin: 1px;
-    }
-  
+@media (max-width:800px) {
+  .main-area {
+    width: 480px;
+    height: 480px;
   }
+
+  .card {
+    width: calc(25% - 2px);
+    height: calc(33.333% - 2px);
+    margin: 1px;
+  }
+
+}
+
 @media (max-width:500px) {
   .modal-contentgame {
     width: 90%;
   }
-  .container{
-    margin:0;
-  }}
+
+  .container {
+    margin: 0;
+  }
+}
 
 
-  @media (max-width:300px) {
-    .modal-contentgame {
-      width: 80%;
-    }
-   
-    .main-area {
-      width: 300px;
-      height: 300px;
-    }
-    
+@media (max-width:300px) {
+  .modal-contentgame {
+    width: 80%;
   }
 
+  .main-area {
+    width: 300px;
+    height: 300px;
+  }
+
+}

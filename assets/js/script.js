@@ -266,8 +266,6 @@ function continueGame() {
     confirmModal.style.display = "none";
 }
 
-
-
 // When the user clicks on (x), close the modal and open the newGame Modal
 closeRules.onclick = function () {
     rulesModal.style.display = "none";

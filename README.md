@@ -4,11 +4,11 @@
 
 
 ## Introduction
-The website has been created for users to enjoy a fun cartoon memory game.
+The website has been created for users to enjoy a fun Paw Patrol memory game.
 
 The owners core goals for the website are:
 
-* to  provide a fun game for all ages
+* to  provide a fun game for children between the ages of 4 - 8 years old
 * for users to return to play the game and try to beat their score
 * for users to navigate through the site with ease and be intuitive
 
@@ -64,7 +64,7 @@ Image from  <a href="http://ami.responsivedesign.is/">Am I Responsive</a>, to di
 * As a user, I want to read the rules and understand how to play the game
 * As a user, I want to be able to know how the scoring works
 * As a user, I want to be able to know when I have matched two cards
-* As a user, I want to know when I have finished the game and my score
+* As a user, I want to know when I have finished the game and see my score
 * As a user, I want to be able to restart the game at any point
 * As a user of multiple devices, I need a website that is fully responsive, invoking the same user experience across all devices, in particular my mobile. 
 
@@ -151,20 +151,19 @@ to update
 
 
 ## 2. Typography <a name="typography"></a>
-to update
 
-The following font Roboto have been selected to ensure the text is easy to read, add value to the text, and invoke user to perceive a positive emotion from the text. The fonts chosen are generic and therefore should appeal to any demographic/user. It is rated as Google's best font. I chose font Lato to compliment the heading.
+The following font cabin have been selected to ensure the text is easy to read, add value to the text, and invoke user to perceive a positive emotion from the text. 
 
-![ Roboto font](assets/uxd/font-roboto.PNG)
+![ Cabin font](assets/images/uxd/fontcabin.PNG)
 
-![ Lato font](assets/uxd/font-lato.PNG)
+
 
 ## 3. Imagery <a name="imagery"></a>
 
-![ Images](assets/uxd/images.PNG)
+![ Images](assets/images/uxd/pawpatrolimages.PNG)
 
 
-I used the images with the colours in mind....  to update
+I used images from the Paw Patrol tv series to ensure all images were related
 
 Please refer to further details in credits section for specific images used within the project
 
@@ -211,36 +210,31 @@ When all 6 pairs are successfully chosen, a modal pop up  will appear with
 
 Score calculated by the follow formula
  if moves are
-=< 7 points = 50,
-=<10 points =40, 
-=<15 points =30, 
-=<20 points =20, 
-=<25 points =10, 
-else points=0
 
-for every bonus question answered correctly they get 5 points e.g. 3 questions x 5 points equals 15
+=< 9 - points = 80,
 
-final score = points from moves plus bonus question points
+=< 12 - points = 60,
 
-eg.  Final score 35 which is 20 points ( 18 moves) +15 ( from above example)
+=< 14 - points = 40, 
+
+=< 16 - points = 30, 
+
+=< 18 - points = 20, 
+
+=< 20 - points = 10, 
+
+=> 21 - points = 5
 
 The user will be given the option to click “play again” button to restart the game.
 
 
-
-
-
-
-
 ---
 # Features remaining to implement (long term objectives): <a name="features-toimplement"></a>
-1.) High score table
 
-2.) Add in skill levels
+1.) Add in skill levels with timer
 
-3.) Add additional game type e.g. logos, animals etc
+2.) Add additional game type e.g. logos, animals etc
 
-4.) Timer
 
 
 ---
