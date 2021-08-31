@@ -25,7 +25,7 @@ let selectedCard = false;
 let boardDisabled = false;
 let firstClick;
 let secondClick;
-let con= "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr>";
+let con = "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr>";
 const highScore = [{
     knames: "Connie",
     kscores: 15
@@ -104,7 +104,7 @@ function resetBoard() {
     boardDisabled = false;
     firstClick = null;
     secondClick = null;
-    con= "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr>";
+    con = "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr>";
     winnerName.value = null;
 }
 /**
@@ -127,11 +127,12 @@ function matchPairsCounter() {
  * Function - Adds the players name and score to the addscore array
  */
 function addToArray() {
+    
     const addScore = {
         knames: winnerName.value,
         kscores: parseInt((score), 10)
     };
-     con= "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr>";
+    con = "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr>";
 
     highScore.push(addScore);
 }
@@ -143,7 +144,7 @@ function displayScores() {
     highScore.sort((a, b) => (b.kscores > a.kscores) ? 1 : -1);
 
     for (let i = 0; i < highScore.length; i++) {
-        con = con+ "<tr><td>" + highScore[i].knames + "</td><td>" + highScore[i].kscores + "</td></tr>";
+        con = con + "<tr><td>" + highScore[i].knames + "</td><td>" + highScore[i].kscores + "</td></tr>";
     }
     return con;
 }
@@ -151,15 +152,15 @@ function displayScores() {
 /**
  * Function Calls add to array function which saves the players name and score to the score board
  */
- function saveDetails() {
+function saveDetails() {
     finishGameModal.style.display = "none";
     addToArray();
     displayScores();
     document.getElementById('scoretable').innerHTML = con;
     displayScoreBoardModal();
-    
- //   saveBtn.innerHTML = 'Saved'
-  //  saveBtn.classList.remove('btn-hover');
+
+    //   saveBtn.innerHTML = 'Saved'
+    //  saveBtn.classList.remove('btn-hover');
 }
 /**
  * Function - closes new game modal, calls reset game function and listens out for click on card, then calls select card function
@@ -167,7 +168,6 @@ function displayScores() {
 function playNewGame() {
     newGameModal.style.display = "none";
     resetGame();
-    
     cards.forEach(card => card.addEventListener('click', selectCard)); // loop for each card click invoke the select card function
 }
 
@@ -182,7 +182,7 @@ function resetGame() {
     counterMoves.innerHTML = `Moves: ${moves}   `;
     removeSelect();
     shuffleCards();
-  
+
 }
 
 /**
@@ -287,4 +287,3 @@ window.onclick = function (event) {
 
 //OPENS new Game Modal at the beginning
 newGameModal.style.display = "block";
-//finishGameModal.style.display = "block";

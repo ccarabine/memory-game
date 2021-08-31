@@ -63,7 +63,7 @@ header {
   /* postion relative to card*/
   border-radius: 5px;
   background: white;
-
+backface-visibility: hidden;
 
 }
 
