@@ -107,34 +107,23 @@ I used <a href="https://balsamiq.com/">Balsamiq</a> to create wireframes for my 
 
 ## Wireframes for Home Page. 
 ### Desktop
-![Start New Game Desktop](assets/images/wireframes/newgame.PNG)
-![The Game Desktop](assets/images/wireframes/thegame.PNG)
-![Finish Game Desktop](assets/images/wireframes/finishgame.PNG)
-### Tablet
 
+## Wireframe for The Memory Game when loaded
+![Start New Game Desktop](assets/images/uxd/wireframes/startgame.png)
 
-### Mobile
+## Wireframes for The Memory Game when the rules Modal is displayed
+![Rules modal Desktop](assets/images/uxd/wireframes/rules.png)
 
+## Wireframes for The Memory Game when play new game is clicked
+![The Game Desktop](assets/images/uxd/wireframes/thegame.png)
 
+## Wireframes for The Memory Game when play new game is completed
+![Finish Game Desktop](assets/images/uxd/wireframes/finishgame.png)
 
+## Wireframes for The Memory Game when the scoreboard is displayed
+![Score Board modal Desktop](assets/images/uxd/wireframes/scoreboardmodal.png)
 
-## Wireframes for The Memory Game 
-### Desktop
-![The Memory Game Desktop](assets/uxd/wireframes/the-barn-desktop.png)
-
-### Tablet
-
-
-### Mobile
-
-## Wireframes for Completed Memory Game 
-### Desktop
-![Completed Memory Game Desktop](assets/uxd/wireframes/the-barn-desktop.png)
-
-### Tablet
-
-
-### Mobile
+The pages will be responsive on all devices
 
 
 
