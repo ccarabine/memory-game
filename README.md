@@ -246,23 +246,26 @@ Corrective action: Remove buttons and centered the input/save button
 # W3C HTML Validator Test <a name="validation-testing-html"></a>  
 I used [W3C HTML Validator](https://validator.w3.org/) code checking tool to validate the html code.
 
-* I selected the "Validate by URI" option for each page index.html, thebarn.html, thearea.html and contactus.html separately.
+* I selected the "Validate by URI" option for each page index.html
 
-## Pages initally came up with the following errors:
+## The page came up with the following warning:
+Empty heading. From line 151, column 13; to line 151, column 29 <h3 id="results"></h3> 
+This is ok as it will be populated from JS
 
-
+No Errors on report
 
 ---
 # W3 CSS Validator Test  <a name="validation-testing-css"></a>  
 I used [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) code checking tool to validate the css code.
 * I opened and selected the "Validate by direct input" option and pasted in the code.
 
-## Pages initally came up with the following errors:
+No Errors on report
 
 
 
 ---
 # A11y Color Contrast Acccessibility Validation <a name="validation-testing-A11y"></a>
+I used [A11y Color Contrast Acccessibility Validation](https://color.a11y.com/) 
 This website provides free color contrast analysis tools that will display the color contrast issues of a web page; per WCAG 2.1 Guidelines. Color Contrast refers to how bright or dark colors appear against each other on screens; particularly with regard to the relative, gray-scale luminosity as perceived by the human eye.
 
 When it comes to website accessibility, the contrast between the text and the text background is a concern for colorblind and other visually impaired users.
@@ -271,7 +274,32 @@ This color contrast tool enables users to comply with website accessibilities re
 
 ## Testing
 
-Website colour palette was tested for contrast accessibility validation and failed, cololour contrast issues were found:
+Website colour palette was tested for contrast accessibility validation and passed with no issues
+
+---
+# JSHint Validation Service <a name="JSHint-Validation-Service"></a>
+I used [JSHint Validation](https://jshint.com/)
+to test the JavaScript code.
+
+No errors were detected in the code. Warnings were detected in the code however this was due to the use of the new ES6 syntax in the code.
+
+---
+
+Chrome Dev Tools Lighthouse Report to test both on desktop and mobile.
+
+Initial Score performance 99, accessibility 97, best practices 87, seo 90
+
+# Best practice
+Displays images with incorrect aspect ratio
+Source:  backgroundimg.png:1
+Description: Failed to load resource: the server responded with a status of 404 ()
+
+the image had the incorrect file name, corrected with backgroundimg.png
+
+resized all the images to the expected size and rerun the report and best practises scored 100
+
+# SEO - Document does not have a meta description
+added meta tags and increased the score Seo to 100
 
 
 

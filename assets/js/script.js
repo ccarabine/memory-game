@@ -131,7 +131,7 @@ function addToArray() {
         knames: winnerName.value,
         kscores: parseInt((score), 10)
     };
-    let con= "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr>";
+     con= "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr>";
 
     highScore.push(addScore);
 }
