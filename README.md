@@ -144,11 +144,7 @@ I used <a href="https://balsamiq.com/">Balsamiq</a> to create wireframes for my 
 
 ## 1. Colour Palette:  <a name="colours"></a>
 
-to update
-
-
-
-
+The colours have been choosen to mimic the Paw Patrol brand using red, yellow and blue.
 
 ## 2. Typography <a name="typography"></a>
 
@@ -244,6 +240,9 @@ The user will be given the option to click “play again” button to restart th
 
 I received the following constructive feedback from friends and family and implemented corrective action:
 
+On the Finish game modal, no need for new game and view scoreboard buttons as the user might forget to press save to save the name/score to the score table
+
+Corrective action: Remove buttons and centered the input/save button
 
 
 ---
@@ -332,10 +331,31 @@ For each section on each page, I tested various screen sizes in the development 
 
 * Iphone 10
 
+# Known issues during testing
+
+* During testing an issue was identified on the score table. 
+
+When the user entered their name and the score board would display with the scores array.  When the user finished the game again.  The array would display the after previous displayd table, therefore dulipcating the names and scoring
+
+Corrective Action: Reset the con variable in the reset funciton
+
+* During testing an issue was identified on the finish game modal
+
+The users name was still displayed in the text input field from the previous game.
+
+Corrective action: Reset winnerName value to Null when the reset board function is called
+
+* During testing an isssue was identified on the main game.  The user could click on a 3rd / 4th card after clicking the 1st/2nd on the same turn.
+
+On investigation i noticed a spelling mistake on the boardDisable variable which stopped boardDisable resulting true and would stop the user from clicking a further card.
+
+Corrective action:  Corrected spelling 
+
+
 
 # Unfixed Bugs
 
-
+No Bugs left to fix
 
 
 
@@ -350,12 +370,12 @@ This is the process i took to deploy my project to the hosting platform GitHub
 6.	Select "Master Branch" in the dropdown under the Source heading
 7.	Finally, click “save”
 
- to update  The live link can be found here <a href="https://ccarabine.github.io/Churchbarn-holiday-let/">Church-Barn-Holiday-Let</a>
+ The live link can be found here <a href="https://ccarabine.github.io/memory-game/">Paw Patrol Memory Game</a>
 
 ---
 # Technologies Used <a name="technology-used"></a>  <a name="Home"></a>
 
-For this project the main languages used are __HTML5__ and __CSS3__.
+For this project the main languages used are __Javascript__, __HTML5__ and __CSS3__.
 
 I have also utilised the following frameworks  and tools:
 
@@ -363,12 +383,11 @@ I have also utilised the following frameworks  and tools:
 * [GitHub](https://www.github.com/): GitHub has been used to create a repository to host the project and receive updated commits from GitPod.
 * [Balsamiq](https://balsamiq.com/): I used Balsamiq to create the wireframe for the website for the basic structure and layout.
 * [Google Fonts](https://getbootstrap.com/): I have used Google Fonts to import fonts for styling purposes for this project.
-* [Font Awesome](https://fontawesome.com/): Font Awesome was used to apply icons in the Footer and the area sections.
 * [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools): Chrome Dev Tools was used to test the site and assist with debugging issues.
 * [W3C Markup Validation Service](https://validator.w3.org/): The W3C Markup Validation Service was used to validate the HTML document for this project and to identify any issues with the code.
 * [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/): The W3C CSS Validation Service was used to validate the CSS document for this project and to identify any issues with the code.
 * [Am I Responsive](http://ami.responsivedesign.is/): Am I Responsive was used to create the header image for the README file.
-* [Resize Pixel](https://www.resizepixel.com/download): Resize Pixel was used to reduce the size of my wireframe images for the README file.
+* [Resize Pixel](https://www.img2go.com/compress-image): Img2go was used to reduce the size of the paw patrol images.
 * [A11y Colour Contrast checker](https://color.a11y.com/Contrast/):A11y Colour Contrast checker was used to check the colour contrast between background and text colours.
 * [Fav Icon Generator](https://favicon.io/favicon-generator/): i used Fav Icon generator to create my fav Icon from text.
 
@@ -376,9 +395,11 @@ I have also utilised the following frameworks  and tools:
 # Credits <a name="credits"></a>
 
 ## Media
- Images were downloaded from 
-https://www.pastemagazine.com/tv/the-50-best-cartoon-characters-of-all-time/
-background images from https://stock.adobe.com/uk/ 
+Images were downloaded from :
+
+Paw Patrol characters https://www.pngkey.com/pngs/paw-patrol/ 
+
+Paw Patrol Logo https://www.pngegg.com/en/png-bddzo 
 
 
 ## Code
@@ -387,9 +408,17 @@ I used the following websites and videos for inspiration and code for my project
 Data attributes
 https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
 
-Grid [grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
-Flexbox [Flex](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+How to create modals https://www.w3schools.com/howto/howto_css_modals.asp
+
+Adding to arrays https://www.youtube.com/watch?v=NxVCq4p0Kb0
+
+Score boards
+https://www.chegg.com/homework-help/questions-and-answers/exercise-ll-work-array-ll-add-nodes-dom-display-results-scores-run-application-see-user-in-q24972694
+
+Memory game tutorial https://www.youtube.com/watch?v=ZniVgo8U7ek
+i used following tutorial on YouTube. I have used code from this tutorial to assist with creating the memory game. Please note some of the code has been customised by myself to fit this project. I have also added my own code for additional functions for the project.
+
 
 
 
@@ -398,7 +427,6 @@ A big thank you to my mentor Maria for her help and guidance throughout my first
 
 Thank you to to the following:
 * My wife for her help and constructive feedback throughout the project. 
-* My father-in-law, owner of church barn in supplying some of the images and copy.
 * The tutors for help and support.
 
 ***
