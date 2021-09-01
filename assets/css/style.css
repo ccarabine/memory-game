@@ -268,19 +268,22 @@ h1 {
     width: 480px;
     height: 480px;
   }
+
   .modal-contentgame {
     width: 90%;
   }
 
-   button {
+  button {
     font-size: 12px;
-
   }
 
   .container {
     margin: 0;
   }
-  h1{font-size: 25px;}
+
+  h1 {
+    font-size: 25px;
+  }
 }
 
 
@@ -293,9 +296,13 @@ h1 {
     width: 300px;
     height: 300px;
   }
+
   button {
     font-size: 9px;
 
   }
-  h1{font-size: 20px;}
+
+  h1 {
+    font-size: 20px;
+  }
 }
