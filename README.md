@@ -350,9 +350,9 @@ For each section on each page, I tested various screen sizes in the development 
 
 * During testing an issue was identified on the score table. 
 
-When the user entered their name and the score board would display with the scores array.  When the user finished the game again.  The array would display the after previous displayd table, therefore dulipcating the names and scoring
+When the user entered their name, the score board would display with the scores array initially.  When the user finished the game again.  The array would display after the previous displayed table, therefore dulipcating the names and scoring
 
-Corrective Action: Reset the con variable in the reset funciton
+Corrective Action: Reset the con variable in the reset function
 
 * During testing an issue was identified on the finish game modal
 
@@ -360,15 +360,15 @@ The users name was still displayed in the text input field from the previous gam
 
 Corrective action: Reset winnerName value to Null when the reset board function is called
 
-* During testing an isssue was identified on the main game.  The user could click on a 3rd / 4th card after clicking the 1st/2nd on the same turn.
+* During testing an issue was identified on the main game.  The user could click on a 3rd / 4th card after clicking the 1st/2nd on the same turn.
 
 On investigation i noticed a spelling mistake on the boardDisable variable which stopped boardDisable resulting true and would stop the user from clicking a further card.
 
 Corrective action:  Corrected spelling 
 
-* During testing an isssue was identified on the scoreboard. If the user didn't enter a name on the finish game modal, there would be no name on the scoreboard with a score
+* During testing an issue was identified on the scoreboard. If the user didn't enter a name on the finish game modal, there would be no name on the scoreboard with a score
 
-Corrective action:  i put an if statement in savedetails function. if the value equal empty string then alert the user to enter their name else run the rest of the function
+Corrective action:  i put an if statement in savedetails function. If the value equal empty string then alert the user to enter their name else run the rest of the function
 
 # Unfixed Bugs
 
