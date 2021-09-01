@@ -37,12 +37,12 @@ Image from  <a href="http://ami.responsivedesign.is/">Am I Responsive</a>, to di
     * [Features to implement](#features-toimplement)
 
 3. [Testing](#testing)
-    * [User Stories Testing](#user-feedback)
-    * [Testing Check List ](#testing-check-list) 
-    * [Validation Testing -HTML ](#validation-testing-html)
+    * [User Stories Testing](#user-stories-testing)
+        * [Validation Testing -HTML ](#validation-testing-html)
     * [Validation Testing -CSS ](#validation-testing-css)
     * [Validation Testing -A11y Color Contrast Accessibility](#validation-testing-A11y)
     * [Design Responsiveness Testing](#testing-responsiveness)
+    * (#JSHint Validation Service][JSHint-Validation-Service] [JSHint Validation](https://
         * [Simulated Testing](#testing-simulated)
 4. [Deployment](#deployment)
 5. [Technologies Used](#technology-used)
@@ -55,6 +55,7 @@ Image from  <a href="http://ami.responsivedesign.is/">Am I Responsive</a>, to di
 
 # User Experience (UX) <a name="ux"></a> [Contents](#home)
 Project Goals
+
 The main business goal for game is to provide a fun challenge to the user via a memory game. The site will test the user’s memory across 12 cards to choose 2 matching cards at a time. The user will also be able to receive an end score based how many moves they made, with the opportunity to replay the game to try and beat their score.
 
 The main target audience for this website are children between the ages of 4-7 years old with an interest in Paw Patrol.
@@ -103,8 +104,7 @@ The main page, there will be a background image, with a main playing area that w
 
 I used <a href="https://balsamiq.com/">Balsamiq</a> to create wireframes for my project in order to plan out the layout of the interface, navigation and information design of the webpage on  desktop, tablets and mobile devices.
 
-## Wireframes for Home Page. 
-### Desktop
+
 
 ## Wireframe for The Memory Game when loaded
 ![Start New Game Desktop](assets/images/uxd/wireframes/startgame.png)
@@ -122,7 +122,7 @@ I used <a href="https://balsamiq.com/">Balsamiq</a> to create wireframes for my 
 ![Score Board modal Desktop](assets/images/uxd/wireframes/scoreboardmodal.png)
 
 The pages will be responsive on all devices
-![Score Board modal Desktop](assets/images/uxd/testing/finishgame.PNG)
+
 
 
 # 4. Surface <a name="surface"></a> [Contents](#home)
@@ -221,24 +221,9 @@ The user can then click on the close [x] and decide whether they would like to p
 ---
 # Testing <a name="testing"></a> [Contents](#home)
 
-## User Feedback <a name="user-feedback"></a>
-
-I received the following constructive feedback from friends and family and implemented corrective action:
-
-On the Finish game modal, there is no need for new game and view scoreboard buttons as the user might forget to press save, to save the name/score to the score table
-
-Corrective action: Remove buttons and centered the input/save button
-
-On the scoreboard, i had to click close, then on new game button and then click yes. i would prefer to click new game when i have seen my score on the scoreboard
-
-Corrective action: add new game button, when clicked it would close the scoreboard modal and run new game
-
-On the finish game modal(phone device) The text input would zoom in to enter the name and stayed zoomed in so you would have to manually zoom out to see the close button.
-
-Corrective action: add meta tags to prevent input zooming
 
 ---
-# My testing  <a name="testing-check-list"></a> [Contents](#home)
+# User stories testing  <a name="user-stories-testing"></a> [Contents](#home)
 
 ### I checked all the features described above to ensure they worked
 
@@ -318,6 +303,21 @@ or click on the close [x] to close the modal  which will display the last game
 
 ![ Score board modal close](assets/images/uxd/testing/scoreboardmodalclose.PNG)
 
+## User Feedback <a name="user-feedback"></a>
+
+I received the following constructive feedback from friends and family and implemented corrective action:
+
+On the Finish game modal, there is no need for new game and view scoreboard buttons as the user might forget to press save, to save the name/score to the score table
+
+Corrective action: Remove buttons and centered the input/save button
+
+On the scoreboard, i had to click close, then on new game button and then click yes. i would prefer to click new game when i have seen my score on the scoreboard
+
+Corrective action: add new game button, when clicked it would close the scoreboard modal and run new game
+
+On the finish game modal(phone device) The text input would zoom in to enter the name and stayed zoomed in so you would have to manually zoom out to see the close button.
+
+Corrective action: add meta tags to prevent input zooming
 
 
 
