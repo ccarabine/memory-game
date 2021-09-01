@@ -1,3 +1,7 @@
+/* I used the  following tutorial on YouTube:
+https://www.youtube.com/watch?v=ZniVgo8U7ek
+I have used some code from this tutorial to assist with creating the game.
+*/
 //Modals
 const newGameModal = document.getElementById("newgamemodal");
 const finishGameModal = document.getElementById("finishgamemodal");
@@ -75,7 +79,7 @@ function match() {
         matchPairsCounter(); //2.
         resetBoard();
 
-        if (matchedPairs == 1) { //3.
+        if (matchedPairs == 6) { //3.
             finishGame();
         }
     } else { //4.
@@ -259,9 +263,7 @@ function confirmDecision() {
  */
 function restartGame() {
     confirmModal.style.display = "none";
-
     playNewGame();
-
 }
 /**
  * Function Click no on the Confirmation modal and it closes the confirmation modal and continues game
@@ -270,24 +272,32 @@ function continueGame() {
     confirmModal.style.display = "none";
 }
 
-// When the user clicks on (x), close the modal and open the newGame Modal
+/**
+ *  Function When the user clicks on (x), close the modal and open the newGame Modal
+ */
 closeRules.onclick = function () {
     rulesModal.style.display = "none";
     newGameModal.style.display = "block";
 
 };
-// When the user clicks on (x), close the modal 
+/** 
+ *  Function When the user clicks on (x), close the modal 
+ */
 closeScoreBoard.onclick = function () {
     scoreBoardModal.style.display = "none";
 };
 
 
-// When the user clicks anywhere outside of the rulesModal, close it
+/**
+ * Function When the user clicks anywhere outside of the rulesModal, close it
+ * */
 window.onclick = function (event) {
     if (event.target == rulesModal) {
         rulesModal.style.display = "none";
     }
 };
 
-//OPENS new Game Modal at the beginning
-newGameModal.style.display = "block";
+//The DOMContentLoaded fires when the DOM content is loaded, without waiting for images and stylesheets to finish loading. Opens new Game Modal at the beginning
+document.addEventListener('DOMContentLoaded',()=>{
+    newGameModal.style.display = "block";
+});
