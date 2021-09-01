@@ -19,6 +19,7 @@ body {
 .container {
   margin: auto;
   /* center main area container vertically and hortionzal */
+
 }
 
 header {
@@ -176,9 +177,9 @@ h1 {
   color: yellow;
   display: block;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   width: 30%;
-  height: 8vh;
+  height: 5em;
   border: 1px solid;
 }
 
@@ -250,8 +251,8 @@ h1 {
 
 @media (max-width:800px) {
   .main-area {
-    width: 480px;
-    height: 480px;
+    width: 680px;
+    height: 680px;
   }
 
   .card {
@@ -263,13 +264,23 @@ h1 {
 }
 
 @media (max-width:500px) {
+  .main-area {
+    width: 480px;
+    height: 480px;
+  }
   .modal-contentgame {
     width: 90%;
+  }
+
+   button {
+    font-size: 12px;
+
   }
 
   .container {
     margin: 0;
   }
+  h1{font-size: 25px;}
 }
 
 
@@ -282,5 +293,9 @@ h1 {
     width: 300px;
     height: 300px;
   }
+  button {
+    font-size: 9px;
 
+  }
+  h1{font-size: 20px;}
 }
