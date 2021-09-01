@@ -366,7 +366,9 @@ On investigation i noticed a spelling mistake on the boardDisable variable which
 
 Corrective action:  Corrected spelling 
 
+* During testing an isssue was identified on the scoreboard. If the user didn't enter a name on the finish game modal, there would be no name on the scoreboard with a score
 
+Corrective action:  i put an if statement in savedetails function. if the value equal empty string then alert the user to enter their name else run the rest of the function
 
 # Unfixed Bugs
 
