@@ -3,18 +3,14 @@
 # Project Overview
 
 
-## Introduction
+
 The website has been created for users to enjoy a fun Paw Patrol memory game.
 
-The owners core goals for the website are:
 
-* to  provide a fun game for children between the ages of 4 - 8 years old
-* for users to return to play the game and try to beat their score
-* for users to navigate through the site with ease and be intuitive
 
-## Link to memory game live site <a href="   "> Memory Game </a>
+## Link to memory game live site <a href="https://ccarabine.github.io/memory-game/"> Memory Game </a>
 
-insert link to responsive image ![Responsive image of front page on all devices](assets/uxd/responsive-design-mockupv2.PNG)
+Responsive image ![Responsive image of front page on all devices](assets/images/uxd/iamresponsive.PNG)
 
 Image from  <a href="http://ami.responsivedesign.is/">Am I Responsive</a>, to display the websites home page across mobile, tablet and desktop.
 
@@ -26,8 +22,9 @@ Image from  <a href="http://ami.responsivedesign.is/">Am I Responsive</a>, to di
     * [Strategy](#strategy)
         * [Project Objectives & Goals](#goals)
         * [User Stories](#userstories)
-        * [Strategy Tradeoffs](#tradeoffs)
+        
     * [Scope](#scope)
+    * [Structure](#Structure)
     * [Skeleton](#skeleton)
         * [Wireframes](#wireframes)
     * [Surface](#design)
@@ -57,9 +54,16 @@ Image from  <a href="http://ami.responsivedesign.is/">Am I Responsive</a>, to di
 
 
 # User Experience (UX) <a name="ux"></a> [Contents](#home)
+Project Goals
+The main business goal for game is to provide a fun challenge to the user via a memory game. The site will test the user’s memory across 12 cards to choose 2 matching cards at a time. The user will also be able to receive an end score based how many moves they made, with the opportunity to replay the game to try and beat their score.
 
+The main target audience for this website are children between the ages of 4-7 years old with an interest in Paw Patrol.
 
-## User Stories: <a name="userstories"></a>
+## 1.Strategy <a name="strategy"></a>
+The website has been created for users to enjoy a fun Paw Patrol memory game.
+
+*  User Stories: <a name="userstories"></a>
+User Goals
 * As a user, I want to play an online game
 * As a user, I want to read the rules and understand how to play the game
 * As a user, I want to be able to know how the scoring works
@@ -68,16 +72,12 @@ Image from  <a href="http://ami.responsivedesign.is/">Am I Responsive</a>, to di
 * As a user, I want to be able to restart the game at any point
 * As a user of multiple devices, I need a website that is fully responsive, invoking the same user experience across all devices, in particular my mobile. 
 
+Business Goals 
 
-## Strategy Tradeoffs <a name="tradeoffs"></a>
-The purpose of this memory game is for users of all ages to have fun playing the game
-<br>
-to update
-<br>
+* I want to provide a fun game for children between the ages of 4 - 8 years old
+* I want users to return to play the game and try to beat their score
+* I want users to navigate through the site with ease and be intuitive
 
-to update -I have rated the features on a scale of 1 to 5 in terms of importance (how important is it for the project now) and feasibility (how realistic is that we can implement a solution)
-
-![Strategy Tradeoffs](assets/uxd/strategy-tradeoffs.PNG)
 
 ## 2. Scope <a name="scope"></a>
 
@@ -87,14 +87,12 @@ To achieve the strategy goals, I want to implement the following functional spec
 * The memory game, which users can access when the game has started, the user will be able to see the 12 turned over cards 
 * User feedback to let them know they have selected two matching cards
 * Number of moves tracker
-* Number of correct bonus questions answered correctly
 * A end of game feature that will let the user know they have finished the game, display their score
 
 ---
 
 
 # 3. Structure <a name="structure"></a> [Contents](#home)
-link to be updated in menu
 The site will be on one page, there is no need for a navbar or footer due to the site being simple.
 The main page, there will be a background image, with a main playing area that will house the playing cards, scores and buttons
 
@@ -124,7 +122,7 @@ I used <a href="https://balsamiq.com/">Balsamiq</a> to create wireframes for my 
 ![Score Board modal Desktop](assets/images/uxd/wireframes/scoreboardmodal.png)
 
 The pages will be responsive on all devices
-
+![Score Board modal Desktop](assets/images/uxd/testing/finishgame.PNG)
 
 
 # 4. Surface <a name="surface"></a> [Contents](#home)
@@ -158,13 +156,13 @@ Please refer to further details in credits section for specific images used with
 
 ## Current Features (short term objectives): <a name="features-current"></a>
 
-## New game modal
+## New game modal -onload
 
 A new game modal pop up will be displayed with Paw Patrol logo and two clickable buttons .
--	1. “Play New Game” button  - when the user clicks on the button, the user would be able to begin the memory game.  All moves, matched card numbers will be set to zero.  All cards will show the back face
--	2. “Rules” button– when the user clicks on button, the rules modal pop up will appear which will allow the user to read the rules of the game.  
+-	1. “Play New Game” button  - when the user clicks on the button, the user would be able to begin the memory game.  All moves, matched card counters will be set to zero.  All cards will show the back face
+-	2. “Rules” button– when the user clicks on button, the rules modal pop up will appear, which will allow the user to read the rules of the game.  
 
-## Rules Modal
+## Rules modal
 The rules modal  is accessed from the new game modal once the user clicks on the “rules” button.  The user can read the rules of the game and click close [x] to bring them back to the new game modal.
 
 ## The game
@@ -180,7 +178,7 @@ When all 6 pairs are successfully chosen, the finish game modal popup will appea
 The user can restart the game at any point by clicking the “New game” button.  A confirmation modal will appear to confirm there choice whether to continue game or start a new game.
 
 ## Confirmation Modal
-The confirmation modal  is accessed from the memory game page, once the user clicks “New Game”.  The user can decide wether to click on “New Game” which will goto the new game modal or they can click on “continue”  to carry on with the current game 
+The confirmation modal  is accessed from the memory main game page, once the user clicks “New Game”.  The user can decide wether to click on “New Game” which will goto the new game modal or they can click on “continue”  to carry on with the current game 
 
 ## Finish game Modal
 When all 6 pairs are successfully chosen, a modal pop up  will appear with 
@@ -227,7 +225,7 @@ The user can then click on the close [x] and decide whether they would like to p
 
 I received the following constructive feedback from friends and family and implemented corrective action:
 
-On the Finish game modal, no need for new game and view scoreboard buttons as the user might forget to press save to save the name/score to the score table
+On the Finish game modal, there is no need for new game and view scoreboard buttons as the user might forget to press save, to save the name/score to the score table
 
 Corrective action: Remove buttons and centered the input/save button
 
@@ -238,13 +236,88 @@ Corrective action: add new game button, when clicked it would close the scoreboa
 On the finish game modal(phone device) The text input would zoom in to enter the name and stayed zoomed in so you would have to manually zoom out to see the close button.
 
 Corrective action: add meta tags to prevent input zooming
+
 ---
-# My testing Check list <a name="testing-check-list"></a> [Contents](#home)
+# My testing  <a name="testing-check-list"></a> [Contents](#home)
 
-## I Checked all the following features to ensure they worked
+### I checked all the features described above to ensure they worked
 
-## Main Structure -Header, navigation bar and footer featured on all four pages. 
-&#x2611;    Consistency/aesthetically pleasing 
+## Rules modal
+A new game modal pop up will be displayed with Paw Patrol logo and two clickable buttons .
+-	1. “Play New Game” button  - when the user clicks on the button, the user would be able to begin the memory game.  All moves, matched card counters will be set to zero.  All cards will show the back face
+-	2. “Rules” button– when the user clicks on button, the rules modal pop up will appear, which will allow the user to read the rules of the game.  
+
+![ New game](assets/images/uxd/testing/newgame.PNG)
+
+## Rules modal
+The rules modal  is accessed from the new game modal once the user clicks on the “rules” button.  The user can read the rules of the game and click close [x] to bring them back to the new game modal.
+
+![ Rules modal](assets/images/uxd/testing/rules.PNG)
+
+## The game
+Once the user initiates the game by clicking “Play New Game” from the new game modal, the user will be presented with the memory game. 3 rows of 4 cards ,totaling 12 cards to choose from which will have a backcard image displayed on each of the cards as default.
+The user can click only on 2 cards at a time. 
+
+![ Main game page](assets/images/uxd/testing/maingame.PNG)
+
+If they match two cards they will remain up turned and display the front of the card – Paw Patrol characters. The matched pairs counter will increment by 1
+
+![ Matched pair](assets/images/uxd/testing/matchedpair.PNG)
+
+The number of moves will update and increment by 1 when a user has selected 2 cards
+![ Moves and matched pairs counter](assets/images/uxd/testing/movesandmatchedpairscounter.PNG)
+
+When all 6 pairs are successfully chosen, the finish game modal popup will appear
+![ Finish game modal](assets/images/uxd/testing/finishgame.PNG)
+
+The user can restart the game at any point by clicking the “New game” button.  A confirmation modal will appear to confirm there choice whether to continue game or start a new game. See confirmation modal section
+
+The use can alsoclick on the scoreboard button to view the scoreboard at any point.
+![ Score board modal](assets/images/uxd/testing/scoreboardmodal.PNG)
+
+
+## Confirmation Modal
+The confirmation modal  is accessed from the memory main game page, once the user clicks “New Game”.  The user can decide wether to click on “New Game” which will goto the new game modal or they can click on “continue”  to carry on with the current game 
+
+![ Confirm choice](assets/images/uxd/testing/confirmbuttonnewgame.PNG)
+
+## Finish game Modal
+When all 6 pairs are successfully chosen, a modal pop up  will appear with 
+* the Score
+* number of moves
+
+Score calculated by the follow formula
+ if moves are
+
+=< 9 - points = 80,
+
+=< 12 - points = 60,
+
+=< 14 - points = 40, 
+
+=< 16 - points = 30, 
+
+=< 18 - points = 20, 
+
+=< 20 - points = 10, 
+
+=> 21 - points = 5
+
+The user will then enter their name for the score board  and click save.  This will then display the score board.  
+
+![ Finish game modal](assets/images/uxd/testing/finishgame.PNG)
+
+## Score Board Modal
+Displays score board
+
+The user can then click Play new game button to play again 
+
+![ Score board button](assets/images/uxd/testing/scoreboardbutton.PNG)
+
+or click on the close [x] to close the modal  which will display the last game
+
+![ Score board modal close](assets/images/uxd/testing/scoreboardmodalclose.PNG)
+
 
 
 
@@ -291,23 +364,24 @@ No errors were detected in the code. Warnings were detected in the code however 
 
 ---
 
-Chrome Dev Tools Lighthouse Report to test both on desktop and mobile.
-
+# Chrome Dev Tools Lighthouse
 Initial Score performance 99, accessibility 97, best practices 87, seo 90
 
-# Best practice
-Displays images with incorrect aspect ratio
+## Best practice
+Issue: Displays images with incorrect aspect ratio
 Source:  backgroundimg.png:1
 Description: Failed to load resource: the server responded with a status of 404 ()
 
-the image had the incorrect file name, corrected with backgroundimg.png
+The image had the incorrect file name, corrected with backgroundimg.png
 
-resized all the images to the expected size and rerun the report and best practises scored 100
+Corrective action: Resized all the images to the expected size and rerun the report and best practises scored 100
 
-# SEO - Document does not have a meta description
-added meta tags and increased the score Seo to 100
+## SEO 
+Issue: Document does not have a meta description
 
+Corrective action: added meta tags and increased the score Seo to 100
 
+NEED TO UPDATE THERE ARE SOME ERRORS
 
 ---
 # Design Responsiveness Testing <a name="testing-responsiveness"></a> [Contents](#home)
