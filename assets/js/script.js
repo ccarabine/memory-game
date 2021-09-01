@@ -169,6 +169,7 @@ function saveDetails() {
  * Function - closes new game modal, calls reset game function and listens out for click on card, then calls select card function
  */
 function playNewGame() {
+    scoreBoardModal.style.display = "none";
     newGameModal.style.display = "none";
     resetGame();
     cards.forEach(card => card.addEventListener('click', selectCard)); // loop for each card click invoke the select card function
