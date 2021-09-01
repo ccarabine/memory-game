@@ -234,6 +234,10 @@ Corrective action: Remove buttons and centered the input/save button
 On the scoreboard, i had to click close, then on new game button and then click yes. i would prefer to click new game when i have seen my score on the scoreboard
 
 Corrective action: add new game button, when clicked it would close the scoreboard modal and run new game
+
+On the finish game modal(phone device) The text input would zoom in to enter the name and stayed zoomed in so you would have to manually zoom out to see the close button.
+
+Corrective action: add meta tags to prevent input zooming
 ---
 # My testing Check list <a name="testing-check-list"></a> [Contents](#home)
 
