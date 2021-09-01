@@ -127,7 +127,7 @@ function matchPairsCounter() {
  * Function - Adds the players name and score to the addscore array
  */
 function addToArray() {
-    
+
     const addScore = {
         knames: winnerName.value,
         kscores: parseInt((score), 10)
@@ -153,14 +153,17 @@ function displayScores() {
  * Function Calls add to array function which saves the players name and score to the score board
  */
 function saveDetails() {
-    finishGameModal.style.display = "none";
-    addToArray();
-    displayScores();
-    document.getElementById('scoretable').innerHTML = con;
-    displayScoreBoardModal();
+    if (winnerName.value === "") {
+        alert("Enter your name")
+    
+    } else {
+        finishGameModal.style.display = "none";
+        addToArray();
+        displayScores();
+        document.getElementById('scoretable').innerHTML = con;
+        displayScoreBoardModal();
+    }
 
-    //   saveBtn.innerHTML = 'Saved'
-    //  saveBtn.classList.remove('btn-hover');
 }
 /**
  * Function - closes new game modal, calls reset game function and listens out for click on card, then calls select card function
