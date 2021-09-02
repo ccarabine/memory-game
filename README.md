@@ -5,7 +5,8 @@
 Over lock down we played endless memory games and puzzles with our 4 year old daughter and with an obsession for Paw Pawtrol i decided to build her a Paw Patrol Memory game to keep for entertained.
 
 
-### View my project in git hub <a href="https://github.com/ccarabine/memory-game">  </a>
+### View my project in git hub <a href="https://github.com/ccarabine/memory-game/"> Git Hub Project </a>
+
 ### View live site <a href="https://ccarabine.github.io/memory-game/"> Paw Patrol memory game </a>
 
 
@@ -53,7 +54,7 @@ Image from  <a href="http://ami.responsivedesign.is/">Am I Responsive</a>, to di
 
 
 # User Experience (UX) <a name="ux"></a> [Contents](#home)
-Project Goals
+Project Goals <a name="goals"></a>
 
 The main business goal for game is to provide a fun challenge to the user via a memory game. The site will test the user’s memory across 12 cards to choose 2 matching cards at a time. The user will also be able to receive an end score based how many moves they made, with the opportunity to replay the game to try and beat their score.
 
@@ -63,6 +64,7 @@ The main target audience for this website are children between the ages of 4-7 y
 The website has been created for users to enjoy a fun Paw Patrol memory game.
 
 *  User Stories: <a name="userstories"></a>
+
 User Goals
 * As a user, I want to play an online game
 * As a user how has never played the game before, I want to read the rules and understand how to play the game
