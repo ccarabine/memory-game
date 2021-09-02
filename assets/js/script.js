@@ -79,7 +79,7 @@ function match() {
         matchPairsCounter(); //2.
         resetBoard();
 
-        if (matchedPairs == 6) { //3.
+        if (matchedPairs == 1) { //3.
             finishGame();
         }
     } else { //4.
@@ -158,9 +158,10 @@ function displayScores() {
  */
 function saveDetails() {
     if (winnerName.value === "") {
-        alert("Enter your name");
-    
+       
+        return false;
     } else {
+        event.preventDefault();   
         finishGameModal.style.display = "none";
         addToArray();
         displayScores();
