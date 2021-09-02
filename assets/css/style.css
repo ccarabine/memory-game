@@ -45,8 +45,8 @@ header {
   /*insert card element into 3d space*/
   -webkit-transform-style: preserve-3d;
   -webkit-transform: scale(1);
-    /*The term ‘webkit’ is part of the CSS syntax used to render content for the Safari and Chrome broswers.*/
-  }
+  /*The term ‘webkit’ is part of the CSS syntax used to render content for the Safari and Chrome broswers.*/
+}
 
 .card:active {
   transform: scale(.95);
@@ -65,7 +65,8 @@ header {
   /* postion relative to card*/
   border-radius: 5px;
   background: white;
-  backface-visibility: hidden;/* shows the front-card*/
+  backface-visibility: hidden;
+  /* shows the front-card*/
   -webkit-backface-visibility: hidden;
 }
 
@@ -104,21 +105,21 @@ header {
 }
 
 .modal-game {
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 .modal-rules {
   padding-top: 50px;
-  }
+}
 
 /* Modal Content */
-.modal-content {
+.modal-contentgame {
   background-color: darkblue;
   color: yellow;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 500px;
 }
 
 li {
@@ -136,7 +137,7 @@ h1 {
 .close {
   color: #aaaaaa;
   float: right;
-  font-size: 28px;
+  font-size: 45px;
   font-weight: bold;
 }
 
@@ -210,37 +211,6 @@ h1 {
   color: red;
 }
 
-
-@media (max-width:3500px) {
-  .modal-contentgame {
-    width: 25%;
-  }
-}
-
-@media (max-width:2500px) {
-  .modal-contentgame {
-    width: 30%;
-  }
-}
-
-@media (max-width:2000px) {
-  .modal-contentgame {
-    width: 40%;
-  }
-}
-
-@media (max-width:1500px) {
-  .modal-contentgame {
-    width: 50%;
-  }
-}
-
-@media (max-width:1000px) {
-  .modal-contentgame {
-    width: 80%;
-  }
-}
-
 @media (max-width:800px) {
   .main-area {
     width: 480px;
@@ -253,12 +223,21 @@ h1 {
     margin: 1px;
   }
 
+  .modal-contentgame {
+    width: 400px;
+  }
 }
 
 @media (max-width:700px) {
   .main-area {
     width: 420px;
     height: 420px;
+  }
+}
+
+@media (max-width:600px) {
+  .modal-contentgame {
+    width: 300px;
   }
 }
 
@@ -304,4 +283,9 @@ h1 {
     width: 250px;
     height: 250px;
   }
+  
+    .modal-contentgame {
+      width: 200px;
+    }
+  
 }

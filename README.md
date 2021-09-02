@@ -371,7 +371,9 @@ Initial Score performance 99, accessibility 97, best practices 87, seo 90
 * Issue
 
 Displays images with incorrect aspect ratio
+
 Source:  backgroundimg.png:1
+
 Description: Failed to load resource: the server responded with a status of 404 ()
 
 The image had the incorrect file name, corrected with backgroundimg.png
