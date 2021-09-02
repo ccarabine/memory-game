@@ -158,7 +158,7 @@ function displayScores() {
  */
 function saveDetails() {
     if (winnerName.value === "") {
-        alert("Enter your name")
+        alert("Enter your name");
     
     } else {
         finishGameModal.style.display = "none";

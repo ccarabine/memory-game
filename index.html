@@ -4,17 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=6"/>
     <meta name="title" content="Paw Patrol Memory Game">
     <meta name="description"
         content="No job is too big, no pup is too small! The PAW Patrol is ready to save the day in Adventure Bay with this exciting new memory game, but they can only do it with your help!" />
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap" rel="stylesheet">
@@ -91,7 +85,7 @@
     <!-- New Game Modal -->
     <div id="newgamemodal" class="modal modal-game">
         <div class="modal-content modal-contentgame ">
-            <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" alt="paw patrol logo" />
+            <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" width="150" height="130" alt="paw patrol logo" />
 
             <button onclick="playNewGame()" class="btn btn-hover">Play New Game</button>
             <button onclick="rules()" class="btn btn-hover">Rules</button>
@@ -101,7 +95,7 @@
     <!-- Confirm decision Modal -->
     <div id="confirmmodal" class="modal modal-game">
         <div class="modal-content modal-contentgame ">
-            <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" alt="paw patrol logo" />
+            <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" width="150" height="130" alt="paw patrol logo" />
             <h1>Are you sure you want start the game again?</h1> <br>
             <button onclick="restartGame()" class="btn btn-hover">Yes</button>
             <button onclick="continueGame()" class="btn btn-hover">No</button>
@@ -111,7 +105,7 @@
     <div id="rulesmodal" class="modal modal-rules">
         <div class="modal-content modal-contentrules ">
             <span class="close closerules">&times;</span>
-            <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" alt="paw patrol logo" />
+            <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" width="150" height="130" alt="paw patrol logo" />
             <h1>Rules</h1> <br>
             <h3>How to play the Memory game?</h3> <br>
             <p>Just click on "Start New Game" to start the game.</p> <br>
@@ -148,7 +142,7 @@
     <div id="finishgamemodal" class="modal modal-game">
         <div class="modal-content modal-contentgame ">
 
-            <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" alt="paw patrol logo" />
+            <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" width="150" height="130" alt="paw patrol logo" />
             <h1>Congratulations </h1> <br>
             <h1>You are a winner</h1> <br>
             <h3 id="results"></h3> <br>
@@ -161,7 +155,7 @@
     <div id="scoreboardmodal" class="modal modal-game">
         <div class="modal-content modal-contentgame ">
             <span class="close closescoreboard">&times;</span>
-            <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" alt="paw patrol logo" />
+            <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" width="150" height="130" alt="paw patrol logo" />
             <h1>Score Board </h1> <br>
             <table id="scoretable">
             </table>

@@ -2,13 +2,12 @@
 
 # Project Overview
 
+Over lock down we played endless memory games and puzzles with our 4 year old daughter and with an obsession for Paw Pawtrol i decided to build her a Paw Patrol Memory game to keep for entertained.
 
 
-The website has been created for users to enjoy a fun Paw Patrol memory game.
+### View my project in git hub <a href="https://github.com/ccarabine/memory-game">  </a>
+### View live site <a href="https://ccarabine.github.io/memory-game/"> Paw Patrol memory game </a>
 
-
-
-## Link to memory game live site <a href="https://ccarabine.github.io/memory-game/"> Memory Game </a>
 
 Responsive image ![Responsive image of front page on all devices](assets/images/uxd/iamresponsive.PNG)
 
@@ -66,7 +65,7 @@ The website has been created for users to enjoy a fun Paw Patrol memory game.
 *  User Stories: <a name="userstories"></a>
 User Goals
 * As a user, I want to play an online game
-* As a user, I want to read the rules and understand how to play the game
+* As a user how has never played the game before, I want to read the rules and understand how to play the game
 * As a user, I want to be able to know how the scoring works
 * As a user, I want to be able to know when I have matched two cards
 * As a user, I want to know when I have finished the game and see my score
@@ -75,7 +74,7 @@ User Goals
 
 Business Goals 
 
-* I want to provide a fun game for children between the ages of 4 - 8 years old
+* I want to provide a fun game for children between the ages of 4 - 7 years old
 * I want users to return to play the game and try to beat their score
 * I want users to navigate through the site with ease and be intuitive
 
@@ -225,7 +224,7 @@ The user can then click on the close [x] and decide whether they would like to p
 ---
 # User stories testing  <a name="user-stories-testing"></a> [Contents](#home)
 
-### I checked all the features described above to ensure they worked
+### I checked all the features described above to ensure they worked and included screen shots below
 
 ## Rules modal
 A new game modal pop up will be displayed with Paw Patrol logo and two clickable buttons .
@@ -253,6 +252,7 @@ The number of moves will update and increment by 1 when a user has selected 2 ca
 ![ Moves and matched pairs counter](assets/images/uxd/testing/movesandmatchedpairscounter.PNG)
 
 When all 6 pairs are successfully chosen, the finish game modal popup will appear
+
 ![ Finish game modal](assets/images/uxd/testing/finishgame.PNG)
 
 The user can restart the game at any point by clicking the “New game” button.  A confirmation modal will appear to confirm there choice whether to continue game or start a new game. See confirmation modal section
@@ -368,20 +368,69 @@ No errors were detected in the code. Warnings were detected in the code however 
 Initial Score performance 99, accessibility 97, best practices 87, seo 90
 
 ## Best practice
-Issue: Displays images with incorrect aspect ratio
+* Issue
+
+Displays images with incorrect aspect ratio
 Source:  backgroundimg.png:1
 Description: Failed to load resource: the server responded with a status of 404 ()
 
 The image had the incorrect file name, corrected with backgroundimg.png
 
-Corrective action: Resized all the images to the expected size and rerun the report and best practises scored 100
+* Corrective action: 
+
+Resized all the images to the expected size and rerun the report and best practises scored 100
 
 ## SEO 
-Issue: Document does not have a meta description
+* Issue
 
-Corrective action: added meta tags and increased the score Seo to 100
+Document does not have a meta description
 
-NEED TO UPDATE THERE ARE SOME ERRORS
+* Corrective action
+
+Add meta tags and increased the score Seo to 100
+
+### I ran the report again after implementing corrective actions. The site received 86 for performance and 85 for accessibility
+
+
+## Performance 
+
+* Issue
+
+Image elements do not have explicit width and height on paw patrol logo
+
+* Corrective action
+
+Width and height on paw patrol logo
+
+* Issue
+
+Properly size images
+
+rocky  697.kb
+
+zuma 251kb
+
+* Corrective action
+
+Reduce file size
+
+rocky  697.kb to 84.9
+
+zuma 251kb to 29.8kb
+
+Performance score improved to 93
+
+## Accessibility
+
+* Issue 
+
+[user-scalable="no"] is used in the <meta name="viewport"> element or the [maximum-scale] attribute is less than 5.
+
+* Corrective action:
+
+Remove the user-scalable="no" parameter from the viewport meta tag and set the maximum-scale parameter to 6
+
+Accessibility score improved to 97
 
 ---
 # Design Responsiveness Testing <a name="testing-responsiveness"></a> [Contents](#home)
