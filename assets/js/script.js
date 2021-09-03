@@ -69,9 +69,9 @@ function selectCard() {
  * 1.if first card equals second card then its a match, remove event listeners on first click and second click card
  * which will disabled the user from clickiing the matched pair of cars
  * 2. Call matchPairsCounter Function and resetBoard
- * 3. If match pairs equal 6, then call finishGame function
- * 4. Unlock the board and wait until they have turned back over
- * 5. Not a match,  set a delay 1000milseconds so we can see the 2nd clicked card, turn back over the cards(rotate by 180oc remove the classes '.select')
+ * 4. If match pairs equal 6, then call finishGame function
+ * 5. Unlock the board and wait until they have turned back over
+ * 6. Not a match,  set a delay 1000milseconds so we can see the 2nd clicked card, turn back over the cards(rotate by 180oc remove the classes '.select')
  */
 function match() {
     if (firstClick.dataset.cardtype === secondClick.dataset.cardtype) { // 1. 
@@ -81,7 +81,7 @@ function match() {
         resetBoard();
         matchedPairModal.style.display = "block";
         finishGameModal.style.display = "none";
-        setTimeout(() => { //5. 
+        setTimeout(() => { //3. 
             matchedPairModal.style.display = "none";
             finishGameModal.style.display = "none";
             if (matchedPairs == 2) { //3.
@@ -93,7 +93,6 @@ function match() {
 
         boardDisabled = true;
         setTimeout(() => { //5. 
-
             firstClick.classList.remove('select');
             secondClick.classList.remove('select');
             resetBoard();
