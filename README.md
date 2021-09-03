@@ -228,7 +228,7 @@ The user can then click on the close [x] and decide whether they would like to p
 
 ### I checked all the features described above to ensure they worked and included screen shots below
 
-## Rules modal
+## New game modal
 A new game modal pop up will be displayed with Paw Patrol logo and two clickable buttons .
 -	1. “Play New Game” button  - when the user clicks on the button, the user would be able to begin the memory game.  All moves, matched card counters will be set to zero.  All cards will show the back face
 -	2. “Rules” button– when the user clicks on button, the rules modal pop up will appear, which will allow the user to read the rules of the game.  
@@ -315,13 +315,15 @@ Corrective action: Remove buttons and centered the input/save button
 
 On the scoreboard, i had to click close, then on new game button and then click yes. i would prefer to click new game when i have seen my score on the scoreboard
 
-Corrective action: add new game button, when clicked it would close the scoreboard modal and run new game
+Corrective action: Add new game button, when clicked it would close the scoreboard modal and run new game
 
 On the finish game modal(phone device) The text input would zoom in to enter the name and stayed zoomed in so you would have to manually zoom out to see the close button.
 
-Corrective action: add meta tags to prevent input zooming
+Corrective action: Add meta tags to prevent input zooming
 
+On matching a pair of cards, there is no real feedback apart from the matched cards remanding upturned. 
 
+Corrective action: Add a pop modal to congratulate the user
 
 ---
 # W3C HTML Validator Test <a name="validation-testing-html"></a>  
