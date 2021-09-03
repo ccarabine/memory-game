@@ -11,6 +11,7 @@ const scoreBoardModal = document.getElementById("scoreboardmodal");
 const span = document.getElementsByClassName("close")[0];
 const closeRules = document.getElementsByClassName("closerules")[0];
 const closeScoreBoard = document.getElementsByClassName("closescoreboard")[0];
+const matchedPairModal = document.getElementById("matchedpairmodal");
 
 //Get Elements
 const cards = document.querySelectorAll('.card');
@@ -78,13 +79,21 @@ function match() {
         secondClick.removeEventListener('click', selectCard);
         matchPairsCounter(); //2.
         resetBoard();
+        matchedPairModal.style.display = "block";
+        finishGameModal.style.display = "none";
+        setTimeout(() => { //5. 
+            matchedPairModal.style.display = "none";
+            finishGameModal.style.display = "none";
+            if (matchedPairs == 2) { //3.
+                finishGame();
+            }
+        }, 2500);
 
-        if (matchedPairs == 1) { //3.
-            finishGame();
-        }
     } else { //4.
+
         boardDisabled = true;
         setTimeout(() => { //5. 
+
             firstClick.classList.remove('select');
             secondClick.classList.remove('select');
             resetBoard();
@@ -158,10 +167,10 @@ function displayScores() {
  */
 function saveDetails() {
     if (winnerName.value === "") {
-       
+
         return false;
     } else {
-        event.preventDefault();   
+        event.preventDefault();
         finishGameModal.style.display = "none";
         addToArray();
         displayScores();
@@ -229,6 +238,7 @@ function displayScoreBoardModal() {
     finishGameModal.style.display = "none";
     scoreBoardModal.style.display = "block";
 }
+
 /**
  * This Function calculates the final score and puts the values in the finish game modal
  */
@@ -299,6 +309,6 @@ window.onclick = function (event) {
 };
 
 //The DOMContentLoaded fires when the DOM content is loaded, without waiting for images and stylesheets to finish loading. Opens new Game Modal at the beginning
-document.addEventListener('DOMContentLoaded',()=>{
+document.addEventListener('DOMContentLoaded', () => {
     newGameModal.style.display = "block";
 });
