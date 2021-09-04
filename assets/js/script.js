@@ -1,7 +1,5 @@
-/* I used the  following tutorial on YouTube:
-https://www.youtube.com/watch?v=ZniVgo8U7ek
-I have used some code from this tutorial to assist with creating the game.
-*/
+/* Credit I used the  following tutorial on YouTube to assist with creating the game and customised the code https://www.youtube.com/watch?v=ZniVgo8U7ek
+ */
 //Modals
 const newGameModal = document.getElementById("newgamemodal");
 const finishGameModal = document.getElementById("finishgamemodal");
@@ -21,7 +19,6 @@ const results = document.getElementById("results");
 const winnerName = document.getElementById('winnername');
 const saveBtn = document.getElementById("savebtn");
 
-
 //declare Variables
 let moves = 0;
 let matchedPairs = 0;
@@ -35,16 +32,17 @@ const highScore = [{
     knames: "Connie",
     kscores: 15
 }];
+
 /**
  * Function SelectCard 
- * 1.  boardDisabled: // if boardDisabled =true return so the rest doesnt get executed else disable board and enable it (in the match function) after the cards have been selected
- * 2. if statement to fix bug :if user clicks twice on a the same card, match will equal to true and it will remove the event listener so have incorporated this line of code
- *    solution: if its the first click then the (this) varaible holds the first card but the first card varaible is still unset so the condition is  going to evaluate to false and the function wil be executed normally.
- *   if its is the second card clicked then the (this) varaible holds the second card, if this equal first card then it will remove the "select" class therefore turning the card back over
- * 3. Turn the card over : this keyword relates to '.card' class, if the '.select' class is there remove it, if not add it 
- * 4. if selectedcard equals false then the player has selected the first card
- * 5. if selectedcard equals true then the player has selected the second card
+ * 1.  boardDisabled: if boardDisabled =true return so the rest doesnt get executed else, disable board and enable it (in the match function) after the cards have been selected
+ * 2.  Return false -  if its the first click then (this) holds the first card , return from function.
+ *     Return True - if its the the second card clicked then  (this)  holds the second card, if this equal first card then it will remove the "select" class therefore turning the card back over
+ * 3.  Turn the card over : this keyword relates to '.card' class, if the '.select' class is there remove it, if not add it 
+ * 4.  if selectedcard equals false then the player has selected the first card
+ * 5.  if selectedcard equals true then the player has selected the second card
  */
+/* Credit I used the  following tutorial on YouTube to assist with creating the game and customised the code https://www.youtube.com/watch?v=ZniVgo8U7ek*/
 function selectCard() {
     if (boardDisabled) return; //1.
 
@@ -66,32 +64,31 @@ function selectCard() {
 
 /**
  * Function - Match
- * 1.If first card equals second card then its a match, remove event listeners on first click and second click card
- * which will disabled the user from clickiing the matched pair of cars
+ * 1. If first card equals second card then its a match, remove event listeners on first click and second click card
+ *    which will disabled the user from clickiing the matched pair of cars
  * 2. Call matchPairsCounter Function and resetBoard
- * 3. display matchedpairs modal, a small timer for it to display then close the modal and continue
+ * 3. Display matchedpairs modal for 2.5 seconds, then close the modal and continue
  * 4. If match pairs equal 6, then call finishGame function
  * 5. Unlock the board and wait until they have turned back over
- * 6. Not a match,  set a delay 1000milseconds so we can see the 2nd clicked card, turn back over the cards(rotate by 180oc remove the classes '.select')
+ * 6. Not a match,  set a delay 1 second so we can see the 2nd clicked card, turn back over the cards(rotate by 180oc remove the classes '.select')
  */
+/* Credit I used the  following tutorial on YouTube to assist with creating the game and customised the code https://www.youtube.com/watch?v=ZniVgo8U7ek*/
 function match() {
     if (firstClick.dataset.cardtype === secondClick.dataset.cardtype) { // 1. 
         firstClick.removeEventListener('click', selectCard);
         secondClick.removeEventListener('click', selectCard);
         matchPairsCounter(); //2.
         resetBoard();
-        matchedPairModal.style.display = "block";3.
+        matchedPairModal.style.display = "block"; //3.
         finishGameModal.style.display = "none";
-        setTimeout(() => { 
+        setTimeout(() => {
             matchedPairModal.style.display = "none";
             finishGameModal.style.display = "none";
-            if (matchedPairs == 2) { //4.
+            if (matchedPairs == 6) { //4.
                 finishGame();
             }
         }, 2500);
-
     } else { //5.
-
         boardDisabled = true;
         setTimeout(() => { //6. 
             firstClick.classList.remove('select');
@@ -103,6 +100,7 @@ function match() {
 /**
  * Function - ShuffleCards, Reposition the order of the cards by order property and generating a random number to position it
  */
+/* Credit I used the  following tutorial on YouTube to assist with creating the game and customised the code https://www.youtube.com/watch?v=ZniVgo8U7ek*/
 function shuffleCards() {
     for (let i = 0; i < cards.length; i++) {
         let position = Math.floor(Math.random() * 12);
@@ -112,6 +110,7 @@ function shuffleCards() {
 /**
  * Function - reset boards and resets the values of selectedCard, boardDisabled, firstClick and secondClick, and con to reset the scoreboard
  */
+/* Credit I used the  following tutorial on YouTube to assist with creating the game and customised the code https://www.youtube.com/watch?v=ZniVgo8U7ek*/
 function resetBoard() {
     selectedCard = false;
     boardDisabled = false;
@@ -139,23 +138,22 @@ function matchPairsCounter() {
 /**
  * Function - Adds the players name and score to the addscore array
  */
+/* Credit I used the site on YouTube to assist with adding to the array and customised the code https://www.youtube.com/watch?v=NxVCq4p0Kb0 */
 function addToArray() {
-
     const addScore = {
         knames: winnerName.value,
         kscores: parseInt((score), 10)
     };
     con = "<tr><td colspan='2'></td></tr><tr><td>Name  </td><td>Score  </td></tr>";
-
     highScore.push(addScore);
 }
 
 /**
  * Function - Sorts highscore Array by score from highest to lowest and displays the scoreboard
  */
+/* Credit I used the site to assist with creating the scoreboard and customised the code https://www.chegg.com/homework-help/questions-and-answers/exercise-ll-work-array-ll-add-nodes-dom-display-results-scores-run-application-see-user-in-q24972694*/
 function displayScores() {
     highScore.sort((a, b) => (b.kscores > a.kscores) ? 1 : -1);
-
     for (let i = 0; i < highScore.length; i++) {
         con = con + "<tr><td>" + highScore[i].knames + "</td><td>" + highScore[i].kscores + "</td></tr>";
     }
@@ -167,7 +165,6 @@ function displayScores() {
  */
 function saveDetails() {
     if (winnerName.value === "") {
-
         return false;
     } else {
         event.preventDefault();
@@ -177,8 +174,8 @@ function saveDetails() {
         document.getElementById('scoretable').innerHTML = con;
         displayScoreBoardModal();
     }
-
 }
+
 /**
  * Function - closes new game modal, calls reset game function and listens out for click on card, then calls select card function
  */
@@ -200,7 +197,6 @@ function resetGame() {
     counterMoves.innerHTML = `Moves: ${moves}   `;
     removeSelect();
     shuffleCards();
-
 }
 
 /**
@@ -208,11 +204,36 @@ function resetGame() {
  */
 function removeSelect() {
     let selectCards = Array.from(document.querySelectorAll('.select'));
-
     selectCards.forEach(function (selectCard) {
         selectCard.classList.remove('select');
     });
 }
+
+/**
+ * This Function calculates the final score and puts the values in the finish game modal
+ */
+function finishGame() {
+    if (moves <= 9) {
+        score = 80;
+    } else if (moves <= 12) {
+        score = 60;
+    } else if (moves <= 14) {
+        score = 40;
+    } else if (moves <= 16) {
+        score = 30;
+    } else if (moves <= 18) {
+        score = 20;
+    } else if (moves <= 20) {
+        score = 10;
+    } else if (moves >= 21) {
+        score = 5;
+    }
+    results.innerHTML = `You made ${moves} moves. Well done, your score is ${score} points`;
+    finishGameModal.style.display = "block";
+}
+
+
+/** Modal Section */
 
 /**
  * This Function closes the new game modal and displays the new rule modal
@@ -237,29 +258,6 @@ function displayNewGameModal() {
 function displayScoreBoardModal() {
     finishGameModal.style.display = "none";
     scoreBoardModal.style.display = "block";
-}
-
-/**
- * This Function calculates the final score and puts the values in the finish game modal
- */
-function finishGame() {
-    if (moves <= 9) {
-        score = 80;
-    } else if (moves <= 12) {
-        score = 60;
-    } else if (moves <= 14) {
-        score = 40;
-    } else if (moves <= 16) {
-        score = 30;
-    } else if (moves <= 18) {
-        score = 20;
-    } else if (moves <= 20) {
-        score = 10;
-    } else if (moves >= 21) {
-        score = 5;
-    }
-    results.innerHTML = `You made ${moves} moves. Well done, your score is ${score} points`;
-    finishGameModal.style.display = "block";
 }
 
 /**
@@ -289,7 +287,6 @@ function continueGame() {
 closeRules.onclick = function () {
     rulesModal.style.display = "none";
     newGameModal.style.display = "block";
-
 };
 /** 
  *  Function When the user clicks on (x), close the modal 
@@ -297,7 +294,6 @@ closeRules.onclick = function () {
 closeScoreBoard.onclick = function () {
     scoreBoardModal.style.display = "none";
 };
-
 
 /**
  * Function When the user clicks anywhere outside of the rulesModal, close it
