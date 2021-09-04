@@ -1,3 +1,4 @@
+/* =============================== General Styling ===============================*/
 * {
   padding: 0;
   margin: 0;
@@ -8,11 +9,6 @@ body {
   display: flex;
   background-image: url("../images/backgroundimg.jpg");
   font-family: 'Cabin', sans-serif;
-}
-
-#winnername {
-  margin: 0 auto;
-  display: block;
 }
 
 .container {
@@ -28,6 +24,19 @@ header {
   margin-top: 5px;
 }
 
+h1 {
+  text-align: center;
+}
+
+.pawpatrollogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+/* =============================== Cards area Styling ===============================*/
+/* Credit I followed the tutorial https://www.youtube.com/watch?v=ZniVgo8U7ek and customised styling*/
 .main-area {
   width: 640px;
   height: 640px;
@@ -45,8 +54,7 @@ header {
   /*insert card element into 3d space*/
   -webkit-transform-style: preserve-3d;
   -webkit-transform: scale(1);
-  /*The term ‘webkit’ is part of the CSS syntax used to render content for the Safari and Chrome broswers.*/
-  border: 4px solid red;
+  border: 3px solid red;
 }
 
 .card:active {
@@ -59,12 +67,10 @@ header {
 .front-card,
 .back-card {
   /* relative to card so they will back card will cover the front card*/
-
-   width: 100%;
+  width: 100%;
   height: 100%;
   padding: 1px;
   position: absolute;
-  /* postion relative to card*/
   border-radius: 5px;
   background: white;
   backface-visibility: hidden;
@@ -83,11 +89,11 @@ header {
   -webkit-transform: rotateY(180deg);
 }
 
-/* Modal Styling
+/* =============================== Modal Styling ===============================*/
+/* Credit : I followed the w3 school https://www.w3schools.com/howto/howto_css_modals.asp and customised the styling */
 /* The Modal (background) */
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
   /* Stay in place */
   z-index: 1;
@@ -95,9 +101,7 @@ header {
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
   /* Enable scroll if needed */
   background-color: rgb(0, 0, 0);
@@ -131,10 +135,7 @@ li {
   padding-bottom: 3px;
 }
 
-h1 {
-  text-align: center;
-}
-
+/* =============================== Button Styling ===============================*/
 /* The Close Button */
 .close {
   color: #aaaaaa;
@@ -142,19 +143,11 @@ h1 {
   font-size: 45px;
   font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
-}
-
-.pawpatrollogo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
 }
 
 .btn-hover:hover {
@@ -192,10 +185,6 @@ h1 {
   display: block;
 }
 
-.back {
-  border: 2px solid black;
-}
-
 #scoretable {
   text-align: center;
   margin: auto;
@@ -211,6 +200,11 @@ h1 {
 #scoretable tr:hover {
   background-color: YELLOW;
   color: red;
+}
+
+#winnername {
+  margin: 0 auto;
+  display: block;
 }
 
 @media (max-width:800px) {
@@ -229,6 +223,7 @@ h1 {
     width: 400px;
   }
 }
+/* =============================== Media Queries ===============================*/
 
 @media (max-width:700px) {
   .main-area {
@@ -285,9 +280,9 @@ h1 {
     width: 250px;
     height: 250px;
   }
-  
-    .modal-contentgame {
-      width: 200px;
-    }
-  
+
+  .modal-contentgame {
+    width: 200px;
+  }
+
 }
