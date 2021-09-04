@@ -2,23 +2,27 @@
 <html lang="en">
 
 <head>
+    <!--Meta tags-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=6" />
     <meta name="title" content="Paw Patrol Memory Game">
     <meta name="description"
         content="No job is too big, no pup is too small! The PAW Patrol is ready to save the day in Adventure Bay with this exciting new memory game, but they can only do it with your help!" />
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap" rel="stylesheet">
+    <!-- Favicon link tags-->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Memory Game</title>
 </head>
 
 <body>
 
-    <div class="container">
+<!-- Header to contain the title, scores and match pair results--> 
+   <div class="container">
         <header>
             <h1>Paw Patrol Memory Game</h1>
             <button onclick="confirmDecision()" class="btn btnsml btn-hover">New Game</button>
@@ -27,9 +31,9 @@
             <br> <span id="moves"></span>
             <span id="matchedpairs"></span>
         </header>
-
+<!-- Main-area to contain the cards area -->
+<!--Credit : Main area  built using thetutorial https://www.youtube.com/watch?v=ZniVgo8U7ek, I changed the class names and images -->
         <main class="main-area">
-
             <div class="card" data-cardtype="card1">
                 <img class="front-card" src="assets/images/chase.png" alt="Chase Image" />
                 <img class="back-card" src="assets/images/backgroundcard.jpg" alt="Background card" />
@@ -81,14 +85,13 @@
         </main>
 
     </div>
-
-
+<!-- Modal section -->
+<!-- Credit : I followed the w3 school https://www.w3schools.com/howto/howto_css_modals.asp and customised the code-->
     <!-- New Game Modal -->
     <div id="newgamemodal" class="modal modal-game">
         <div class="modal-contentgame ">
             <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" width="150" height="130"
                 alt="paw patrol logo" />
-
             <button onclick="playNewGame()" class="btn btn-hover">Play New Game</button>
             <button onclick="rules()" class="btn btn-hover">Rules</button>
         </div>
@@ -113,8 +116,6 @@
             <h1>Rules</h1> <br>
             <h3>How to play the Memory game?</h3> <br>
             <p>Just click on "Start New Game" to start the game.</p> <br>
-
-
             <h3>The purpose of this memory game:</h3><br>
             <p> To memorize the locations of the cards in the game in the least moves and to make pairs of cards by
                 turning them over 2 by
@@ -140,7 +141,6 @@
             <p>Every time you start a new game, a random selection and a random positioning of the cards ensure you a
                 different game than the previous one, so you can play as many times as you want!</p>
         </div>
-
     </div>
     <!-- Finish Game Modal -->
     <div id="finishgamemodal" class="modal modal-game">
@@ -152,7 +152,8 @@
             <h1>You are a winner</h1> <br>
             <h3 id="results"></h3> <br>
             <h3>Enter your name below for the score board and click on the save button</h3> <br>
-            <form onsubmit="return saveDetails()">
+           <!--form--> 
+           <form onsubmit="return saveDetails()">
                 <input type="text" id="winnername" name="winnername" value="" required><br>
                 <button type="submit" id="savebtn" class="btn btn-hover btnsml">Save</button>
             </form>
@@ -176,9 +177,10 @@
             <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" width="150" height="130"
                 alt="paw patrol logo" />
             <h1>Amazing</h1> <br>
-            <h1>You are on a roll !  </h1> <br>
+            <h1>You are on a roll ! </h1> <br>
         </div>
     </div>
+    <!--JavaScript link to script.js-->
     <script src="assets/js/script.js"></script>
 </body>
 
