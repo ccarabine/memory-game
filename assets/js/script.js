@@ -35,7 +35,7 @@ const highScore = [{
 
 /**
  * Function SelectCard 
- * 1.  boardDisabled: if boardDisabled =true return so the rest doesnt get executed else, disable board and enable it (in the match function) after the cards have been selected
+ * 1.  boardDisabled: if boardDisabled =true return so the rest doesnt get executed else, disable board and enable it (in the verify match function) after the cards have been selected
  * 2.  Return false -  if its the first click then (this) holds the first card , return from function.
  *     Return True - if its the the second card clicked then  (this)  holds the second card, if this equal first card then it will remove the "select" class therefore turning the card back over
  * 3.  Turn the card over : this keyword relates to '.card' class, if the '.select' class is there remove it, if not add it 
@@ -58,45 +58,73 @@ function selectCard() {
         selectedCard = false;
         secondClick = this;
         moveCounter();
-        match();
+        verifyForMatch();
     }
 }
 
-/**
- * Function - Match
- * 1. If first card equals second card then its a match, remove event listeners on first click and second click card
- *    which will disabled the user from clickiing the matched pair of cars
- * 2. Call matchPairsCounter Function and resetBoard
- * 3. Display matchedpairs modal for 2.5 seconds, then close the modal and continue
- * 4. If match pairs equal 6, then call finishGame function
- * 5. Unlock the board and wait until they have turned back over
- * 6. Not a match,  set a delay 1 second so we can see the 2nd clicked card, turn back over the cards(rotate by 180oc remove the classes '.select')
+
+
+ 
+ /**
+ * Function - verifyForMatch
+ * If first card equals second card then its a match, true: call deActivateCards function if true, false call turncardsBackOver
  */
+ 
 /* Credit I used the  following tutorial on YouTube to assist with creating the game and customised the code https://www.youtube.com/watch?v=ZniVgo8U7ek*/
-function match() {
-    if (firstClick.dataset.cardtype === secondClick.dataset.cardtype) { // 1. 
-        firstClick.removeEventListener('click', selectCard);
-        secondClick.removeEventListener('click', selectCard);
-        matchPairsCounter(); //2.
-        resetBoard();
-        matchedPairModal.style.display = "block"; //3.
-        finishGameModal.style.display = "none";
-        setTimeout(() => {
-            matchedPairModal.style.display = "none";
-            finishGameModal.style.display = "none";
-            if (matchedPairs == 6) { //4.
-                finishGame();
-            }
-        }, 2500);
-    } else { //5.
-        boardDisabled = true;
-        setTimeout(() => { //6. 
-            firstClick.classList.remove('select');
-            secondClick.classList.remove('select');
-            resetBoard();
-        }, 1000);
-    }
+function verifyForMatch() {
+    let isMatch = firstClick.dataset.cardtype === secondClick.dataset.cardtype; // 1. 
+    isMatch ? deActivateCards() : turnCardsBackOver();
 }
+
+/**
+ * Function - turnCardBackOver
+ *  Not a match, 
+ * Unlock the board and wait until they have turned back over after a 1 second delay so we can see the 2nd clicked card, turn back over the cards(rotate by 180oc) remove the classes '.select')
+ * Credit I used the  following tutorial on YouTube to assist with creating the game and customised the code https://www.youtube.com/watch?v=ZniVgo8U7ek
+ */
+ 
+function turnCardsBackOver() {
+    boardDisabled = true;
+    setTimeout(() => {  
+        firstClick.classList.remove('select');
+        secondClick.classList.remove('select');
+        resetBoard();
+    }, 1000);
+};
+
+/**
+ * Function - deActivateCards
+ * Match
+ * Remove event listeners on first click and second click card
+ * which will disabled the user from clickiing the matched pair of cars
+ * Call matchPairsCounter Function and resetBoard
+ */
+
+function deActivateCards() {
+    firstClick.removeEventListener('click', selectCard);
+    secondClick.removeEventListener('click', selectCard);
+    matchPairsCounter(); 
+    matchedCards();
+    resetBoard();
+};
+
+/**
+ * Function - matchedCards
+*  Display matchedpairs modal for 1.5 seconds, then close the modal and continue
+*  If match pairs equal 6, then call finishGame function
+*/
+function matchedCards() {
+    matchedPairModal.style.display = "block"; 
+    finishGameModal.style.display = "none";
+    setTimeout(() => {
+        matchedPairModal.style.display = "none";
+        finishGameModal.style.display = "none";
+        if (matchedPairs == 6) { //4.
+            finishGame();
+        }
+    }, 1500);
+};
+
 /**
  * Function - ShuffleCards, Reposition the order of the cards by order property and generating a random number to position it
  */
