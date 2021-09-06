@@ -23,7 +23,7 @@ Image from  <a href="http://ami.responsivedesign.is/">Am I Responsive</a>, to di
     * [Scope](#scope)
     * [Structure](#Structure)
     * [Skeleton](#skeleton)
-    * [Surface](#design)
+    * [Surface](#surface)
       
 2. [Features](#features)
     * [Current Features](#features-current)
@@ -34,7 +34,7 @@ Image from  <a href="http://ami.responsivedesign.is/">Am I Responsive</a>, to di
     * [Features testing](#features-testing)
     * [User Stories Testing](#user-stories-testing)
     * [Constructive User Feedback](#user-feedback)
-    * [Known issues during testing](#known-issue)
+    * [Known issues during testing](#known-issues)
     * [Validation Testing -HTML ](#validation-testing-html)
     * [Validation Testing -CSS ](#validation-testing-css)
     * [Validation Testing -A11y Color Contrast Accessibility](#validation-testing-A11y)
@@ -419,6 +419,10 @@ On investigation I noticed a spelling mistake on the boardDisable variable which
 
 * During testing an issue was identified on the scoreboard. If the user didn't enter a name on the finish game modal, there would be no name on the scoreboard with a score
     * Corrective action:  I put an if statement in savedetails function. If the value equal empty string then alert the user to enter their name else run the rest of the function
+
+* During testing an issue was identified on my laptop view. I couldn't see the full board of cards, only 2 and a half cards in height.
+    * Corrective action:  I added media queries to control the height of the container to show all cards in the view.
+
 ### [Contents table ](#home)
 ---
 ## W3C HTML Validator Test <a name="validation-testing-html"></a>  
@@ -635,6 +639,8 @@ I have also utilised the following frameworks  and tools:
 * [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools): Chrome Dev Tools was used to test the site and assist with debugging issues.
 * [W3C Markup Validation Service](https://validator.w3.org/): The W3C Markup Validation Service was used to validate the HTML document for this project and to identify any issues with the code.
 * [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/): The W3C CSS Validation Service was used to validate the CSS document for this project and to identify any issues with the code.
+* [JSHint](https://jshint.com/): JSHint, a JavaScript Code Quality Tool to detect errors and potential problems in your JavaScript code.
+* [Chrome Lighthouse report](https://ccarabine.github.io/memory-game/):Lighthouse is an open-source, automated tool for improving the quality of web pages. Program run in Chrome Dev Tools
 * [Am I Responsive](http://ami.responsivedesign.is/): Am I Responsive was used to create the header image for the README file.
 * [Resize Pixel](https://www.img2go.com/compress-image): Img2go was used to reduce the size of the paw patrol images.
 * [A11y Colour Contrast checker](https://color.a11y.com/Contrast/):A11y Colour Contrast checker was used to check the colour contrast between background and text colours.
