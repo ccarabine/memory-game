@@ -156,6 +156,11 @@ li {
   color: red;
   cursor: pointer;
 }
+.btn:active {
+  color: yellow;
+  color: red;
+  transform: translateY(4px);
+}
 
 .btn {
   align-items: center;
