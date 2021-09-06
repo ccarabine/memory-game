@@ -21,8 +21,8 @@
 
 <body>
 
-<!-- Header to contain the title, scores and match pair results--> 
-   <div class="container">
+    <!-- Header to contain the title, scores and match pair results-->
+    <div class="container">
         <header>
             <h1>Paw Patrol Memory Game</h1>
             <button onclick="confirmDecision()" class="btn btnsml btn-hover">New Game</button>
@@ -31,8 +31,8 @@
             <br> <span id="moves"></span>
             <span id="matchedpairs"></span>
         </header>
-<!-- Main-area to contain the cards area -->
-<!--Credit : Main area  built using the tutorial https://www.youtube.com/watch?v=ZniVgo8U7ek, I changed the class names and images -->
+        <!-- Main-area to contain the cards area -->
+        <!--Credit : Main area  built using the tutorial https://www.youtube.com/watch?v=ZniVgo8U7ek, I changed the class names and images -->
         <main class="main-area">
             <div class="card" data-cardtype="card1">
                 <img class="front-card" src="assets/images/chase.png" alt="Chase Image" />
@@ -85,8 +85,8 @@
         </main>
 
     </div>
-<!-- Modal section -->
-<!-- Credit : I followed the w3 school https://www.w3schools.com/howto/howto_css_modals.asp and customised the code-->
+    <!-- Modal section -->
+    <!-- Credit : I followed the w3 school https://www.w3schools.com/howto/howto_css_modals.asp and customised the code-->
     <!-- New Game Modal -->
     <div id="newgamemodal" class="modal modal-game">
         <div class="modal-contentgame ">
@@ -114,32 +114,27 @@
             <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" width="150" height="130"
                 alt="paw patrol logo" />
             <h1>Rules</h1> <br>
-            <h3>How to play the Memory game?</h3> <br>
-            <p>Just click on "Start New Game" to start the game.</p> <br>
-            <h3>The purpose of this memory game:</h3><br>
-            <p> To memorize the locations of the cards in the game in the least moves and to make pairs of cards by
-                turning them over 2 by
-                2. When the 2 cards match, it's a pair! You win the pair and the cards
-                remain turned face up. You will then continue the game, otherwise the cards are automatically turned
-                face down and you have to make a new try until you have found the 6 pairs of cards. You will be given a
-                final score which will depend on the
-                number of moves and the bonus questions answered
+            <h3>How to Play:</h3><br>
+            <p> Find all 6 pairs with the least moves by memorising their locations as you play.<br><br>
+                Turn 2 cards at a time, when 2 cards match it’s a winning pair!<br><br>
+                Your winning score will depend on the number of moves made<br><br>
+                Remember to click ‘save’ to save your score to the leaders score board!<br><br>
+                Click ‘start new game’ to play the game!<br><br>
+                Each game is different, you’ll never get bored!<br><br>
             </p><br>
 
-            <h3> Scoring</h3><br>
-            <p>The final score is calculated from the number of moves taken and bonus questions </p>
+            <h3>Score breakdown: </h3><br>
+            <p>If you match all 6 pairs with less than:</p>
             <ul>
-                <li> Less than 9 moves, the player receives 80 points</li>
-                <li> Less than 12 moves, the player receives 60 points</li>
-                <li> Less than 14 moves, the player receives 40 points</li>
-                <li> Less than 16 moves, the player receives 30 points</li>
-                <li> Less than 18 moves, the player receives 20 points</li>
-                <li> Less than 20 moves, the player receives 10 points</li>
-                <li> More then 21 moves, the player receives 5 points</li>
+                <li> 9 moves, receive 80 points</li>
+                <li> 12 moves, receive 60 points</li>
+                <li> 14 moves, receive 40 points</li>
+                <li> 16 moves, receive 30 points</li>
+                <li> 18 moves, receive 20 points</li>
+                <li> 20 moves, receive 10 points</li>
+                <li> More then 21 moves, receive 5 points</li>
             </ul> <br>
-            <p>Remember to click save, to save your score to the board</p>
-            <p>Every time you start a new game, a random selection and a random positioning of the cards ensure you a
-                different game than the previous one, so you can play as many times as you want!</p>
+
         </div>
     </div>
     <!-- Finish Game Modal -->
@@ -152,8 +147,8 @@
             <h1>You are a winner</h1> <br>
             <h3 id="results"></h3> <br>
             <h3>Enter your name below for the score board and click on the save button</h3> <br>
-           <!--form--> 
-           <form onsubmit="return saveDetails()">
+            <!--form-->
+            <form onsubmit="return saveDetails()">
                 <input type="text" id="winnername" name="winnername" value="" required><br>
                 <button type="submit" id="savebtn" class="btn btn-hover btnsml">Save</button>
             </form>
