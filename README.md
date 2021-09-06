@@ -2,15 +2,15 @@
 
 # Project Overview
 
-Over lockdown as a family with a 4 year old daughter, we played endless memory games and puzzles. My daughter has a long standing passion/obsession for Paw Patrol so it seems fitting to build her a Paw Patrol Memory game to keep for entertained.
+Over lockdown as a family with a 4 year old daughter, we played endless memory games and puzzles. My daughter has a long standing passion/obsession for Paw Patrol so it seems fitting to build her a Paw Patrol Memory game to keep her entertained.
 
 
-## View my project in git hub <a href="https://github.com/ccarabine/memory-game/"> Git Hub Project </a>
+### View my project in git hub <a href="https://github.com/ccarabine/memory-game/"> Git Hub Project </a>
 
-## View the live site here<a href="https://ccarabine.github.io/memory-game/"> Paw Patrol memory game </a>
+### View the live site here<a href="https://ccarabine.github.io/memory-game/"> Paw Patrol memory game </a>
 
-
-Responsive image ![Responsive image of front page on all devices](assets/images/uxd/iamresponsive.PNG)
+---
+## Responsive image ![Responsive image of front page on all devices](assets/images/uxd/iamresponsive.PNG)
 
 Image from  <a href="http://ami.responsivedesign.is/">Am I Responsive</a>, to display the websites home page across mobile, tablet and desktop.
 
@@ -50,22 +50,22 @@ Image from  <a href="http://ami.responsivedesign.is/">Am I Responsive</a>, to di
 
 ---
 # User Experience (UX) <a name="ux"></a> 
-Project Goals 
+## Project Goals 
 
 The main goal for this game is to provide a fun challenge to the user via a memory game. The site will test the user’s memory across 12 cards to choose 2 matching cards/pairs at a time. The user will also be able to receive an end score based on how many moves they made, with the opportunity to replay the game to try and beat their score.
 
-The main target audience for this website are children between the ages of 4-7 years old with an interest in Paw Patrol, although the game will resonate with all children unfamiliar with the brand.
+The main target audience for this game are children between the ages of 4-7 years old with an interest in Paw Patrol, although the game will resonate with all children, even those unfamiliar with the brand.
 
 ---
 # Strategy <a name="strategy"></a>
 
-The website has been created for users to enjoy a fun Paw Patrol memory game.
+The game has been created for users to enjoy a fun Paw Patrol memory game.
 
 ## User Stories: 
 
 ### Site Owner Goals 
 
-* I want to provide a fun game for children online users between the ages of 4 - 7 years old
+* I want to provide a fun game for children/online users between the ages of 4 - 7 years old
 * I want users to navigate through the game with ease and for the game to be intuitive
 * I want users to be incentivised to return and replay the game to beat their previous scores listed on the scoreboard
 * I want users to have facility to return and replay the game with different games each time.
@@ -76,10 +76,10 @@ The website has been created for users to enjoy a fun Paw Patrol memory game.
 * As a user, I want to play an online game
 * As a user who has never played the game before, I need to locate the rules and understand how to play the game
 * As a user, I need to know how the scoring works
-* As a user, I want to know when I have match two cards
+* As a user, I want to know when I have matched two cards
 * As a user, I want to know when I have finished the game and see my score
 * As a user, I want to be able to restart the game at any point
-* As a user of multiple devices, I need a website that is fully responsive, invoking the same user experience across all devices, in particular my mobile. 
+* As a user of multiple devices, I need a game that is fully responsive, invoking the same user experience across all devices, in particular my mobile. 
 * As a user, I want to know how many matched cards and moves I have made during the game at any time
 * As a user, I want to be challenged with different games each time I play
 * As a user, I expect the site to be fully accessible 
@@ -103,7 +103,7 @@ As the target user is aged between 4-7 years, it is important for the structural
 
 The game will be on one html page, there is no need for a navbar or footer due to the game simplicity .
 
-The main page there will host the following elements
+The main page will host the following elements:
 
 * Background image
 * Header section with the title of the game, Paw Patrol logo, number of moves/matched cards and navigation buttons to new game and to view the scoreboard
@@ -111,7 +111,7 @@ The main page there will host the following elements
 
 ### Navigation
 
-The sites navigation will be consistent and predictable by use of buttons and modals to direct the user to their desired destination. 
+The games navigation will be consistent and predictable by use of buttons and modals to direct the user to their desired destination. 
 
 ### Buttons
 
@@ -119,11 +119,11 @@ Buttons will be styled consistently and give feedback when the user hovers or cl
 
 ### Pop up Modals
 
-Pop up Modals will be consistent in styling across the site with background colour, a Paw Patrol logo as a header 
+Pop up Modals will be consistent in styling across the site with background colour and a Paw Patrol logo as a header 
 
 ### Favicon
 
-A favicon of the a paw is displayed as a visual reminder of the Web site identity in the address bar or in tabs. 
+A favicon of the a paw is displayed as a visual reminder of the game identity in the address bar or in the tabs. 
 
 ### [Contents table ](#home)
 
@@ -132,7 +132,7 @@ A favicon of the a paw is displayed as a visual reminder of the Web site identit
 
 ## Wireframe 
 
-I used <a href="https://balsamiq.com/">Balsamiq</a> to create wireframes for my project in order to plan out the layout of the interface, navigation and information design of the webpage on  desktop, tablets and mobile devices.
+I used <a href="https://balsamiq.com/">Balsamiq</a> to create wireframes for my project in order to plan out the layout of the interface, navigation and information design of the game on  desktop, tablets and mobile devices.
 
 [Link to wireframes](https://github.com/ccarabine/memory-game/blob/main/wireframes.md)
 
@@ -155,16 +155,12 @@ The following font cabin have been selected to ensure the text is easy to read, 
 
 ![ Cabin font](assets/images/uxd/fontcabin.PNG)
 
-
-
 ## 3. Imagery <a name="imagery"></a>
 I have selected popular Paw Patrol characters for the images on the cards to resonate with users and ensure all images are consistent across the game.
 Please refer to further details in credits section for specific images used within the project
 
 ![ Images](assets/images/uxd/pawpatrolimages.PNG)
 ![ Images](assets/images/backgroundimg.jpg)
-
-
 
 ### [Contents table ](#home)
 ---
@@ -179,30 +175,30 @@ Under the header is the main game area displaying 12 cards faced down.
 
 ### New game modal 
 
-On load, the new game modal pop up will be displayed with Paw Patrol logo  and two clickable buttons .
--	1. “Play New Game” button  - when the user clicks the button, the user will be able to begin the memory game.  All moves, matched card counters will be set to zero.  
--	2. “Rules” button– when the user clicks the button, the rules modal pop up will appear, which will allow the user to read the rules of the game.  
+On load, the 'new game' modal pop-up will be displayed with Paw Patrol logo  and two clickable buttons .
+-	1. 'Play New Game' button  - when the user clicks the button, the user will be able to begin the memory game.  All moves, matched card counters will be set to zero.  
+-	2. 'Rules' button– when the user clicks the button, the rules modal pop up will appear, which will allow the user to read the rules of the game.  
 
 ### Rules modal
-The rules modal  is accessed from the new game modal once the user clicks on the “rules” button.  The user can read the rules of the game and click close [x] to bring them back to the new game modal.
+The 'rules' modal  is accessed from the 'new game' modal once the user clicks on the 'rules' button.  The user can read the rules of the game and click close [x] to bring them back to the 'new game' modal.
 
 ### The game
-Once the user initiates the game by clicking “Play New Game” from the new game modal, the user will be presented with the memory game. 3 rows of 4 cards ,totalling 12 cards to choose from which will have a ‘back card’ image displayed on each of the cards as default.
+Once the user initiates the game by clicking 'Play New Game' from the 'new game' modal, the user will be presented with the memory game. 3 rows of 4 cards, totalling 12 cards to choose from, these will have a ‘back card’ image displayed on each of the cards as default.
 
 The user can click only on 2 cards at a time. 
 
 The user will start the game, by selecting two cards. The number of moves will update and increment by 1.
 
-If the user matches two cards they will remain up turned and display the front of the card – Paw Patrol character. The matched pairs pop up modal will display as user feedback. The matched pairs counter will increment by 1
+If the user matches two cards they will remain up turned and display the front of the card – Paw Patrol character. The 'matched pairs' pop-up modal will display as user feedback. The 'matched pairs counter' will increment by 1
 
-When all 6 pairs are successfully chosen, the finish game modal popup will appear
-The user can restart the game at any point by clicking the “New game” button.  A confirmation modal will appear to confirm whether they wish to continue game or start a new game.
+When all 6 pairs are successfully chosen, the 'finish game' modal pop-up will appear
+The user can restart the game at any point by clicking the 'New game' button.  A 'confirmation' modal will appear to confirm whether they wish to continue game or start a new game.
 
 ### Confirmation Modal
-The confirmation modal  is accessed from the memory main game page, once the user clicks “New Game”.  The user can decide whether to click on “New Game” which will go to the new game modal or they can click on “continue”  to carry on with the current game. 
+The 'confirmation' modal  is accessed from the memory main game page, once the user clicks 'New Game'.  The user can decide whether to click on 'New Game' which will go to the 'new game' modal or they can click on 'continue' to carry on with the current game. 
 
 ### Finish game Modal
-When all 6 pairs are successfully chosen, a modal pop up  will appear with 
+When all 6 pairs are successfully chosen, a modal pop-up  will appear with 
 * the Score
 * number of moves
 
@@ -224,7 +220,7 @@ Score calculated by the follow formula
 
 => 21 - points = 5
 
-The user will then enter their name for the score board  and click save.  This will then display the score board.  
+The user will then enter their name for the score board and click save.  This will then display the score board.  
 
 ### Score Board Modal
 Displays score board with the usernames and score in numerical order (top/highest score at top)
@@ -251,21 +247,21 @@ The user can then click on the close [x] and decide whether they would like to p
 
 
 ## &#x2611; New game modal 
-On load, the new game modal pop up will be displayed with Paw Patrol logo  and two clickable buttons .
--	1. “Play New Game” button  - when the user clicks the button, the user will be able to begin the memory game.  All moves, matched card counters will be set to zero.  
--	2. “Rules” button– when the user clicks the button, the rules modal pop up will appear, which will allow the user to read the rules of the game.
+On load, the 'new game' modal pop-up will be displayed with Paw Patrol logo  and two clickable buttons .
+-	1. 'Play New Game' button  - when the user clicks the button, the user will be able to begin the memory game.  All moves, matched card counters will be set to zero.  
+-	2. 'Rules' button– when the user clicks the button, the 'rules' modal pop-up will appear, which will allow the user to read the rules of the game.
 
 ![ New game](assets/images/uxd/testing/newgame.PNG)
 
 ## &#x2611;  Rules modal
-The rules modal  is accessed from the new game modal once the user clicks on the “rules” button.  The user can read the rules of the game and click close [x] to bring them back to the new game modal.
+The 'rules' modal is accessed from the 'new game' modal once the user clicks on the 'rules' button.  The user can read the rules of the game and click close [x] to bring them back to the 'new game' modal.
 
 
 ![ Rules modal](assets/images/uxd/testing/rules.PNG)
 
 ## &#x2611; The game
 
-Once the user initiates the game by clicking “Play New Game” from the new game modal, the user will be presented with the memory game. 3 rows of 4 cards ,totalling 12 cards to choose from which will have a ‘back card’ image displayed on each of the cards as default.
+Once the user initiates the game by clicking 'Play New Game' from the 'new game' modal, the user will be presented with the memory game. 3 rows of 4 cards ,totalling 12 cards to choose from which will have a ‘back card’ image displayed on each of the cards as default.
 
 The user can click only on 2 cards at a time. 
 
@@ -275,25 +271,23 @@ The user will start the game, by selecting two cards. The number of moves will u
 
 ![ Matched pair](assets/images/uxd/testing/matchedpair.PNG)
 
-If the user matches two cards they will remain up turned and display the front of the card – Paw Patrol character. The matched pairs pop up modal will display as user feedback. The matched pairs counter will increment by 1
+If the user matches two cards they will remain up turned and display the front of the card – Paw Patrol character. The 'matched pairs' pop-up modal will display as user feedback. The matched pairs counter will increment by 1
 
 ![ Moves and matched pairs counter](assets/images/uxd/testing/movesandmatchedpairscounter.PNG)
 
-
-When all 6 pairs are successfully chosen, the finish game modal popup will appear
+When all 6 pairs are successfully chosen, the 'finish game' modal pop-up will appear
 
 ![ Finish game modal](assets/images/uxd/testing/finishgame.PNG)
 
-
-The user can restart the game at any point by clicking the “New game” button.  A confirmation modal will appear to confirm whether they wish to continue game or start a new game. 
+The user can restart the game at any point by clicking the 'New game' button.  A 'confirmation' modal will appear to confirm whether they wish to continue game or start a new game. 
 
 ## &#x2611;  Confirmation Modal
-The confirmation modal  is accessed from the memory main game page, once the user clicks “New Game”.  The user can decide whether to click on “New Game” which will go to the new game modal or they can click on “continue”  to carry on with the current game. 
+The 'confirmation' modal is accessed from the memory main game page, once the user clicks 'New Game'.  The user can decide whether to click on 'New Game' button which will go to the 'new game' modal or they can click on continue to carry on with the current game. 
 
 ![ Confirm choice](assets/images/uxd/testing/confirmbuttonnewgame.PNG)
 
 ## &#x2611;  Finish game Modal
-When all 6 pairs are successfully chosen, a modal pop up  will appear with 
+When all 6 pairs are successfully chosen, the 'finish game' modal pop-up  will appear with 
 * the Score
 * number of moves
 
@@ -315,7 +309,7 @@ Score calculated by the follow formula
 
 => 21 - points = 5
 
-The user will then enter their name for the score board  and click save.  This will then display the score board.  
+The user will then enter their name for the score board and click save.  This will then display the score board.  
 
 ![ Finish game modal](assets/images/uxd/testing/finishgame.PNG)
 
@@ -326,7 +320,7 @@ The user can then click on the close [x] and decide whether they would like to p
 
 ![ Score board button](assets/images/uxd/testing/scoreboardbutton.PNG)
 
-or click on the close [x] to close the modal  which will display the last game
+or click on the close [x] to close the 'scoreboard' modal  which will display the last game
 
 ![ Score board modal close](assets/images/uxd/testing/scoreboardmodalclose.PNG)
 
@@ -336,8 +330,8 @@ or click on the close [x] to close the modal  which will display the last game
 
 I have tested the site owner/user stories to ensure the MPV has been achieved.
 
-Site Owner Goals:
-* I want to provide a fun game for children online users between the ages of 4 - 7 years old
+### Site Owner Goals:
+* I want to provide a fun game for children/online users between the ages of 4 - 7 years old
 
     * Achieved by popular brand, simplicity and styling which resonates/appeals to all users in the target audience of 4-7 year olds. 
 * I want users to navigate through the game with ease and for the game to be intuitive
@@ -352,7 +346,7 @@ Site Owner Goals:
      * The cards are shuffled so each new game has random positioning of cards to challenge users.
 
 * I want the game to be accessible to all users
-    * Site has been tested for contrast between background and foreground colours to cater for the visually impaired and has alt text for non-text elements.
+    * The game has been tested for contrast between background and foreground colours to cater for the visually impaired and has alt text for non-text elements.
 
 ### Site User Goals:
 * As a user, I want to play an online game
@@ -363,6 +357,7 @@ Site Owner Goals:
 
 * As a user, I need to know how the scoring works
     * The comprehensive score explanation is detailed in the ‘rules’ pop-up modal.
+
 * As a user, I want to know when I have match two cards
     * The ‘match-cards’ modal, displayed for 1.5 seconds, provides feedback when two cards have been matched. Both cards are then displayed for game remainder. 
 
@@ -372,7 +367,7 @@ Site Owner Goals:
 * As a user, I want to be able to restart the game at any point
     * The user can start new game at any point by easily navigating the ‘new game’ button on the header.
 
-* As a user of multiple devices, I need a website that is fully responsive, invoking the same user experience across all devices, in particular my mobile. 
+* As a user of multiple devices, I need a game that is fully responsive, invoking the same user experience across all devices, in particular my mobile. 
     * The game has been tested and is functional on all devices with no compromised features/views.
 
 * As a user, I want to know how many matched cards and moves I have made during the game at any time
@@ -399,26 +394,25 @@ The goal is to encourage the user to save their name in order to update the scor
     (My 4 year old daughter is very frustrated by the amount of steps required to start new game. The process is not intuitive or easy to understand.)
     * Corrective action: Added a ‘new game’ button on the ‘score’ board pop-up model, which in turn, closes the ‘score’ board pop-up modal and starts a new game, reducing steps.
 
-* On matching a pair of cards, there is no real feedback apart from the matched cards remanding upturned. 
+* On matching a pair of cards, there is no real feedback apart from the matched cards remaining upturned. 
     * Corrective action: Add a pop-up modal to congratulate the user
 ### [Contents table ](#home)
 ---
 ## Known issues during testing <a name="known-issues"></a>
 
-* During testing an issue was identified on the score table.
-When the user entered their name, the score board would display with the scores array initially.  When the user finished the game again.  The array would display after the previous displayed table, therefore duplicating the names and scoring
+* During testing an issue was identified on the score table. When the user entered their name, the score board would display with the scores array, initially.  When the user finished the game again,  the array would display after the previous displayed table, therefore duplicating the names and scoring.
     * Corrective Action: Reset the con variable in the reset function
 
-* During testing an issue was identified on the finish game modal
+* During testing an issue was identified on the 'finish game' modal
 The users name was still displayed in the text input field from the previous game.
-    * Corrective action: Reset winnerName value to Null when the reset board function is called
+    * Corrective action: Reset winnerName value to Null when the reset board function is called.
 
-* During testing an issue was identified on the main game.  The user could click on a 3rd / 4th card after clicking the 1st/2nd on the same turn.
+* During testing an issue was identified on the main game.  The user could click on a 3rd/4th card after clicking the 1st/2nd on the same turn.
 On investigation I noticed a spelling mistake on the boardDisable variable which stopped boardDisable resulting true and would stop the user from clicking a further card.
     * Corrective action:  Corrected spelling 
 
-* During testing an issue was identified on the scoreboard. If the user didn't enter a name on the finish game modal, there would be no name on the scoreboard with a score
-    * Corrective action:  I put an if statement in savedetails function. If the value equal empty string then alert the user to enter their name else run the rest of the function
+* During testing an issue was identified on the scoreboard. If the user didn't enter a name on the 'finish game' modal, there would be no name on the scoreboard with a score
+    * Corrective action:  I put an 'if statement' in saveDetails function. If the value equal empty string then alert the user to enter their name else run the rest of the function.
 
 * During testing an issue was identified on my laptop view. I couldn't see the full board of cards, only 2 and a half cards in height.
     * Corrective action:  I added media queries to control the height of the container to show all cards in the view.
@@ -443,16 +437,14 @@ I used [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) code checking t
 
 No Errors on report
 
-
-
 ---
 ## A11y Color Contrast Acccessibility Validation <a name="validation-testing-A11y"></a>
 I used [A11y Color Contrast Acccessibility Validation](https://color.a11y.com/) 
-This website provides free color contrast analysis tools that will display the color contrast issues of a web page; per WCAG 2.1 Guidelines. Color Contrast refers to how bright or dark colors appear against each other on screens; particularly with regard to the relative, gray-scale luminosity as perceived by the human eye.
+This website provides free colour contrast analysis tools that will display the colour contrast issues of a web page; per WCAG 2.1 Guidelines. Colour Contrast refers to how bright or dark colours appear against each other on screens; particularly with regards to the relative, gray-scale luminosity as perceived by the human eye.
 
-When it comes to website accessibility, the contrast between the text and the text background is a concern for colorblind and other visually impaired users.
+When it comes to website accessibility, the contrast between the text and the text background is a concern for colourblind and other visually impaired users.
 
-This color contrast tool enables users to comply with website accessibilities regulations.
+This colour contrast tool enables users to comply with website accessibilities regulations.
 
 ### Testing
 
@@ -471,7 +463,7 @@ No errors were detected in the code. Warnings were detected in the code however 
 
 ## Desktop report
 
-Initial Score performance 99, accessibility 97, best practices 87, seo 90
+Initial Score performance 99, Accessibility 97, Best practices 87, SEO 90
 
 ### Best practice
 * Issue
@@ -551,15 +543,18 @@ Serve images that are appropriately-sized to save cellular data and improve load
 rubble.png resource size 303 kb potential saving 222kb
 backgroundcard.jpg resource size 243 kb potential saving 215kb
 
-* Correcive action: tried to resolve it by using google-webfonts-helper inline CSS, but the score for the best practices reduced. 
+* Correcive action: Tried to resolve it by using google-webfonts-helper inline CSS, but the score for the best practices reduced. 
 Reduced file size of images
+
 *** score improved to 80
 
 ### Best Practices
 * Issue
 Displays images with incorrect aspect ratio
 patrol patrol logo displayed size 150x130 expected size 300 x 260
-corrective action: resized image to 300x260
+
+* Corrective action: Resized image to 300x260
+
 *** Improved score to 93
 
 ---
@@ -589,7 +584,6 @@ For each section on each page, I tested various screen sizes in the development 
 * iPad
 
 * iPad Pro
-
 
 ## Desktop testing
 
@@ -680,11 +674,13 @@ i used following tutorial on YouTube. I have used code from this tutorial to ass
 ### [Contents table ](#home)
 ---
 # Acknowledgements <a name="acknowledgements"></a>
-A big thank you to my mentor Maria for her help and guidance throughout my first project
+A big thank you to my mentor Maria for her help and guidance throughout my second project
 
 Thank you to to the following:
 * My daughter Connie who inspired me, provided really critical feedback and displayed much pleasure on discovering and playing the game.
 * My wife for her help and constructive feedback throughout the project. 
 * The tutors for help and support.
 
+![My daughter playing the game 1](assets/images/uxd/connieplay1.jpg)
+![My daughter playing the game 1](assets/images/uxd/connieplay2.jpg)
 ***
