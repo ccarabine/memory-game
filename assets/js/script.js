@@ -1,5 +1,3 @@
-/* Credit I used the  following tutorial on YouTube to assist with creating the game and customised the code https://www.youtube.com/watch?v=ZniVgo8U7ek
- */
 //Modals
 const newGameModal = document.getElementById("newgamemodal");
 const finishGameModal = document.getElementById("finishgamemodal");
@@ -62,17 +60,14 @@ function selectCard() {
     }
 }
 
-
-
- 
- /**
+/**
  * Function - verifyForMatch
  * If first card equals second card then its a match, true: call deActivateCards function if true, false call turncardsBackOver
  */
- 
+
 /* Credit I used the  following tutorial on YouTube to assist with creating the game and customised the code https://www.youtube.com/watch?v=ZniVgo8U7ek*/
 function verifyForMatch() {
-    let isMatch = firstClick.dataset.cardtype === secondClick.dataset.cardtype; // 1. 
+    let isMatch = firstClick.dataset.cardtype === secondClick.dataset.cardtype;
     isMatch ? deActivateCards() : turnCardsBackOver();
 }
 
@@ -82,10 +77,10 @@ function verifyForMatch() {
  * Unlock the board and wait until they have turned back over after a 1 second delay so we can see the 2nd clicked card, turn back over the cards(rotate by 180oc) remove the classes '.select')
  * Credit I used the  following tutorial on YouTube to assist with creating the game and customised the code https://www.youtube.com/watch?v=ZniVgo8U7ek
  */
- 
+
 function turnCardsBackOver() {
     boardDisabled = true;
-    setTimeout(() => {  
+    setTimeout(() => {
         firstClick.classList.remove('select');
         secondClick.classList.remove('select');
         resetBoard();
@@ -99,22 +94,25 @@ function turnCardsBackOver() {
  * which will disabled the user from clickiing the matched pair of cars
  * Call matchPairsCounter Function and resetBoard
  */
+// Credit I used the  following tutorial on YouTube to assist with creating the game and customised the code https://www.youtube.com/watch?v=ZniVgo8U7ek
 
 function deActivateCards() {
     firstClick.removeEventListener('click', selectCard);
     secondClick.removeEventListener('click', selectCard);
-    matchPairsCounter(); 
+    matchPairsCounter();
     matchedCards();
     resetBoard();
 };
 
 /**
  * Function - matchedCards
-*  Display matchedpairs modal for 1.5 seconds, then close the modal and continue
-*  If match pairs equal 6, then call finishGame function
-*/
+ *  Display matchedpairs modal for 1.5 seconds, then close the modal and continue
+ *  If match pairs equal 6, then call finishGame function
+ */
+// Credit I used the  following tutorial on YouTube to assist with creating the game and customised the code https://www.youtube.com/watch?v=ZniVgo8U7ek
+
 function matchedCards() {
-    matchedPairModal.style.display = "block"; 
+    matchedPairModal.style.display = "block";
     finishGameModal.style.display = "none";
     setTimeout(() => {
         matchedPairModal.style.display = "none";
@@ -211,7 +209,7 @@ function playNewGame() {
     scoreBoardModal.style.display = "none";
     newGameModal.style.display = "none";
     resetGame();
-    cards.forEach(card => card.addEventListener('click', selectCard)); // loop for each card click invoke the select card function
+    cards.forEach(card => card.addEventListener('click', selectCard));
 }
 
 /**
@@ -278,7 +276,6 @@ function displayNewGameModal() {
     finishGameModal.style.display = "none";
     newGameModal.style.display = "block";
 }
-
 
 /**
  * This Function closes finish game modal,displays  scoreboard

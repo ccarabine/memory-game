@@ -20,13 +20,11 @@
 </head>
 
 <body>
-
     <!-- Header to contain the title, scores and match pair results-->
     <div class="container">
         <header>
             <h1>Paw Patrol Memory Game</h1>
             <button onclick="confirmDecision()" class="btn btnsml btn-hover">New Game</button>
-
             <button onclick="displayScoreBoardModal()" class="btn btnsml btn-hover">Score board</button>
             <br> <span id="moves"></span>
             <span id="matchedpairs"></span>
@@ -83,7 +81,6 @@
                 <img class="back-card" src="assets/images/backgroundcard.jpg" alt="Background card" />
             </div>
         </main>
-
     </div>
     <!-- Modal section -->
     <!-- Credit : I followed the w3 school https://www.w3schools.com/howto/howto_css_modals.asp and customised the code-->
@@ -134,13 +131,11 @@
                 <li> 20 moves, receive 10 points</li>
                 <li> More then 21 moves, receive 5 points</li>
             </ul> <br>
-
         </div>
     </div>
     <!-- Finish Game Modal -->
     <div id="finishgamemodal" class="modal modal-game">
         <div class="modal-contentgame ">
-
             <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" width="150" height="130"
                 alt="paw patrol logo" />
             <h1>Congratulations </h1> <br>
@@ -154,6 +149,7 @@
             </form>
         </div>
     </div>
+
     <!-- Scoreboard Modal -->
     <div id="scoreboardmodal" class="modal modal-game">
         <div class="modal-contentgame ">
@@ -166,6 +162,7 @@
             <button onclick="playNewGame()" class="btn btn-hover">Play New Game</button>
         </div>
     </div>
+
     <!-- Matched Pair Modal -->
     <div id="matchedpairmodal" class="modal modal-game">
         <div class="modal-contentgame ">
