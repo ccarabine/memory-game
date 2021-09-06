@@ -16,4 +16,4 @@
 
 The pages will be responsive on all devices
 
-[Back to Readme](https://github.com/ccarabine/memory-game/blob/main/readme.MD)
+[Back to Readme](https://github.com/ccarabine/memory-game/blob/main/readme.md)

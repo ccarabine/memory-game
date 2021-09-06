@@ -85,7 +85,7 @@ function turnCardsBackOver() {
         secondClick.classList.remove('select');
         resetBoard();
     }, 1000);
-};
+}
 
 /**
  * Function - deActivateCards
@@ -102,7 +102,7 @@ function deActivateCards() {
     matchPairsCounter();
     matchedCards();
     resetBoard();
-};
+}
 
 /**
  * Function - matchedCards
@@ -121,7 +121,7 @@ function matchedCards() {
             finishGame();
         }
     }, 1500);
-};
+}
 
 /**
  * Function - ShuffleCards, Reposition the order of the cards by order property and generating a random number to position it

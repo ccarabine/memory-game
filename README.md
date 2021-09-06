@@ -134,7 +134,7 @@ A favicon of the a paw is displayed as a visual reminder of the Web site identit
 
 I used <a href="https://balsamiq.com/">Balsamiq</a> to create wireframes for my project in order to plan out the layout of the interface, navigation and information design of the webpage on  desktop, tablets and mobile devices.
 
-[Link to wireframes](https://github.com/ccarabine/memory-game/blob/main/wireframes.MD)
+[Link to wireframes](https://github.com/ccarabine/memory-game/blob/main/wireframes.md)
 
 ### [Contents table ](#home)
 
@@ -237,6 +237,9 @@ The user can then click on the close [x] and decide whether they would like to p
 1.) Add in skill levels with timer
 
 2.) Add additional game type e.g. logos, animals etc
+
+3.) Background, winning the game and matching cards sounds
+
 ### [Contents table ](#home)
 
 ---
@@ -278,6 +281,7 @@ If the user matches two cards they will remain up turned and display the front o
 
 
 When all 6 pairs are successfully chosen, the finish game modal popup will appear
+
 ![ Finish game modal](assets/images/uxd/testing/finishgame.PNG)
 
 
@@ -460,6 +464,9 @@ No errors were detected in the code. Warnings were detected in the code however 
 ---
 
 ## Chrome Dev Tools Lighthouse <a name="Lighthouse"></a>
+
+## Desktop report
+
 Initial Score performance 99, accessibility 97, best practices 87, seo 90
 
 ### Best practice
@@ -528,6 +535,29 @@ Remove the user-scalable="no" parameter from the viewport meta tag and set the m
 
 *** Accessibility score improved to 97
 ### [Contents table ](#home)
+
+## Mobile report
+Initial Score performance 75, accessibility 97, best practices 87, seo 100
+
+### Performance
+* Issue
+Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles
+
+Serve images that are appropriately-sized to save cellular data and improve load time
+rubble.png resource size 303 kb potential saving 222kb
+backgroundcard.jpg resource size 243 kb potential saving 215kb
+
+* Correcive action: tried to resolve it by using google-webfonts-helper inline CSS, but the score for the best practices reduced. 
+Reduced file size of images
+*** score improved to 80
+
+### Best Practices
+* Issue
+Displays images with incorrect aspect ratio
+patrol patrol logo displayed size 150x130 expected size 300 x 260
+corrective action: resized image to 300x260
+*** Improved score to 93
+
 ---
 # Design Responsiveness Testing <a name="testing-responsiveness"></a> 
 
