@@ -24,8 +24,8 @@
     <div class="container">
         <header>
             <h1>Paw Patrol Memory Game</h1>
-            <button onclick="confirmDecision()" class="btn btnsml btn-hover">New Game</button>
-            <button onclick="displayScoreBoardModal()" class="btn btnsml btn-hover">Score board</button>
+            <button id="confirmDecision" class="btn btnsml btn-hover">New Game</button>
+            <button id="displayScoreBoardModal" class="btn btnsml btn-hover">Score board</button>
             <br> <span id="moves"></span>
             <span id="matchedpairs"></span>
         </header>
@@ -89,8 +89,8 @@
         <div class="modal-contentgame ">
             <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" width="150" height="130"
                 alt="paw patrol logo" />
-            <button onclick="playNewGame()" class="btn btn-hover">Play New Game</button>
-            <button onclick="rules()" class="btn btn-hover">Rules</button>
+            <button class="btn btn-hover playNewGame">Play New Game</button>
+            <button id="rules" class="btn btn-hover">Rules</button>
         </div>
     </div>
 
@@ -100,8 +100,8 @@
             <img class="pawpatrollogo" src="assets/images/pawpatrollogo.png" width="150" height="130"
                 alt="paw patrol logo" />
             <h1>Are you sure you want start the game again?</h1> <br>
-            <button onclick="restartGame()" class="btn btn-hover">Yes</button>
-            <button onclick="continueGame()" class="btn btn-hover">No</button>
+            <button id="restartGame" class="btn btn-hover">Yes</button>
+            <button id="continueGame" class="btn btn-hover">No</button>
         </div>
     </div>
     <!-- Rules Modal -->
@@ -143,7 +143,7 @@
             <h3 id="results"></h3> <br>
             <h3>Enter your name below for the score board and click on the save button</h3> <br>
             <!--form-->
-            <form onsubmit="return saveDetails()">
+            <form id="submit">
                 <input type="text" id="winnername" name="winnername" value="" required><br>
                 <button type="submit" id="savebtn" class="btn btn-hover btnsml">Save</button>
             </form>
@@ -159,7 +159,7 @@
             <h1>Score Board </h1> <br>
             <table id="scoretable">
             </table>
-            <button onclick="playNewGame()" class="btn btn-hover">Play New Game</button>
+            <button class="btn btn-hover playNewGame">Play New Game</button>
         </div>
     </div>
 

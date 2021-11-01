@@ -1,21 +1,42 @@
-//Modals
+//Get Elements
 const newGameModal = document.getElementById("newgamemodal");
 const finishGameModal = document.getElementById("finishgamemodal");
 const rulesModal = document.getElementById("rulesmodal");
 const confirmModal = document.getElementById("confirmmodal");
 const scoreBoardModal = document.getElementById("scoreboardmodal");
-const span = document.getElementsByClassName("close")[0];
 const closeRules = document.getElementsByClassName("closerules")[0];
 const closeScoreBoard = document.getElementsByClassName("closescoreboard")[0];
 const matchedPairModal = document.getElementById("matchedpairmodal");
 
-//Get Elements
 const cards = document.querySelectorAll('.card');
 const counterMoves = document.getElementById("moves");
 const counterMatchedPairs = document.getElementById("matchedpairs");
 const results = document.getElementById("results");
 const winnerName = document.getElementById('winnername');
-const saveBtn = document.getElementById("savebtn");
+
+//Event Listerners
+var displayScoreBoard = document.getElementById("displayScoreBoardModal");
+displayScoreBoard.addEventListener("click",displayScoreBoardModal);
+
+var confirmDecisionFunc= document.getElementById("confirmDecision");
+confirmDecisionFunc.addEventListener("click",confirmDecision);
+
+var continueGameFunc= document.getElementById("continueGame");
+continueGameFunc.addEventListener("click",continueGame);
+
+var restartGameFunc= document.getElementById("restartGame");
+restartGameFunc.addEventListener("click",restartGame);
+
+var playNewGameFunc= document.getElementsByClassName("playNewGame");
+playNewGameFunc[0].addEventListener("click",playNewGame);
+playNewGameFunc[1].addEventListener("click",playNewGame);
+
+var rulesFunc = document.getElementById("rules");
+rulesFunc.addEventListener("click",rules);
+
+var onsubmit1 = document.getElementById("submit");
+onsubmit1.addEventListener("click", saveDetails);
+
 
 //declare Variables
 let moves = 0;
@@ -267,14 +288,6 @@ function finishGame() {
 function rules() {
     newGameModal.style.display = "none";
     rulesModal.style.display = "block";
-}
-
-/**
- * This Function closes the finishgamemodal and displays the new game modal
- */
-function displayNewGameModal() {
-    finishGameModal.style.display = "none";
-    newGameModal.style.display = "block";
 }
 
 /**
